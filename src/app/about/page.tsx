@@ -114,24 +114,24 @@ export default function AboutPage() {
       <main className="bg-[#F7F5F0] min-h-screen">
         
         {/* HERO SECTION */}
-        <section className="pt-16 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="pt-10 pb-16 sm:pt-20 sm:pb-28 overflow-hidden w-full">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFECE6] border border-[#E5E1D8] text-[11px] font-bold uppercase tracking-widest text-grey-600 mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#EFECE6] border border-[#E5E1D8] text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-grey-600 mb-4 sm:mb-6 max-w-full truncate">
                 OUR STORY &amp; ETHOS
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-bold text-navy tracking-tight leading-[1.12]">
+              <h1 className="text-3xl sm:text-5xl lg:text-[56px] font-bold text-navy tracking-tight leading-[1.15]">
                 Detailed work. <br />
                 <span className="text-grey-500 font-medium">Delivered with care.</span>
               </h1>
-              <p className="mt-6 text-base sm:text-xl text-grey-600 leading-relaxed max-w-2xl">
+              <p className="mt-4 sm:mt-6 text-sm sm:text-xl text-grey-600 leading-relaxed max-w-2xl">
                 Meridex was founded on a simple conviction: finance and advisory leaders should spend their days advising clients and growing their firms, not getting buried in repetitive file notes, reconciliations, and lodgement admin.
               </p>
             </div>
 
             {/* Visual Bento Hero Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-14">
-              <div className="lg:col-span-8 rounded-[32px] overflow-hidden bg-[#EAE7DF] border border-[#DDD8CD] relative min-h-[320px] sm:min-h-[420px] shadow-sm">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 mt-10 sm:mt-14 w-full">
+              <div className="lg:col-span-8 rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#EAE7DF] border border-[#DDD8CD] relative min-h-[260px] sm:min-h-[420px] shadow-sm">
                 <div
                   className="absolute inset-0 bg-cover bg-center"
                   style={{
@@ -140,23 +140,23 @@ export default function AboutPage() {
                   role="img"
                   aria-label="Meridex modern financial operations office"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/30 to-transparent" />
-                <div className="absolute bottom-8 left-8 right-8 text-white">
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-[11px] font-semibold mb-3">
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/35 to-transparent" />
+                <div className="absolute bottom-5 sm:bottom-8 left-5 sm:left-8 right-5 sm:right-8 text-white">
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/20 backdrop-blur-md text-[10px] sm:text-[11px] font-semibold mb-2 sm:mb-3">
                     <ShieldCheck className="w-3.5 h-3.5 text-teal-light" />
                     <span>The Meridex Standard</span>
                   </div>
-                  <h2 className="text-2xl sm:text-3xl font-bold leading-tight">
+                  <h2 className="text-xl sm:text-3xl font-bold leading-tight">
                     Where precision meets modern financial dexterity.
                   </h2>
-                  <p className="text-xs sm:text-sm text-grey-200 mt-2 max-w-xl">
+                  <p className="text-[11px] sm:text-sm text-grey-200 mt-1 sm:mt-2 max-w-xl">
                     Every task we touch undergoes systematic calibration against your firm’s specific aggregators, software tools, and compliance guidelines.
                   </p>
                 </div>
               </div>
 
               {/* Stats Card Right */}
-              <div className="lg:col-span-4 bg-[#EFECE6] border border-[#E5E1D8] rounded-[32px] p-8 flex flex-col justify-between shadow-xs">
+              <div className="lg:col-span-4 bg-[#EFECE6] border border-[#E5E1D8] rounded-[24px] sm:rounded-[32px] p-5 sm:p-8 flex flex-col justify-between shadow-xs">
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-navy text-white flex items-center justify-center font-bold text-lg mb-6 shadow-xs">
                     M

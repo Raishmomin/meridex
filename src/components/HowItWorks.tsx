@@ -122,7 +122,7 @@ export default function HowItWorks() {
         </div>
 
         {/* Interactive Step Navigator Pills */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3 mb-6 sm:mb-10">
           {steps.map((step, idx) => {
             const isSelected = activeStep === idx;
             const Icon = step.icon;
@@ -131,9 +131,9 @@ export default function HowItWorks() {
               <button
                 key={step.number}
                 onClick={() => setActiveStep(idx)}
-                className={`text-left p-4 rounded-[22px] border transition-all duration-200 flex flex-col justify-between ${
+                className={`text-left p-3.5 sm:p-4 rounded-[18px] sm:rounded-[22px] border transition-all duration-200 flex flex-col justify-between ${
                   isSelected
-                    ? 'bg-navy text-white border-navy shadow-md scale-[1.02]'
+                    ? 'bg-navy text-white border-navy shadow-md scale-[1.01]'
                     : 'bg-white hover:bg-[#EFECE6] text-grey-700 border-[#E5E1D8]'
                 }`}
               >
@@ -176,7 +176,7 @@ export default function HowItWorks() {
         </div>
 
         {/* Detailed Interactive Step Spotlight Card (The Upgrade) */}
-        <div className="bg-white border border-[#E5E1D8] rounded-[32px] p-7 sm:p-10 lg:p-12 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="bg-white border border-[#E5E1D8] rounded-[24px] sm:rounded-[32px] p-5 sm:p-10 lg:p-12 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
           
           {/* Left Side: Step Highlights & Deliverables */}
           <div className="lg:col-span-7 flex flex-col justify-center">

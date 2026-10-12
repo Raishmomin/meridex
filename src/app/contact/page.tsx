@@ -42,18 +42,18 @@ export default function ContactPage() {
   return (
     <>
       <Navbar />
-      <main className="bg-[#F7F5F0] min-h-screen py-14 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <main className="bg-[#F7F5F0] min-h-screen py-10 sm:py-20 w-full overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           
           {/* Section Header */}
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFECE6] border border-[#E5E1D8] text-[11px] font-bold uppercase tracking-widest text-grey-600 mb-4">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#EFECE6] border border-[#E5E1D8] text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-grey-600 mb-4 max-w-full truncate">
               START A PILOT · 24-HOUR RESPONSE
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-[52px] font-bold text-navy tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-bold text-navy tracking-tight leading-tight">
               Let&apos;s talk about the tasks slowing you down.
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-grey-600 leading-relaxed">
+            <p className="mt-3 sm:mt-4 text-sm sm:text-lg text-grey-600 leading-relaxed">
               Tell us your volume, tools, and backlog. We will propose a tailored, zero-lock-in pilot so you can judge us purely on results.
             </p>
           </div>
@@ -64,46 +64,46 @@ export default function ContactPage() {
             <div className="lg:col-span-5 space-y-6">
               
               {/* Direct Card */}
-              <div className="bg-[#EFECE6] border border-[#E5E1D8] rounded-[32px] p-8 shadow-xs">
-                <h3 className="text-xl font-bold text-navy mb-1">
+              <div className="bg-[#EFECE6] border border-[#E5E1D8] rounded-[24px] sm:rounded-[32px] p-5 sm:p-8 shadow-xs">
+                <h3 className="text-lg sm:text-xl font-bold text-navy mb-1">
                   Connect directly with our team
                 </h3>
-                <p className="text-xs sm:text-sm text-grey-600 mb-6">
+                <p className="text-xs sm:text-sm text-grey-600 mb-5 sm:mb-6">
                   Schedule a discovery session or send us your scope for an immediate pilot proposal.
                 </p>
 
-                <div className="space-y-4 text-sm">
-                  <div className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-white border border-[#E5E1D8]">
-                    <div className="w-10 h-10 rounded-xl bg-navy text-white flex items-center justify-center shrink-0">
-                      <Mail className="w-5 h-5 text-teal-light" />
+                <div className="space-y-3 sm:space-y-4 text-sm">
+                  <div className="flex items-start gap-3 p-3 sm:p-3.5 rounded-2xl bg-white border border-[#E5E1D8]">
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-navy text-white flex items-center justify-center shrink-0">
+                      <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-teal-light" />
                     </div>
-                    <div>
-                      <span className="text-[11px] font-semibold text-grey-400 block uppercase">Email us</span>
-                      <a href="mailto:info@meridex.com.au" className="font-bold text-navy hover:text-teal transition-colors">
+                    <div className="min-w-0">
+                      <span className="text-[10px] sm:text-[11px] font-semibold text-grey-400 block uppercase">Email us</span>
+                      <a href="mailto:info@meridex.com.au" className="font-bold text-xs sm:text-sm text-navy hover:text-teal transition-colors truncate block">
                         info@meridex.com.au
                       </a>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-white border border-[#E5E1D8]">
-                    <div className="w-10 h-10 rounded-xl bg-navy text-white flex items-center justify-center shrink-0">
-                      <Phone className="w-5 h-5 text-teal-light" />
+                  <div className="flex items-start gap-3 p-3 sm:p-3.5 rounded-2xl bg-white border border-[#E5E1D8]">
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-navy text-white flex items-center justify-center shrink-0">
+                      <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-teal-light" />
                     </div>
-                    <div>
-                      <span className="text-[11px] font-semibold text-grey-400 block uppercase">Call our office</span>
-                      <a href="tel:+61390000000" className="font-bold text-navy hover:text-teal transition-colors">
+                    <div className="min-w-0">
+                      <span className="text-[10px] sm:text-[11px] font-semibold text-grey-400 block uppercase">Call our office</span>
+                      <a href="tel:+61390000000" className="font-bold text-xs sm:text-sm text-navy hover:text-teal transition-colors truncate block">
                         +61 3 9000 0000
                       </a>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3.5 p-3.5 rounded-2xl bg-white border border-[#E5E1D8]">
-                    <div className="w-10 h-10 rounded-xl bg-navy text-white flex items-center justify-center shrink-0">
-                      <Clock className="w-5 h-5 text-teal-light" />
+                  <div className="flex items-start gap-3 p-3 sm:p-3.5 rounded-2xl bg-white border border-[#E5E1D8]">
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-navy text-white flex items-center justify-center shrink-0">
+                      <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-teal-light" />
                     </div>
-                    <div>
-                      <span className="text-[11px] font-semibold text-grey-400 block uppercase">Operating Hours</span>
-                      <p className="font-bold text-navy">
+                    <div className="min-w-0">
+                      <span className="text-[10px] sm:text-[11px] font-semibold text-grey-400 block uppercase">Operating Hours</span>
+                      <p className="font-bold text-xs sm:text-sm text-navy leading-snug">
                         Mon – Fri: 8:00 AM – 6:30 PM (AEST &amp; EST)
                       </p>
                     </div>
@@ -152,7 +152,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right Column: High-Conversion Interactive Form */}
-            <div className="lg:col-span-7 bg-white border border-[#E5E1D8] rounded-[36px] p-8 sm:p-12 shadow-md">
+            <div className="lg:col-span-7 bg-white border border-[#E5E1D8] rounded-[24px] sm:rounded-[36px] p-5 sm:p-10 lg:p-12 shadow-md w-full">
               {isSubmitted ? (
                 <div className="text-center py-12 space-y-4">
                   <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4">

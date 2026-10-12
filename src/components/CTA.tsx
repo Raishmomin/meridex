@@ -10,7 +10,7 @@ export default function CTA() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Large Rounded Container echoing the international modern aesthetic */}
-        <div className="relative rounded-[36px] bg-navy overflow-hidden p-8 sm:p-14 lg:p-20 text-center shadow-2xl border border-navy-light">
+        <div className="relative rounded-[24px] sm:rounded-[36px] bg-navy overflow-hidden p-6 sm:p-14 lg:p-20 text-center shadow-2xl border border-navy-light w-full">
           
           {/* Subtle Ambient Decorative Glows */}
           <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-teal/10 blur-3xl pointer-events-none" />
@@ -18,12 +18,12 @@ export default function CTA() {
 
           <div className="relative z-10 max-w-3xl mx-auto">
             {/* Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-teal-light text-xs font-semibold mb-6">
-              <ShieldCheck className="w-3.5 h-3.5" />
-              <span>Low-Risk Exploration · Australia &amp; USA Ready</span>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 text-teal-light text-[11px] sm:text-xs font-semibold mb-4 sm:mb-6 max-w-full">
+              <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
+              <span className="truncate">Low-Risk Exploration · Australia &amp; USA Ready</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-bold text-white tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-4xl lg:text-[46px] font-bold text-white tracking-tight leading-tight">
               Let&apos;s take the detailed work off your plate.
             </h2>
             

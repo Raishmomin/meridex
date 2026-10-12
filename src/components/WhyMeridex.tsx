@@ -36,10 +36,10 @@ export default function WhyMeridex(): React.JSX.Element {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6">
           
           {/* Card 1: Left Tall Vertical Card (Col-span 5 on LG, row-span 2) */}
-          <div className="lg:col-span-5 bg-[#EFECE6] border border-[#E5E1D8] rounded-[32px] p-8 sm:p-9 flex flex-col justify-between transition-all duration-300 hover:shadow-lg relative overflow-hidden group">
+          <div className="lg:col-span-5 bg-[#EFECE6] border border-[#E5E1D8] rounded-[24px] sm:rounded-[32px] p-5 sm:p-8 lg:p-9 flex flex-col justify-between transition-all duration-300 hover:shadow-lg relative overflow-hidden group">
             <div>
               {/* Media image inside card */}
-              <div className="w-full h-56 sm:h-64 rounded-[24px] overflow-hidden mb-8 relative border border-[#DDD8CD] bg-[#DDD8CD]/40">
+              <div className="w-full h-48 sm:h-64 rounded-[20px] sm:rounded-[24px] overflow-hidden mb-6 sm:mb-8 relative border border-[#DDD8CD] bg-[#DDD8CD]/40">
                 <div
                   className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
                   style={{
@@ -85,8 +85,8 @@ export default function WhyMeridex(): React.JSX.Element {
             <div className="grid grid-cols-1 sm:grid-cols-12 gap-5 sm:gap-6">
               
               {/* Card 2: "Trusted by" Card (Col-span 7) */}
-              <div className="sm:col-span-7 bg-[#EFECE6] border border-[#E5E1D8] rounded-[32px] p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg relative overflow-hidden group">
-                <div className="w-full h-36 rounded-[20px] overflow-hidden mb-5 relative border border-[#DDD8CD] bg-[#DDD8CD]/40">
+              <div className="sm:col-span-7 bg-[#EFECE6] border border-[#E5E1D8] rounded-[24px] sm:rounded-[32px] p-5 sm:p-7 lg:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg relative overflow-hidden group">
+                <div className="w-full h-32 sm:h-36 rounded-[18px] sm:rounded-[20px] overflow-hidden mb-4 sm:mb-5 relative border border-[#DDD8CD] bg-[#DDD8CD]/40">
                   <div
                     className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
                     style={{
@@ -98,7 +98,7 @@ export default function WhyMeridex(): React.JSX.Element {
                   <div className="absolute inset-0 bg-navy/10 pointer-events-none" />
                 </div>
                 <div>
-                  <h4 className="text-xl sm:text-2xl font-bold text-navy tracking-tight leading-snug">
+                  <h4 className="text-lg sm:text-2xl font-bold text-navy tracking-tight leading-snug">
                     Trusted by <span className="text-grey-500 font-medium">finance firms across Australia &amp; the USA.</span>
                   </h4>
                   <p className="text-xs text-grey-500 mt-2">
@@ -107,19 +107,19 @@ export default function WhyMeridex(): React.JSX.Element {
                 </div>
               </div>
 
-              {/* Card 3: Big Stat Card (Col-span 5) - Matching the 50% chess crown card */}
-              <div className="sm:col-span-5 bg-[#EFECE6] border border-[#E5E1D8] rounded-[32px] p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg relative overflow-hidden group">
+              {/* Card 3: Big Stat Card (Col-span 5) */}
+              <div className="sm:col-span-5 bg-[#EFECE6] border border-[#E5E1D8] rounded-[24px] sm:rounded-[32px] p-5 sm:p-7 lg:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg relative overflow-hidden group">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-teal bg-white/80 border border-[#E5E1D8] px-2.5 py-1 rounded-full">
                     SLA Benchmark
                   </span>
-                  <div className="w-9 h-9 rounded-full bg-navy/5 flex items-center justify-center">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-navy/5 flex items-center justify-center">
                     <Award className="w-4 h-4 text-navy" />
                   </div>
                 </div>
 
                 <div>
-                  <div className="text-4xl sm:text-5xl font-extrabold text-navy tracking-tight mb-1">
+                  <div className="text-3xl sm:text-5xl font-extrabold text-navy tracking-tight mb-1">
                     99.8%
                   </div>
                   <p className="text-xs font-semibold text-grey-700">
@@ -138,28 +138,28 @@ export default function WhyMeridex(): React.JSX.Element {
 
             </div>
 
-            {/* Bottom Row: Wide Card (Col-span 7 full) - Matching "Elevates personal style..." wide card */}
-            <div className="bg-[#EFECE6] border border-[#E5E1D8] rounded-[32px] p-7 sm:p-9 transition-all duration-300 hover:shadow-lg relative overflow-hidden group grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+            {/* Bottom Row: Wide Card */}
+            <div className="bg-[#EFECE6] border border-[#E5E1D8] rounded-[24px] sm:rounded-[32px] p-5 sm:p-7 lg:p-9 transition-all duration-300 hover:shadow-lg relative overflow-hidden group grid grid-cols-1 md:grid-cols-12 gap-5 sm:gap-6 items-center">
               
               <div className="md:col-span-7 flex flex-col justify-center">
                 <div className="inline-flex items-center gap-1.5 text-xs font-bold text-teal uppercase tracking-wider mb-2">
                   <Rocket className="w-3.5 h-3.5" />
                   <span>Empowers Growth</span>
                 </div>
-                <h4 className="text-xl sm:text-2xl font-bold text-navy tracking-tight leading-snug mb-3">
+                <h4 className="text-lg sm:text-2xl font-bold text-navy tracking-tight leading-snug mb-2 sm:mb-3">
                   Elevates team focus and <span className="text-grey-500 font-medium">transforms your operational capacity.</span>
                 </h4>
                 <p className="text-xs sm:text-sm text-grey-600 leading-relaxed">
                   Take the detail-heavy routine work off your plate so your brokers and advisors spend 100% of their energy advising clients and writing business.
                 </p>
-                <div className="mt-4 flex items-center gap-4 text-xs font-semibold text-navy">
+                <div className="mt-3 sm:mt-4 flex flex-wrap items-center gap-3 text-xs font-semibold text-navy">
                   <span>✓ Named Account Lead</span>
                   <span>✓ Secure NDAs</span>
                 </div>
               </div>
 
               {/* Right Portrait Image in the wide card */}
-              <div className="md:col-span-5 h-44 sm:h-52 rounded-[22px] overflow-hidden relative border border-[#DDD8CD] bg-[#DDD8CD]/40">
+              <div className="md:col-span-5 h-40 sm:h-52 rounded-[18px] sm:rounded-[22px] overflow-hidden relative border border-[#DDD8CD] bg-[#DDD8CD]/40">
                 <div
                   className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
                   style={{
@@ -177,8 +177,8 @@ export default function WhyMeridex(): React.JSX.Element {
 
         </div>
 
-        {/* Micro-Benefits strip below bento grid to cover all 6 core business pillars */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+        {/* Micro-Benefits strip */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mt-6 sm:mt-8">
           <div className="bg-white/80 border border-[#E5E1D8] rounded-2xl p-4 flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg bg-[#EFECE6] flex items-center justify-center shrink-0">
               <Rocket className="w-4 h-4 text-teal" />

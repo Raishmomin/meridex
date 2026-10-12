@@ -88,13 +88,13 @@ export default function ChatbotBubble() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
       {/* Floating Chat Bubble Launcher */}
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
           aria-label="Open live chat assistant"
-          className="group relative flex items-center gap-3 bg-navy hover:bg-navy-light text-white p-3.5 sm:px-5 sm:py-3.5 rounded-full shadow-2xl transition-all duration-300 hover:scale-105 border border-[#E5E1D8]/20"
+          className="group relative flex items-center gap-2.5 bg-navy hover:bg-navy-light text-white p-3 sm:px-5 sm:py-3.5 rounded-full shadow-2xl transition-all duration-300 hover:scale-105 border border-[#E5E1D8]/20"
         >
           {/* Notification ping badge */}
           <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
@@ -102,7 +102,7 @@ export default function ChatbotBubble() {
             <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-teal" />
           </span>
 
-          <div className="w-8 h-8 rounded-full bg-teal/20 text-teal-light flex items-center justify-center shrink-0">
+          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal/20 text-teal-light flex items-center justify-center shrink-0">
             <MessageSquare className="w-4 h-4 text-teal-light" />
           </div>
 
@@ -115,7 +115,7 @@ export default function ChatbotBubble() {
 
       {/* Expanded Chat Drawer / Card */}
       {isOpen && (
-        <div className="w-[90vw] sm:w-[380px] h-[520px] max-h-[85vh] bg-[#F7F5F0] rounded-[28px] border border-[#E5E1D8] shadow-2xl flex flex-col overflow-hidden animate-fade-in-up">
+        <div className="w-[calc(100vw-32px)] max-w-[380px] h-[480px] sm:h-[520px] max-h-[85vh] bg-[#F7F5F0] rounded-[24px] sm:rounded-[28px] border border-[#E5E1D8] shadow-2xl flex flex-col overflow-hidden animate-fade-in-up">
           
           {/* Header */}
           <div className="bg-navy p-4 sm:p-5 text-white flex items-center justify-between">

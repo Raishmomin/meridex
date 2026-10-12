@@ -125,15 +125,15 @@ export default function Testimonials(): React.JSX.Element {
         </div>
 
         {/* 4-COLUMN TALL UPGRADED CARDS (LUXURA THEME ELEVATED WITH VERIFIED METRICS) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {filtered.map((item) => (
             <div
               key={item.id}
-              className="bg-[#EFECE6] border border-[#E5E1D8] rounded-[28px] p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1 min-h-[420px] group relative overflow-hidden"
+              className="bg-[#EFECE6] border border-[#E5E1D8] rounded-[22px] sm:rounded-[28px] p-5 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1 min-h-[360px] sm:min-h-[420px] group relative overflow-hidden"
             >
               {/* Card Top: Metric Badge & Country Indicator */}
               <div>
-                <div className="flex items-center justify-between gap-2 mb-5">
+                <div className="flex items-center justify-between gap-2 mb-4 sm:mb-5">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-white text-navy border border-[#E5E1D8] shadow-2xs">
                     <Sparkles className="w-3 h-3 text-teal" />
                     <span>{item.metric}</span>

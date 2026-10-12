@@ -104,7 +104,7 @@ export default function Services() {
         </div>
 
         {/* 5 Service Cards with Warm-Sand Rounded Cards & Clean Professional Presentation */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             const isFeatured = index === 0;
@@ -112,7 +112,7 @@ export default function Services() {
             return (
               <div
                 key={service.id}
-                className={`group rounded-[24px] p-7 sm:p-8 transition-all duration-300 flex flex-col justify-between border ${
+                className={`group rounded-[22px] sm:rounded-[24px] p-5 sm:p-8 transition-all duration-300 flex flex-col justify-between border ${
                   isFeatured
                     ? 'bg-[#EFECE6] border-[#E5E1D8] shadow-sm hover:shadow-md'
                     : 'bg-[#F7F5F0] border-[#E5E1D8]/80 hover:bg-[#EFECE6] hover:border-[#E5E1D8]'
@@ -162,7 +162,7 @@ export default function Services() {
           })}
 
           {/* 6th Card: Interactive Pilot Prompt to balance the 3x2 grid elegantly */}
-          <div className="rounded-[24px] p-7 sm:p-8 bg-navy text-white flex flex-col justify-between border border-navy-light shadow-md">
+          <div className="rounded-[22px] sm:rounded-[24px] p-5 sm:p-8 bg-navy text-white flex flex-col justify-between border border-navy-light shadow-md">
             <div>
               <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white mb-6">
                 <Globe className="w-6 h-6 text-teal-light" />
