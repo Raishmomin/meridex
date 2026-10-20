@@ -22,7 +22,7 @@ const faqs: FAQItem[] = [
   {
     question: "How do you protect client data?",
     answer:
-      "We use secure file sharing platforms, restrict access to authorised team members only, and follow strict confidentiality protocols. We can also sign NDAs and comply with your firm's data handling policies.",
+      "We work inside the platforms you already use, under access you control, and only the people assigned to your work can see your data. We don't share client information with anyone outside that team.",
   },
   {
     question: "Which software do you work with?",
@@ -37,7 +37,7 @@ const faqs: FAQItem[] = [
   {
     question: "What is your turnaround time?",
     answer:
-      "Turnaround depends on the scope and volume. During onboarding, we agree on deadlines and SLAs. Most recurring tasks are delivered within 24 to 48 hours.",
+      "Turnaround depends on the scope and volume. During onboarding, we agree on deadlines and SLAs upfront.",
   },
   {
     question: "Can we stop after the pilot?",

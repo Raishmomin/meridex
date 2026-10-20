@@ -31,57 +31,57 @@ const countries: CountryData[] = [
     name: 'Australia',
     flag: '🇦🇺',
     status: 'active',
-    quote: 'BAS preparation, aggregator compliance & Xero reconciliations delivered on AEST/AWST time.',
-    role: 'Active Operations Hub',
+    quote: 'Document verification, lodgement support, BAS preparation & Xero reconciliations.',
+    role: 'Active Support',
     pinCoordinates: { x: 82.5, y: 73.5 },
-    timezones: 'AEST / AEDT & AWST Coverage',
+    timezones: 'overlap with AEST / AEDT business hours, by arrangement',
     specialties: [
-      'MFAA / FBAA Aggregator Compliance',
-      'BAS Preparation & Single Touch Payroll',
-      'Serviceability & Lender Comparisons',
-      'Bank & Credit Card Reconciliation (Xero/MYOB)',
+      'Document collection and verification for mortgage brokers',
+      'BAS prep and payroll support',
+      'Application prep and lodgement support',
+      'Bank and credit card reconciliations',
     ],
-    regulation: 'Full compliance with Australian Privacy Principles (APPs), Privacy Act 1988, and Tax Agent Services Act.',
+    regulation: 'client data handled under strict confidentiality, built around APPs',
     commonTools: ['Xero', 'MYOB', 'BrokerEngine', 'ApplyOnline'],
-    clientCount: '40+ Australian Brokerages & Firms',
+    clientCount: 'now taking pilot clients',
   },
   {
     id: 'usa',
     name: 'United States',
     flag: '🇺🇸',
     status: 'active',
-    quote: 'QuickBooks bookkeeping, 1099 payroll reviews, and mortgage loan processing across EST & PST zones.',
-    role: 'Active Operations Hub',
+    quote: 'QuickBooks bookkeeping, 1099 payroll reviews, and mortgage 1003 file preparation.',
+    role: 'Active Support',
     pinCoordinates: { x: 23, y: 38 },
-    timezones: 'EST, CST, & PST Timezone Alignment',
+    timezones: 'overlap with your business hours, by arrangement',
     specialties: [
-      'QuickBooks Online AP / AR Management',
-      '1003 Mortgage Loan File Pre-Underwrite',
-      '1099 & W-2 Year-End Reconciliation',
-      'Trailing Docs, VOE & Disclosures Tracking',
+      'AP / AR support in QuickBooks Online',
+      'Bank and credit card reconciliations',
+      '1099 and W-2 year end data preparation',
+      'Mortgage 1003 file preparation and document checks',
     ],
-    regulation: 'SOC2 Aligned, strict non-disclosure security agreements, and encrypted cloud workflow channels.',
+    regulation: 'confidentiality agreements and access controls on every file',
     commonTools: ['QuickBooks Online', 'Encompass', 'Calyx Point', 'Dext'],
-    clientCount: '35+ US Lenders & Accounting Firms',
+    clientCount: 'now taking pilot clients',
   },
   {
     id: 'uk',
     name: 'United Kingdom',
     flag: '🇬🇧',
     status: 'upcoming',
-    quote: 'UK Mortgage broker document prep, VAT reconciliations, and payroll support launching Q3.',
+    quote: 'Mortgage file prep for your FCA-authorised adviser, VAT workpapers, and payroll support.',
     role: 'Launching Q3 2026',
     pinCoordinates: { x: 48.5, y: 26 },
     timezones: 'GMT / BST Local Business Hours',
     specialties: [
+      'Mortgage file prep for your FCA-authorised adviser',
       'HMRC Aligned VAT Return Workpapers',
-      'FCA Regulated Mortgage File Structuring',
       'Xero UK Payroll & CIS Processing',
-      'Pre-Registration Pilot Available',
+      'Bank and credit card reconciliations',
     ],
-    regulation: 'GDPR Aligned Data Protocols and dedicated UK cloud infrastructure.',
+    regulation: 'confidentiality-first data handling',
     commonTools: ['Xero UK', 'FreeAgent', 'Smartr365'],
-    clientCount: 'Waitlist Open for Pilot Cohort',
+    clientCount: 'now taking pilot clients',
   },
 ];
 
@@ -258,7 +258,7 @@ export default function CountrySelection() {
                         ) : (
                           <span className="text-[9px] bg-emerald-50 text-emerald-700 font-bold px-2 py-0.5 rounded-full ml-auto flex items-center gap-1">
                             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                            Live Hub
+                            Active Coverage
                           </span>
                         )}
                       </div>
@@ -284,7 +284,7 @@ export default function CountrySelection() {
             <div className="flex items-center gap-2 mb-1">
               <span className="text-lg">{selectedCountry.flag}</span>
               <span className="text-xs font-bold text-navy">{selectedCountry.name}</span>
-              <span className="text-[9px] text-teal font-semibold ml-auto">{selectedCountry.status === 'upcoming' ? 'Q3 2026' : 'Active Hub'}</span>
+              <span className="text-[9px] text-teal font-semibold ml-auto">{selectedCountry.status === 'upcoming' ? 'Q3 2026' : 'Active Coverage'}</span>
             </div>
             <p className="text-[11px] text-grey-700 leading-snug">
               &ldquo;{selectedCountry.quote}&rdquo;
@@ -301,7 +301,7 @@ export default function CountrySelection() {
                   <span className="text-3xl sm:text-4xl">{selectedCountry.flag}</span>
                   <div>
                     <h3 className="text-base sm:text-xl font-bold text-navy leading-tight">
-                      {selectedCountry.name} Operations Hub
+                      {selectedCountry.name}
                     </h3>
                     <span className="text-[11px] sm:text-xs font-semibold text-teal block mt-0.5">
                       {selectedCountry.clientCount}
@@ -336,7 +336,7 @@ export default function CountrySelection() {
                 </div>
 
                 <div className="flex flex-wrap items-center gap-1.5 pt-1">
-                  <span className="text-[10px] sm:text-[11px] font-semibold text-grey-500 mr-1">Pre-trained on:</span>
+                  <span className="text-[10px] sm:text-[11px] font-semibold text-grey-500 mr-1">tools we work in:</span>
                   {(selectedCountry?.commonTools || []).map((tool) => (
                     <span
                       key={tool}
@@ -358,7 +358,7 @@ export default function CountrySelection() {
                   <ArrowRight className="w-3.5 h-3.5 text-teal-light" />
                 </a>
                 <p className="text-[10px] sm:text-[11px] text-grey-500 mt-2 text-center md:text-right">
-                  Zero long-term commitment · Fixed SLA
+                  no long term lock-in. Turnround agreed upfront.
                 </p>
               </div>
 

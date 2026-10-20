@@ -67,7 +67,7 @@ const steps: Step[] = [
       'Firm NDA & data handling policy signed',
       'Dedicated Slack/Teams or email bridge',
     ],
-    keyHighlight: 'Bank-grade credentials management with least-privilege security.',
+    keyHighlight: 'Role-based credentials management with strict access control.',
   },
   {
     number: '04',

@@ -13,7 +13,6 @@ const navItems: NavItem[] = [
   { label: 'Home', href: '/#hero' },
   { label: 'Services', href: '/#services' },
   { label: 'How It Works', href: '/#how-it-works' },
-  { label: 'Why Meridex', href: '/#why-meridex' },
   { label: 'About', href: '/about' },
   { label: 'FAQ', href: '/#faq' },
   { label: 'Contact', href: '/contact' },

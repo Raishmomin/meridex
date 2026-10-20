@@ -79,7 +79,7 @@ export default function Hero() {
 
             {/* H1 Headline - Responsive font size down to 320px screens */}
             <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-bold text-navy leading-[1.15] tracking-tight break-words w-full">
-              Outsource the admin and finance work slowing your business down.
+              Outsource the admin work slowing your business down.
             </h1>
 
             {/* Subheadline */}
@@ -123,7 +123,7 @@ export default function Hero() {
                   href="/#services"
                   className="hover:text-navy underline underline-offset-4 decoration-grey-300"
                 >
-                  Explore 5 Specialist Services →
+                  Explore Services →
                 </a>
                 <span className="text-grey-300">·</span>
                 <a
@@ -155,14 +155,14 @@ export default function Hero() {
               {/* Main Visual Frame */}
               <div className="relative rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#EAE7DF] border border-[#DDD8CD] shadow-lg aspect-[4/3.2] sm:aspect-[4/3.4] lg:aspect-[4/3.5] flex items-end justify-center w-full">
                 
-                {/* Professional B2B Photo */}
+                {/* Professional Modern Workplace Photo */}
                 <div 
                   className="absolute inset-0 bg-cover bg-center"
                   style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80')`,
+                    backgroundImage: `url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80')`,
                   }}
                   role="img"
-                  aria-label="Dedicated finance and admin operations professional"
+                  aria-label="Modern organized financial operations workspace"
                 />
 
                 {/* Scrim */}
@@ -173,7 +173,7 @@ export default function Hero() {
                   <div className="flex items-center justify-between gap-2 mb-1.5">
                     <span className="text-[10px] font-bold text-grey-500 uppercase">Turnaround</span>
                     <span className="px-1.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[9px] font-bold">
-                      99.8% SLA
+                      Agreed SLA
                     </span>
                   </div>
                   <div className="h-6 flex items-end gap-1 pt-1">
@@ -183,7 +183,7 @@ export default function Hero() {
                     <div className="w-2 bg-teal rounded-t h-6" />
                     <div className="w-2 bg-blue-500 rounded-t h-6" />
                   </div>
-                  <p className="text-[9px] text-grey-500 mt-1 font-medium">Verified audit files</p>
+                  <p className="text-[9px] text-grey-500 mt-1 font-medium">Reviewed task files</p>
                 </div>
               </div>
 

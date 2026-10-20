@@ -15,8 +15,8 @@ const trustItems: TrustItem[] = [
   },
   {
     icon: Shield,
-    label: 'Secure Handling',
-    sub: 'Bank-grade access protocols',
+    label: 'Confidential Handling',
+    sub: 'Access controls on every file',
   },
   {
     icon: CheckCircle2,

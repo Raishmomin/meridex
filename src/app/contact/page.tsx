@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import ChatbotBubble from '@/components/ChatbotBubble';
 import {
   Mail,
   Phone,
@@ -90,62 +89,21 @@ export default function ContactPage() {
                       <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-teal-light" />
                     </div>
                     <div className="min-w-0">
-                      <span className="text-[10px] sm:text-[11px] font-semibold text-grey-400 block uppercase">Call our office</span>
-                      <a href="tel:+61390000000" className="font-bold text-xs sm:text-sm text-navy hover:text-teal transition-colors truncate block">
-                        +61 3 9000 0000
+                      <span className="text-[10px] sm:text-[11px] font-semibold text-grey-400 block uppercase">Call or WhatsApp</span>
+                      <a href="tel:+918097527110" className="font-bold text-xs sm:text-sm text-navy hover:text-teal transition-colors truncate block">
+                        +91 8097 527 110
                       </a>
                     </div>
                   </div>
-
-                  <div className="flex items-start gap-3 p-3 sm:p-3.5 rounded-2xl bg-white border border-[#E5E1D8]">
-                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-navy text-white flex items-center justify-center shrink-0">
-                      <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-teal-light" />
-                    </div>
-                    <div className="min-w-0">
-                      <span className="text-[10px] sm:text-[11px] font-semibold text-grey-400 block uppercase">Operating Hours</span>
-                      <p className="font-bold text-xs sm:text-sm text-navy leading-snug">
-                        Mon – Fri: 8:00 AM – 6:30 PM (AEST &amp; EST)
-                      </p>
-                    </div>
-                  </div>
                 </div>
 
-                {/* Regional Presence Badges */}
-                <div className="mt-8 pt-6 border-t border-[#DDD8CD] space-y-3">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-navy">
-                    Active Operations Hubs:
-                  </h4>
-                  <div className="flex flex-col gap-2 text-xs text-grey-700">
-                    <div className="flex items-center gap-2">
-                      <span>🇦🇺</span>
-                      <span className="font-semibold text-navy">Australia:</span>
-                      <span>Level 14, 380 Collins St, Melbourne VIC 3000</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span>🇺🇸</span>
-                      <span className="font-semibold text-navy">United States:</span>
-                      <span>100 Congress Ave, Suite 2000, Austin, TX 78701</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Guarantees Box */}
-              <div className="bg-white border border-[#E5E1D8] rounded-[28px] p-7 shadow-xs space-y-3">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-navy mb-2">
-                  The Meridex Pilot Commitment:
-                </h4>
-                <div className="flex items-center gap-2.5 text-xs text-grey-700">
-                  <CheckCircle2 className="w-4 h-4 text-teal shrink-0" />
-                  <span>No lock-in contracts or multi-month obligations.</span>
-                </div>
-                <div className="flex items-center gap-2.5 text-xs text-grey-700">
-                  <CheckCircle2 className="w-4 h-4 text-teal shrink-0" />
-                  <span>100% Second-level review before any work is delivered.</span>
-                </div>
-                <div className="flex items-center gap-2.5 text-xs text-grey-700">
-                  <CheckCircle2 className="w-4 h-4 text-teal shrink-0" />
-                  <span>Strict NDA and data isolation protocols.</span>
+                <div className="mt-8 pt-6 border-t border-[#DDD8CD] space-y-2">
+                  <span className="text-[11px] font-semibold text-grey-500 uppercase tracking-wider block">
+                    Our Working Standard
+                  </span>
+                  <p className="text-xs text-grey-600 leading-relaxed">
+                    We work inside the platforms you already use, under access you control. No long-term lock-in—turnaround agreed upfront.
+                  </p>
                 </div>
               </div>
 
@@ -349,7 +307,6 @@ export default function ContactPage() {
         </div>
       </main>
       <Footer />
-      <ChatbotBubble />
     </>
   );
 }
