@@ -49,11 +49,11 @@ export default function Footer() {
 
             <div className="pt-2 flex flex-col sm:flex-row gap-3">
               <a
-                href="mailto:info@meridex.com.au"
+                href="mailto:info@meridex.com"
                 className="inline-flex items-center gap-2 text-xs font-semibold text-navy hover:text-teal transition-colors"
               >
                 <Mail className="w-3.5 h-3.5 text-teal" />
-                <span>info@meridex.com.au</span>
+                <span>info@meridex.com</span>
               </a>
               <span className="hidden sm:inline text-grey-300">·</span>
               <a

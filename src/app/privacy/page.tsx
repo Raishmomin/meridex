@@ -111,7 +111,7 @@ export default function PrivacyPage() {
               </p>
               <div className="p-4 rounded-xl bg-[#F7F5F0] border border-[#E5E1D8] space-y-1 text-sm font-medium">
                 <p className="text-navy font-bold">Meridex Operations &amp; Privacy</p>
-                <p>Email: <a href="mailto:info@meridex.com.au" className="text-teal hover:underline">info@meridex.com.au</a></p>
+                <p>Email: <a href="mailto:info@meridex.com" className="text-teal hover:underline">info@meridex.com</a></p>
                 <p>Phone: <a href="tel:+918097527110" className="text-teal hover:underline">+91 8097 527 110</a></p>
               </div>
             </section>

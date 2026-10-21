@@ -78,8 +78,8 @@ export default function ContactPage() {
                     </div>
                     <div className="min-w-0">
                       <span className="text-[10px] sm:text-[11px] font-semibold text-grey-400 block uppercase">Email us</span>
-                      <a href="mailto:info@meridex.com.au" className="font-bold text-xs sm:text-sm text-navy hover:text-teal transition-colors truncate block">
-                        info@meridex.com.au
+                      <a href="mailto:info@meridex.com" className="font-bold text-xs sm:text-sm text-navy hover:text-teal transition-colors truncate block">
+                        info@meridex.com
                       </a>
                     </div>
                   </div>
