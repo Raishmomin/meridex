@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 
 interface NavItem {
@@ -19,36 +20,60 @@ const navItems: NavItem[] = [
 ];
 
 export default function Navbar() {
+  const [isVisible, setIsVisible] = useState<boolean>(true);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const currentScrollY = window.scrollY;
+
+      // Update background styling when scrolled
+      setIsScrolled(currentScrollY > 20);
+
+      // Keep header visible at the very top or when mobile menu is open
+      if (mobileMenuOpen || currentScrollY <= 20) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        // Scrolling DOWN past threshold -> HIDE header
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling UP -> SHOW header
+        setIsVisible(true);
+      }
+
+      lastScrollY = currentScrollY;
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [mobileMenuOpen]);
 
   return (
-    <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled
-          ? 'bg-[#F7F5F0]/90 backdrop-blur-md shadow-sm border-b border-[#E5E1D8]'
-          : 'bg-[#F7F5F0]'
-      }`}
-    >
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 w-full transition-transform duration-300 ease-in-out ${
+          isVisible ? 'translate-y-0' : '-translate-y-full'
+        } ${
+          isScrolled
+            ? 'bg-[#F7F5F0]/95 backdrop-blur-md shadow-sm border-b border-[#E5E1D8]'
+            : 'bg-[#F7F5F0]'
+        }`}
+      >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo with clean modern graphic mark matching reference style */}
-          <Link href="#hero" className="flex items-center gap-2.5 focus:outline-none group">
-            <div className="w-8 h-8 rounded-full bg-navy flex items-center justify-center text-white font-semibold text-sm transition-transform duration-200 group-hover:scale-105">
-              <span className="text-teal-light">M</span>
-            </div>
-            <span className="text-xl font-bold tracking-tight text-navy">
-              Meridex
-            </span>
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2 focus:outline-none group shrink-0">
+            <Image
+              src="/meridex-logo.png"
+              alt="Meridex Solutions"
+              width={180}
+              height={36}
+              className="h-7 sm:h-8 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation - Clean, minimalist aesthetic */}
@@ -122,5 +147,8 @@ export default function Navbar() {
         </div>
       </div>
     </header>
-  );
+    {/* Spacer to prevent layout shift with fixed header */}
+    <div className="h-20 w-full shrink-0" aria-hidden="true" />
+  </>
+);
 }

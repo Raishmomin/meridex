@@ -17,9 +17,21 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Us — Meridex | Detailed Work. Delivered with Care.',
+  title: 'About Us',
   description:
     'Learn how Meridex was founded, the meaning behind Merit and Dexterity, and our commitment to helping finance and advisory practices scale with precision.',
+  openGraph: {
+    title: 'About Meridex Solutions — Where Merit Meets Dexterity',
+    description:
+      'Merit is how we earn work. Dexterity is how we keep it. Learn about our founding story and core principles.',
+    images: [{ url: '/meridex-logo-full.jpg', width: 1200, height: 630, alt: 'Meridex Solutions' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Meridex Solutions',
+    description: 'Merit is how we earn work. Dexterity is how we keep it.',
+    images: ['/meridex-logo-full.jpg'],
+  },
 };
 
 const principles = [

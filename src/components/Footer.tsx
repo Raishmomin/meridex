@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Mail, Phone } from 'lucide-react';
 
 export default function Footer() {
@@ -32,15 +33,18 @@ export default function Footer() {
           
           {/* Brand Info */}
           <div className="lg:col-span-5 space-y-4">
-            <Link href="/" className="inline-flex items-center gap-2 text-2xl font-bold text-navy tracking-tight">
-              <div className="w-7 h-7 rounded-full bg-navy flex items-center justify-center text-white font-semibold text-xs">
-                <span className="text-teal-light">M</span>
-              </div>
-              <span>Meridex</span>
+            <Link href="/" className="inline-block">
+              <Image
+                src="/meridex-logo.png"
+                alt="Meridex Solutions"
+                width={180}
+                height={36}
+                className="h-8 w-auto object-contain"
+              />
             </Link>
             
-            <p className="text-sm font-semibold text-navy">
-              Detailed work. Delivered with care.
+            <p className="text-sm font-medium text-grey-500 italic">
+              Where merit meets dexterity.
             </p>
             
             <p className="text-sm text-grey-600 leading-relaxed max-w-sm">

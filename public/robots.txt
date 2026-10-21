@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://meridex.com/sitemap.xml
+
+# Block crawling of search result pages or non-essential paths
+Disallow: /api/
