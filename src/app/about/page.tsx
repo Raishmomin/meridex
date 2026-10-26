@@ -56,38 +56,38 @@ export default function AboutPage() {
   return (
     <>
       <Navbar />
-      <main className="bg-[#F7F5F0] min-h-screen">
+      <main className="bg-[#0B0F14] min-h-screen">
         
         {/* SECTION 1: ABOUT US */}
-        <section className="pt-16 pb-16 sm:pt-24 sm:pb-20 border-b border-[#E5E1D8]">
+        <section className="pt-16 pb-16 sm:pt-24 sm:pb-20 border-b border-[#222A38]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFECE6] border border-[#E5E1D8] text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-grey-600 mb-6">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-grey-400 mb-6">
               ABOUT MERIDEX
             </div>
             
-            <h1 className="text-3xl sm:text-5xl font-bold text-navy tracking-tight leading-tight mb-8">
+            <h1 className="text-3xl sm:text-5xl font-bold text-white tracking-tight leading-tight mb-8">
               About Us
             </h1>
 
-            <div className="space-y-6 text-base sm:text-xl text-grey-700 leading-relaxed font-normal">
+            <div className="space-y-6 text-base sm:text-xl text-grey-300 leading-relaxed font-normal">
               <p>
                 Meridex is an outsourcing partner for businesses that want their admin and finance work handled reliably, so they can spend their time on clients and growth.
               </p>
               
-              <p className="text-grey-600 text-sm sm:text-lg">
+              <p className="text-grey-400 text-sm sm:text-lg">
                 We take on the detailed, recurring work that keeps a business running: document collection and checking, application preparation, bookkeeping, accounting support and tax return preparation. We work with clients in Australia, the US and the UK.
               </p>
             </div>
 
             {/* Coverage badges */}
-            <div className="flex flex-wrap items-center gap-2.5 pt-6 sm:pt-8 text-xs font-semibold text-navy">
-              <span className="px-3 py-1.5 rounded-full bg-white border border-[#E5E1D8] shadow-2xs inline-flex items-center gap-1.5">
+            <div className="flex flex-wrap items-center gap-2.5 pt-6 sm:pt-8 text-xs font-semibold text-white">
+              <span className="px-3 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] shadow-md inline-flex items-center gap-1.5">
                 <span>🇦🇺</span> Australia
               </span>
-              <span className="px-3 py-1.5 rounded-full bg-white border border-[#E5E1D8] shadow-2xs inline-flex items-center gap-1.5">
+              <span className="px-3 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] shadow-md inline-flex items-center gap-1.5">
                 <span>🇺🇸</span> United States
               </span>
-              <span className="px-3 py-1.5 rounded-full bg-white border border-[#E5E1D8] shadow-2xs inline-flex items-center gap-1.5">
+              <span className="px-3 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] shadow-md inline-flex items-center gap-1.5">
                 <span>🇬🇧</span> United Kingdom
               </span>
             </div>
@@ -95,54 +95,54 @@ export default function AboutPage() {
         </section>
 
         {/* SECTION 2: WHY MERIDEX */}
-        <section className="py-16 sm:py-24 bg-white border-b border-[#E5E1D8]">
+        <section className="py-16 sm:py-24 bg-[#0E1217] border-b border-[#222A38]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFECE6] border border-[#E5E1D8] text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-grey-600 mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-grey-400 mb-4">
               NAME &amp; ETHOS
             </div>
             
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy tracking-tight leading-tight mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight mb-4">
               Why Meridex
             </h2>
             
-            <p className="text-base sm:text-lg text-grey-600 mb-10">
+            <p className="text-base sm:text-lg text-grey-400 mb-10">
               The name comes from two words, merit and dexterity.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Merit Card */}
-              <div className="bg-[#F7F5F0] border border-[#E5E1D8] rounded-[24px] p-6 sm:p-8 flex flex-col justify-between">
+              <div className="bg-[#151A22] border border-[#222A38] rounded-[24px] p-6 sm:p-8 flex flex-col justify-between shadow-xl">
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-navy text-white flex items-center justify-center font-bold text-lg mb-5 shadow-xs">
+                  <div className="w-12 h-12 rounded-2xl bg-[#0B0F14] border border-[#222A38] text-white flex items-center justify-center font-bold text-lg mb-5 shadow-xs">
                     M
                   </div>
-                  <h3 className="text-xl font-bold text-navy mb-3">
+                  <h3 className="text-xl font-bold text-white mb-3">
                     Merit
                   </h3>
-                  <p className="text-sm sm:text-base text-grey-700 leading-relaxed">
+                  <p className="text-sm sm:text-base text-grey-300 leading-relaxed">
                     Merit is how we earn work. We start with a small pilot, you judge us on the results, and we continue only when the work has earned its place.
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-[#DDD8CD] text-xs font-semibold text-teal flex items-center gap-1.5">
+                <div className="mt-6 pt-4 border-t border-[#222A38] text-xs font-semibold text-teal flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4" />
                   <span>How We Earn Work</span>
                 </div>
               </div>
 
               {/* Dexterity Card */}
-              <div className="bg-[#F7F5F0] border border-[#E5E1D8] rounded-[24px] p-6 sm:p-8 flex flex-col justify-between">
+              <div className="bg-[#151A22] border border-[#222A38] rounded-[24px] p-6 sm:p-8 flex flex-col justify-between shadow-xl">
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-teal text-white flex items-center justify-center font-bold text-lg mb-5 shadow-xs">
                     D
                   </div>
-                  <h3 className="text-xl font-bold text-navy mb-3">
+                  <h3 className="text-xl font-bold text-white mb-3">
                     Dexterity
                   </h3>
-                  <p className="text-sm sm:text-base text-grey-700 leading-relaxed">
+                  <p className="text-sm sm:text-base text-grey-300 leading-relaxed">
                     Dexterity is how we keep it. Every task gets careful, precise handling, and every file is reviewed before it comes back to you.
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-[#DDD8CD] text-xs font-semibold text-teal flex items-center gap-1.5">
+                <div className="mt-6 pt-4 border-t border-[#222A38] text-xs font-semibold text-teal flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4" />
                   <span>How We Keep It</span>
                 </div>
@@ -153,13 +153,13 @@ export default function AboutPage() {
         </section>
 
         {/* SECTION 3: HOW WE WORK */}
-        <section className="py-16 sm:py-24 bg-[#F7F5F0] border-b border-[#E5E1D8]">
+        <section className="py-16 sm:py-24 bg-[#0B0F14] border-b border-[#222A38]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFECE6] border border-[#E5E1D8] text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-grey-600 mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-grey-400 mb-4">
               PRINCIPLES IN PRACTICE
             </div>
             
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy tracking-tight leading-tight mb-8">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight mb-8">
               How we work
             </h2>
 
@@ -169,15 +169,15 @@ export default function AboutPage() {
                 return (
                   <div
                     key={item.title}
-                    className="bg-white border border-[#E5E1D8] rounded-2xl p-5 sm:p-6 flex items-start gap-4 shadow-2xs hover:border-navy/20 transition-colors"
+                    className="bg-[#151A22] border border-[#222A38] rounded-2xl p-5 sm:p-6 flex items-start gap-4 shadow-md hover:border-teal/40 transition-colors"
                   >
-                    <div className="w-9 h-9 rounded-xl bg-[#EFECE6] flex items-center justify-center shrink-0 text-navy mt-0.5">
+                    <div className="w-9 h-9 rounded-xl bg-[#0B0F14] border border-[#222A38] flex items-center justify-center shrink-0 text-teal mt-0.5">
                       <Icon className="w-4 h-4 text-teal" />
                     </div>
                     <div>
-                      <h3 className="text-base sm:text-lg font-bold text-navy">
+                      <h3 className="text-base sm:text-lg font-bold text-white">
                         {item.title}{' '}
-                        <span className="font-normal text-grey-600 ml-1">
+                        <span className="font-normal text-grey-300 ml-1">
                           {item.desc}
                         </span>
                       </h3>
@@ -191,9 +191,9 @@ export default function AboutPage() {
         </section>
 
         {/* SECTION 4: LET'S TALK */}
-        <section className="py-16 sm:py-24 bg-white">
+        <section className="py-16 sm:py-24 bg-[#0E1217]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
-            <div className="relative rounded-[28px] sm:rounded-[36px] bg-navy overflow-hidden p-8 sm:p-12 lg:p-14 flex flex-col sm:flex-row items-center justify-between gap-8 shadow-2xl border border-navy-light/60">
+            <div className="relative rounded-[28px] sm:rounded-[36px] bg-[#151A22] overflow-hidden p-8 sm:p-12 lg:p-14 flex flex-col sm:flex-row items-center justify-between gap-8 shadow-2xl border border-[#222A38]">
               {/* Ambient Glows */}
               <div className="absolute top-0 right-0 -mr-16 -mt-16 w-80 h-80 rounded-full bg-teal/15 blur-3xl pointer-events-none" />
               <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-80 h-80 rounded-full bg-blue-500/15 blur-3xl pointer-events-none" />

@@ -89,18 +89,18 @@ export default function CountrySelection() {
   const [selectedCountry, setSelectedCountry] = useState<CountryData>(countries[0]);
 
   return (
-    <section id="regions" className="py-14 sm:py-20 lg:py-28 bg-[#F7F5F0] border-t border-[#E5E1D8] relative overflow-hidden w-full">
+    <section id="regions" className="py-14 sm:py-20 lg:py-28 bg-[#0B0F14] border-t border-[#222A38] relative overflow-hidden w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          <div className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-[#EFECE6] border border-[#E5E1D8] text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-grey-600 mb-3 sm:mb-4">
+          <div className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-grey-400 mb-3 sm:mb-4">
             CROSS-BORDER JURISDICTIONS
           </div>
-          <h2 className="text-2xl sm:text-4xl lg:text-[44px] font-bold text-navy tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-[44px] font-bold text-white tracking-tight leading-tight">
             Tailored for local finance regulations &amp; timezones
           </h2>
-          <p className="mt-3 text-grey-600 text-xs sm:text-base leading-relaxed">
+          <p className="mt-3 text-grey-400 text-xs sm:text-base leading-relaxed">
             We work with mortgage brokers, CPAs, and finance firms across Australia and the United States, with UK support launching soon.
           </p>
 
@@ -114,14 +114,14 @@ export default function CountrySelection() {
                   onClick={() => setSelectedCountry(country)}
                   className={`inline-flex items-center gap-1.5 sm:gap-2.5 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 border ${
                     isSelected
-                      ? 'bg-navy text-white border-navy shadow-md scale-102 sm:scale-105'
-                      : 'bg-white text-grey-700 border-[#E5E1D8] hover:bg-[#EFECE6] hover:text-navy'
+                      ? 'bg-[#2563EB] text-white border-[#2563EB] shadow-lg scale-102 sm:scale-105'
+                      : 'bg-[#151A22] text-grey-300 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
                   }`}
                 >
                   <span className="text-base">{country.flag}</span>
                   <span>{country.name}</span>
                   {country.status === 'upcoming' ? (
-                    <span className="text-[9px] sm:text-[10px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded-full font-bold">
+                    <span className="text-[9px] sm:text-[10px] bg-amber-950/60 text-amber-300 border border-amber-800/40 px-1.5 py-0.5 rounded-full font-bold">
                       Soon
                     </span>
                   ) : (
@@ -134,15 +134,15 @@ export default function CountrySelection() {
         </div>
 
         {/* MAP CONTAINER */}
-        <div className="relative bg-white border border-[#E5E1D8] rounded-[24px] sm:rounded-[36px] p-4 sm:p-10 lg:p-12 shadow-sm w-full overflow-hidden">
+        <div className="relative bg-[#11151C] border border-[#222A38] rounded-[24px] sm:rounded-[36px] p-4 sm:p-10 lg:p-12 shadow-2xl w-full overflow-hidden">
           
           {/* Top Bar inside Map Frame: Active Region Stats */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4 pb-4 sm:pb-6 mb-3 sm:mb-4 border-b border-[#E5E1D8]/80 text-xs text-grey-600">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4 pb-4 sm:pb-6 mb-3 sm:mb-4 border-b border-[#222A38] text-xs text-grey-400">
             <div className="flex items-center gap-2">
               <Compass className="w-4 h-4 text-teal shrink-0" />
-              <span className="font-bold text-navy truncate">Interactive Jurisdiction Map</span>
+              <span className="font-bold text-white truncate">Interactive Jurisdiction Map</span>
             </div>
-            <div className="flex items-center gap-3 text-[10px] sm:text-[11px] font-medium text-grey-500">
+            <div className="flex items-center gap-3 text-[10px] sm:text-[11px] font-medium text-grey-400">
               <span className="flex items-center gap-1">
                 <span className="w-2 h-2 rounded-full bg-blue-500" /> Aus &amp; US Active
               </span>
@@ -163,10 +163,10 @@ export default function CountrySelection() {
             >
               <defs>
                 <pattern id="realWorldDots" x="0" y="0" width="11" height="11" patternUnits="userSpaceOnUse">
-                  <circle cx="2" cy="2" r="1.3" className="text-grey-300" fill="currentColor" />
+                  <circle cx="2" cy="2" r="1.3" fill="#2D3748" />
                 </pattern>
                 <pattern id="realWorldDotsActive" x="0" y="0" width="11" height="11" patternUnits="userSpaceOnUse">
-                  <circle cx="2" cy="2" r="1.6" className="text-navy" fill="currentColor" />
+                  <circle cx="2" cy="2" r="1.6" fill="#14B8A6" />
                 </pattern>
               </defs>
 
@@ -189,7 +189,7 @@ export default function CountrySelection() {
               />
               <path
                 d="M 455,165 Q 570,165 590,245 Q 570,355 520,410 Q 455,350 445,250 Q 440,195 455,165 Z"
-                fill="url(#worldDots)"
+                fill="url(#realWorldDots)"
               />
               <path
                 d="M 570,60 Q 770,40 850,130 Q 820,230 700,250 Q 610,190 570,60 Z"
@@ -225,17 +225,17 @@ export default function CountrySelection() {
                         isSelected
                           ? c.status === 'upcoming'
                             ? 'bg-amber-400 animate-ping'
-                            : 'bg-blue-600 animate-ping'
-                          : 'opacity-0 group-hover:opacity-40 bg-grey-400'
+                            : 'bg-blue-500 animate-ping'
+                          : 'opacity-0 group-hover:opacity-40 bg-grey-600'
                       }`}
                     />
                     <span
-                      className={`relative w-3.5 sm:w-4 h-3.5 sm:h-4 rounded-full border-2 border-white shadow-xl transition-transform duration-300 ${
+                      className={`relative w-3.5 sm:w-4 h-3.5 sm:h-4 rounded-full border-2 border-[#11151C] shadow-xl transition-transform duration-300 ${
                         isSelected
                           ? c.status === 'upcoming'
-                            ? 'bg-amber-500 scale-125 ring-2 ring-amber-500/30'
-                            : 'bg-blue-600 scale-125 ring-2 ring-blue-600/30'
-                          : 'bg-grey-500'
+                            ? 'bg-amber-400 scale-125 ring-2 ring-amber-400/40'
+                            : 'bg-blue-500 scale-125 ring-2 ring-blue-500/40'
+                          : 'bg-grey-600'
                       }`}
                     />
                   </button>
@@ -251,33 +251,33 @@ export default function CountrySelection() {
                           : c.pinCoordinates.x > 70
                           ? 'right-0'
                           : 'left-1/2 -translate-x-1/2'
-                      } w-72 sm:w-80 bg-white/98 backdrop-blur-md rounded-2xl p-4 shadow-2xl border border-navy/20 animate-fade-in-up`}
+                      } w-72 sm:w-80 bg-[#151A22]/98 backdrop-blur-md rounded-2xl p-4 shadow-2xl border border-[#222A38] animate-fade-in-up`}
                     >
-                      <div className="flex items-center gap-2 mb-2 pb-2 border-b border-grey-100">
+                      <div className="flex items-center gap-2 mb-2 pb-2 border-b border-[#222A38]">
                         <span className="text-2xl">{c.flag}</span>
                         <div className="min-w-0 pr-1">
-                          <span className="text-xs font-bold text-navy block">{c.name}</span>
-                          <span className="text-[10px] text-grey-500 block leading-tight">{c.timezones}</span>
+                          <span className="text-xs font-bold text-white block">{c.name}</span>
+                          <span className="text-[10px] text-grey-400 block leading-tight">{c.timezones}</span>
                         </div>
                         {c.status === 'upcoming' ? (
-                          <span className="text-[9px] bg-amber-50 text-amber-700 font-bold px-2 py-0.5 rounded-full ml-auto shrink-0">
+                          <span className="text-[9px] bg-amber-950/60 text-amber-300 border border-amber-800/40 font-bold px-2 py-0.5 rounded-full ml-auto shrink-0">
                             2027
                           </span>
                         ) : (
-                          <span className="text-[9px] bg-emerald-50 text-emerald-700 font-bold px-2 py-0.5 rounded-full ml-auto flex items-center gap-1 shrink-0">
-                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                          <span className="text-[9px] bg-emerald-950/60 text-emerald-400 border border-emerald-800/40 font-bold px-2 py-0.5 rounded-full ml-auto flex items-center gap-1 shrink-0">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                             Active Coverage
                           </span>
                         )}
                       </div>
 
-                      <p className="text-[11.5px] sm:text-xs text-grey-700 leading-snug font-normal">
+                      <p className="text-[11.5px] sm:text-xs text-grey-300 leading-snug font-normal">
                         &ldquo;{c.quote}&rdquo;
                       </p>
 
-                      <div className="mt-3 pt-2 border-t border-grey-100 flex items-center justify-between text-[10px] text-grey-500 font-medium">
+                      <div className="mt-3 pt-2 border-t border-[#222A38] flex items-center justify-between text-[10px] text-grey-400 font-medium">
                         <span className="text-teal font-semibold">{c.role}</span>
-                        <span className="text-blue-600 font-bold">Selected ✓</span>
+                        <span className="text-blue-400 font-bold">Selected ✓</span>
                       </div>
                     </div>
                   )}
@@ -287,20 +287,20 @@ export default function CountrySelection() {
 
           </div>
 
-          {/* Mobile Quote Snippet (Rendered inline to guarantee zero horizontal clipping on 350px) */}
-          <div className="sm:hidden mt-3 p-3.5 rounded-2xl bg-[#EFECE6] border border-[#DDD8CD] text-left">
+          {/* Mobile Quote Snippet */}
+          <div className="sm:hidden mt-3 p-3.5 rounded-2xl bg-[#151A22] border border-[#222A38] text-left">
             <div className="flex items-center gap-2 mb-1">
               <span className="text-lg">{selectedCountry.flag}</span>
-              <span className="text-xs font-bold text-navy">{selectedCountry.name}</span>
+              <span className="text-xs font-bold text-white">{selectedCountry.name}</span>
               <span className="text-[9px] text-teal font-semibold ml-auto">{selectedCountry.status === 'upcoming' ? 'Launching 2027' : 'Active Coverage'}</span>
             </div>
-            <p className="text-[11px] text-grey-700 leading-snug">
+            <p className="text-[11px] text-grey-300 leading-snug">
               &ldquo;{selectedCountry.quote}&rdquo;
             </p>
           </div>
 
           {/* SELECTED JURISDICTION DEEP-DIVE CARD */}
-          <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-[#E5E1D8] bg-[#F7F5F0] rounded-[20px] sm:rounded-[26px] p-5 sm:p-8">
+          <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-[#222A38] bg-[#151A22] border border-[#222A38] rounded-[20px] sm:rounded-[26px] p-5 sm:p-8">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-5 sm:gap-6 items-start">
               
               {/* Region Profile */}
@@ -308,7 +308,7 @@ export default function CountrySelection() {
                 <div className="flex items-center gap-2.5">
                   <span className="text-3xl sm:text-4xl">{selectedCountry.flag}</span>
                   <div>
-                    <h3 className="text-base sm:text-xl font-bold text-navy leading-tight">
+                    <h3 className="text-base sm:text-xl font-bold text-white leading-tight">
                       {selectedCountry.name}
                     </h3>
                     <span className="text-[11px] sm:text-xs font-semibold text-teal block mt-0.5">
@@ -317,26 +317,26 @@ export default function CountrySelection() {
                   </div>
                 </div>
 
-                <div className="mt-3 sm:mt-4 space-y-2 text-xs text-grey-600">
+                <div className="mt-3 sm:mt-4 space-y-2 text-xs text-grey-300">
                   <div className="flex items-center gap-2 font-medium">
-                    <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-navy shrink-0" />
+                    <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-teal shrink-0" />
                     <span>{selectedCountry.timezones}</span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-navy shrink-0 mt-0.5" />
-                    <span className="leading-snug">{selectedCountry.regulation}</span>
+                    <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-teal shrink-0 mt-0.5" />
+                    <span className="leading-snug text-grey-400">{selectedCountry.regulation}</span>
                   </div>
                 </div>
               </div>
 
               {/* Core Deliverables */}
               <div className="md:col-span-5">
-                <span className="text-[10px] sm:text-[11px] font-bold text-navy uppercase tracking-wider block mb-2 sm:mb-2.5">
+                <span className="text-[10px] sm:text-[11px] font-bold text-white uppercase tracking-wider block mb-2 sm:mb-2.5">
                   Regional Workflows &amp; Tool Stack:
                 </span>
                 <div className="space-y-1.5 sm:space-y-2 mb-3 sm:mb-4">
                   {(selectedCountry?.specialties || []).map((spec) => (
-                    <div key={spec} className="flex items-start gap-2 text-xs text-grey-700">
+                    <div key={spec} className="flex items-start gap-2 text-xs text-grey-300">
                       <CheckCircle2 className="w-3.5 h-3.5 text-teal shrink-0 mt-0.5" />
                       <span className="leading-snug">{spec}</span>
                     </div>
@@ -344,11 +344,11 @@ export default function CountrySelection() {
                 </div>
 
                 <div className="flex flex-wrap items-center gap-1.5 pt-1">
-                  <span className="text-[10px] sm:text-[11px] font-semibold text-grey-500 mr-1">Tools we work in:</span>
+                  <span className="text-[10px] sm:text-[11px] font-semibold text-grey-400 mr-1">Tools we work in:</span>
                   {(selectedCountry?.commonTools || []).map((tool) => (
                     <span
                       key={tool}
-                      className="text-[9px] sm:text-[10px] font-bold bg-white border border-[#E5E1D8] text-navy px-2 py-0.5 rounded-full"
+                      className="text-[9px] sm:text-[10px] font-bold bg-[#0B0F14] border border-[#222A38] text-grey-200 px-2 py-0.5 rounded-full"
                     >
                       {tool}
                     </span>
@@ -360,12 +360,12 @@ export default function CountrySelection() {
               <div className="md:col-span-3 flex flex-col items-stretch md:items-end justify-between h-full pt-2">
                 <a
                   href={`/contact?country=${encodeURIComponent(selectedCountry.name)}`}
-                  className="w-full inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 rounded-full bg-navy hover:bg-navy-light text-white text-xs font-semibold transition-all shadow-sm"
+                  className="w-full inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 rounded-full bg-[#2563EB] hover:bg-blue-600 text-white text-xs font-semibold transition-all shadow-md"
                 >
                   <span>Launch Pilot in {selectedCountry.name}</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-teal-light" />
+                  <ArrowRight className="w-3.5 h-3.5 text-white" />
                 </a>
-                <p className="text-[10px] sm:text-[11px] text-grey-500 mt-2 text-center md:text-right">
+                <p className="text-[10px] sm:text-[11px] text-grey-400 mt-2 text-center md:text-right">
                   No long-term lock-in. Turnaround agreed upfront.
                 </p>
               </div>

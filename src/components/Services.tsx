@@ -191,7 +191,7 @@ export default function Services() {
       : ukServices;
 
   return (
-    <section id="services" className="bg-white py-16 sm:py-20 lg:py-28 rounded-t-[32px] sm:rounded-t-[44px] shadow-sm border-t border-[#E5E1D8]">
+    <section id="services" className="bg-[#0E1217] py-16 sm:py-20 lg:py-28 rounded-t-[32px] sm:rounded-t-[44px] shadow-2xl border-t border-[#222A38]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -199,10 +199,10 @@ export default function Services() {
           <span className="text-xs font-bold uppercase tracking-wider text-teal">
             Dedicated Outsourcing Specialists
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-navy tracking-tight mt-2 leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-white tracking-tight mt-2 leading-tight">
             Our Services
           </h2>
-          <p className="mt-3 text-grey-600 text-sm sm:text-lg leading-relaxed max-w-2xl mx-auto [text-wrap:balance]">
+          <p className="mt-3 text-grey-400 text-sm sm:text-lg leading-relaxed max-w-2xl mx-auto [text-wrap:balance]">
             Detail-heavy admin and financial work, handled with care and precision, so your team can focus on clients, relationships, and business growth.
           </p>
 
@@ -212,8 +212,8 @@ export default function Services() {
               onClick={() => setActiveTab('australia')}
               className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 border ${
                 activeTab === 'australia'
-                  ? 'bg-navy text-white border-navy shadow-md'
-                  : 'bg-[#F7F5F0] text-grey-700 border-[#E5E1D8] hover:bg-[#EFECE6] hover:text-navy'
+                  ? 'bg-[#2563EB] text-white border-[#2563EB] shadow-lg'
+                  : 'bg-[#151A22] text-grey-300 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
               }`}
             >
               <span className="text-base">🇦🇺</span>
@@ -224,8 +224,8 @@ export default function Services() {
               onClick={() => setActiveTab('usa')}
               className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 border ${
                 activeTab === 'usa'
-                  ? 'bg-navy text-white border-navy shadow-md'
-                  : 'bg-[#F7F5F0] text-grey-700 border-[#E5E1D8] hover:bg-[#EFECE6] hover:text-navy'
+                  ? 'bg-[#2563EB] text-white border-[#2563EB] shadow-lg'
+                  : 'bg-[#151A22] text-grey-300 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
               }`}
             >
               <span className="text-base">🇺🇸</span>
@@ -236,13 +236,13 @@ export default function Services() {
               onClick={() => setActiveTab('uk')}
               className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 border ${
                 activeTab === 'uk'
-                  ? 'bg-navy text-white border-navy shadow-md'
-                  : 'bg-[#F7F5F0] text-grey-700 border-[#E5E1D8] hover:bg-[#EFECE6] hover:text-navy'
+                  ? 'bg-[#2563EB] text-white border-[#2563EB] shadow-lg'
+                  : 'bg-[#151A22] text-grey-300 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
               }`}
             >
               <span className="text-base">🇬🇧</span>
               <span>United Kingdom</span>
-              <span className="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full font-bold ml-1">
+              <span className="text-[10px] bg-amber-950/60 text-amber-300 border border-amber-800/40 px-2 py-0.5 rounded-full font-bold ml-1">
                 Launching 2027
               </span>
             </button>
@@ -260,31 +260,31 @@ export default function Services() {
                 key={service.id}
                 className={`group rounded-[22px] sm:rounded-[26px] p-5 sm:p-7 transition-all duration-300 flex flex-col justify-between border ${
                   isFeatured
-                    ? 'bg-[#EFECE6] border-[#DDD8CD] shadow-sm hover:shadow-md'
-                    : 'bg-[#F7F5F0] border-[#E5E1D8]/80 hover:bg-[#EFECE6] hover:border-[#DDD8CD]'
+                    ? 'bg-[#151A22] border-[#2E3846] shadow-xl hover:border-teal/50'
+                    : 'bg-[#11151C] border-[#222A38] hover:bg-[#151A22] hover:border-[#2E3846]'
                 }`}
               >
                 <div>
                   {/* Card Top */}
                   <div className="flex items-center justify-between mb-5">
-                    <div className="w-11 h-11 rounded-2xl bg-white border border-[#E5E1D8] flex items-center justify-center text-navy shadow-xs group-hover:scale-105 transition-transform duration-200">
-                      <Icon className="w-5 h-5 text-navy" />
+                    <div className="w-11 h-11 rounded-2xl bg-[#0B0F14] border border-[#222A38] flex items-center justify-center text-teal shadow-xs group-hover:scale-105 transition-transform duration-200">
+                      <Icon className="w-5 h-5 text-teal" />
                     </div>
-                    <span className="text-[11px] font-semibold text-grey-600 bg-white/80 px-3 py-1 rounded-full border border-[#E5E1D8]">
+                    <span className="text-[11px] font-semibold text-grey-300 bg-[#0B0F14] px-3 py-1 rounded-full border border-[#222A38]">
                       {service.category}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-lg sm:text-xl font-bold text-navy tracking-tight mb-3.5">
+                  <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight mb-3.5">
                     {service.title}
                   </h3>
 
                   {/* Checklist */}
-                  <ul className="space-y-2 text-xs sm:text-sm text-grey-700">
+                  <ul className="space-y-2 text-xs sm:text-sm text-grey-300">
                     {service.subServices.map((sub, idx) => (
                       <li key={idx} className="flex items-start gap-2.5">
-                        <span className="w-4 h-4 rounded-full bg-white border border-[#E5E1D8] flex items-center justify-center shrink-0 mt-0.5">
+                        <span className="w-4 h-4 rounded-full bg-[#0B0F14] border border-[#222A38] flex items-center justify-center shrink-0 mt-0.5">
                           <Check className="w-2.5 h-2.5 text-teal" />
                         </span>
                         <span className="leading-snug">{sub}</span>
@@ -293,11 +293,11 @@ export default function Services() {
                   </ul>
                 </div>
 
-                <div className="pt-5 mt-6 border-t border-[#DDD8CD] flex items-center justify-between">
-                  <span className="text-[11px] font-medium text-grey-500">Pilot ready</span>
+                <div className="pt-5 mt-6 border-t border-[#222A38] flex items-center justify-between">
+                  <span className="text-[11px] font-medium text-grey-400">Pilot ready</span>
                   <a
                     href={`/contact?service=${encodeURIComponent(service.title)}`}
-                    className="inline-flex items-center gap-1 text-xs font-bold text-navy hover:text-teal transition-colors"
+                    className="inline-flex items-center gap-1 text-xs font-bold text-teal hover:text-teal-light transition-colors"
                   >
                     <span>Pilot this task</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -308,27 +308,27 @@ export default function Services() {
           })}
 
           {/* Custom Workflow Card */}
-          <div className="rounded-[22px] sm:rounded-[26px] p-5 sm:p-7 bg-navy text-white flex flex-col justify-between border border-navy-light shadow-md">
+          <div className="rounded-[22px] sm:rounded-[26px] p-5 sm:p-7 bg-[#151A22] text-white flex flex-col justify-between border border-[#2E3846] shadow-xl">
             <div>
-              <div className="w-11 h-11 rounded-2xl bg-white/10 flex items-center justify-center text-white mb-5">
+              <div className="w-11 h-11 rounded-2xl bg-[#0B0F14] border border-[#222A38] flex items-center justify-center text-teal-light mb-5">
                 <Globe className="w-5 h-5 text-teal-light" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight mb-2">
                 Need a Custom Task or SOP?
               </h3>
-              <p className="text-xs sm:text-sm text-grey-300 leading-relaxed mb-4">
+              <p className="text-xs sm:text-sm text-grey-400 leading-relaxed mb-4">
                 Have specific aggregator guidelines or specialized platforms? We build custom pilots calibrated directly around your firm&apos;s internal processes.
               </p>
-              <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-xs text-grey-300 space-y-1">
+              <div className="p-3 rounded-xl bg-[#0B0F14] border border-[#222A38] text-xs text-grey-300 space-y-1">
                 <p className="font-semibold text-white">Coverage:</p>
                 <p>Australia &amp; USA Active · UK Pilot Available</p>
               </div>
             </div>
 
-            <div className="pt-5 mt-6 border-t border-white/10">
+            <div className="pt-5 mt-6 border-t border-[#222A38]">
               <a
                 href="/contact"
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-white text-navy font-semibold text-xs hover:bg-grey-100 transition-colors"
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-[#2563EB] hover:bg-blue-600 text-white font-semibold text-xs transition-colors shadow-md"
               >
                 <span>Request Custom Pilot</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -338,38 +338,38 @@ export default function Services() {
         </div>
 
         {/* Seamless Integration & Software Reassurance Section */}
-        <div className="mt-12 sm:mt-16 bg-[#F7F5F0] border border-[#E5E1D8] rounded-[24px] sm:rounded-[32px] p-6 sm:p-10">
+        <div className="mt-12 sm:mt-16 bg-[#11151C] border border-[#222A38] rounded-[24px] sm:rounded-[32px] p-6 sm:p-10 shadow-2xl">
           <div className="max-w-4xl mx-auto space-y-6">
             <div className="text-center sm:text-left">
               <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-teal">
                 Seamless Platform Integration
               </span>
-              <h3 className="text-xl sm:text-2xl font-bold text-navy mt-1">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mt-1">
                 No forced platform migrations.
               </h3>
-              <p className="text-xs sm:text-sm text-grey-600 mt-2 leading-relaxed">
+              <p className="text-xs sm:text-sm text-grey-400 mt-2 leading-relaxed">
                 Our specialists integrate seamlessly into the accounting software, broker CRMs, and document tools your team already relies on.
               </p>
             </div>
 
             {/* In-House / Proprietary Software Callout Card */}
-            <div className="p-4 sm:p-6 rounded-2xl bg-white border border-[#E5E1D8] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="p-4 sm:p-6 rounded-2xl bg-[#151A22] border border-[#222A38] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div className="flex items-start sm:items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#EFECE6] flex items-center justify-center text-navy shrink-0 border border-[#DDD8CD]">
+                <div className="w-10 h-10 rounded-xl bg-[#0B0F14] flex items-center justify-center text-teal shrink-0 border border-[#222A38]">
                   <Workflow className="w-5 h-5 text-teal" />
                 </div>
                 <div>
-                  <h4 className="text-xs sm:text-sm font-bold text-navy">
+                  <h4 className="text-xs sm:text-sm font-bold text-white">
                     Using proprietary or customized software?
                   </h4>
-                  <p className="text-xs text-grey-600 mt-0.5">
+                  <p className="text-xs text-grey-400 mt-0.5">
                     We adapt directly to your bespoke internal tools and screen recordings during onboarding.
                   </p>
                 </div>
               </div>
               <a
                 href="/contact"
-                className="w-full sm:w-auto text-center whitespace-nowrap px-5 py-2.5 rounded-full bg-navy hover:bg-navy-light text-white text-xs font-semibold transition-all shadow-xs shrink-0"
+                className="w-full sm:w-auto text-center whitespace-nowrap px-5 py-2.5 rounded-full bg-[#2563EB] hover:bg-blue-600 text-white text-xs font-semibold transition-all shadow-md shrink-0"
               >
                 Confirm Compatibility
               </a>

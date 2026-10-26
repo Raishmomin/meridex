@@ -91,18 +91,18 @@ export default function Testimonials(): React.JSX.Element {
       : testimonials.filter((t) => t.serviceCategory === filter);
 
   return (
-    <section id="testimonials" className="py-20 lg:py-28 bg-[#F7F5F0]">
+    <section id="testimonials" className="py-20 lg:py-28 bg-[#0B0F14] border-t border-[#222A38]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header with pill tag */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#EFECE6] border border-[#E5E1D8] text-[11px] font-bold uppercase tracking-widest text-grey-600 mb-4">
+          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[11px] font-bold uppercase tracking-widest text-grey-400 mb-4">
             CLIENT SUCCESS &amp; VERIFIED FEEDBACK
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-navy tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-white tracking-tight leading-tight">
             What our clients say
           </h2>
-          <p className="mt-3 text-grey-600 text-base sm:text-lg">
+          <p className="mt-3 text-grey-400 text-base sm:text-lg">
             Hear from finance industry leaders in Australia and the USA who trust Meridex for their most critical operations.
           </p>
 
@@ -114,8 +114,8 @@ export default function Testimonials(): React.JSX.Element {
                 onClick={() => setFilter(cat)}
                 className={`px-4 py-2 rounded-full text-xs font-semibold transition-all duration-200 border ${
                   filter === cat
-                    ? 'bg-navy text-white border-navy shadow-sm'
-                    : 'bg-white text-grey-700 border-[#E5E1D8] hover:bg-[#EFECE6] hover:text-navy'
+                    ? 'bg-[#2563EB] text-white border-[#2563EB] shadow-md'
+                    : 'bg-[#151A22] text-grey-300 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
                 }`}
               >
                 {cat}
@@ -124,17 +124,17 @@ export default function Testimonials(): React.JSX.Element {
           </div>
         </div>
 
-        {/* 4-COLUMN TALL UPGRADED CARDS (LUXURA THEME ELEVATED WITH VERIFIED METRICS) */}
+        {/* 4-COLUMN TALL UPGRADED CARDS */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {filtered.map((item) => (
             <div
               key={item.id}
-              className="bg-[#EFECE6] border border-[#E5E1D8] rounded-[22px] sm:rounded-[28px] p-5 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1 min-h-[360px] sm:min-h-[420px] group relative overflow-hidden"
+              className="bg-[#151A22] border border-[#222A38] rounded-[22px] sm:rounded-[28px] p-5 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:border-teal/40 min-h-[360px] sm:min-h-[420px] group relative overflow-hidden"
             >
               {/* Card Top: Metric Badge & Country Indicator */}
               <div>
                 <div className="flex items-center justify-between gap-2 mb-4 sm:mb-5">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-white text-navy border border-[#E5E1D8] shadow-2xs">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-[#0B0F14] text-white border border-[#222A38] shadow-xs">
                     <Sparkles className="w-3 h-3 text-teal" />
                     <span>{item.metric}</span>
                   </span>
@@ -158,15 +158,15 @@ export default function Testimonials(): React.JSX.Element {
                 </div>
 
                 {/* Quote Text */}
-                <p className="text-sm text-grey-800 leading-relaxed font-normal">
+                <p className="text-sm text-grey-300 leading-relaxed font-normal">
                   &ldquo;{item.quote}&rdquo;
                 </p>
               </div>
 
               {/* Author footer at bottom with round circular photo and clean credentials */}
-              <div className="pt-6 mt-6 border-t border-[#DDD8CD]/80">
+              <div className="pt-6 mt-6 border-t border-[#222A38]">
                 <div className="flex items-center gap-3.5 mb-2.5">
-                  <div className="w-11 h-11 rounded-full overflow-hidden bg-[#DDD8CD] shrink-0 border-2 border-white shadow-xs">
+                  <div className="w-11 h-11 rounded-full overflow-hidden bg-[#0B0F14] shrink-0 border-2 border-[#222A38] shadow-xs">
                     <div
                       className="w-full h-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
                       style={{ backgroundImage: `url('${item.avatarUrl}')` }}
@@ -175,25 +175,25 @@ export default function Testimonials(): React.JSX.Element {
                     />
                   </div>
                   <div className="min-w-0">
-                    <h3 className="font-bold text-sm text-navy truncate">
+                    <h3 className="font-bold text-sm text-white truncate">
                       {item.clientName}
                     </h3>
-                    <p className="text-[11px] text-grey-600 truncate font-medium">
+                    <p className="text-[11px] text-grey-400 truncate font-medium">
                       {item.role}
                     </p>
-                    <p className="text-[10px] text-grey-500 truncate">
+                    <p className="text-[10px] text-grey-400 truncate">
                       {item.company}
                     </p>
                   </div>
                 </div>
 
                 {/* Verified SLA Audit Footer */}
-                <div className="pt-2 border-t border-[#DDD8CD]/40 flex items-center justify-between text-[10px] text-grey-500 font-medium">
-                  <span className="flex items-center gap-1 text-emerald-800 font-semibold">
-                    <ShieldCheck className="w-3 h-3 text-emerald-600" />
+                <div className="pt-2 border-t border-[#222A38] flex items-center justify-between text-[10px] text-grey-400 font-medium">
+                  <span className="flex items-center gap-1 text-emerald-400 font-semibold">
+                    <ShieldCheck className="w-3 h-3 text-emerald-400" />
                     {item.verifiedSLA}
                   </span>
-                  <span className="text-navy">{item.serviceCategory}</span>
+                  <span className="text-white">{item.serviceCategory}</span>
                 </div>
               </div>
             </div>
@@ -201,19 +201,19 @@ export default function Testimonials(): React.JSX.Element {
         </div>
 
         {/* Bottom Social Proof Bar */}
-        <div className="mt-12 text-center flex flex-wrap items-center justify-center gap-6 text-xs text-grey-600">
+        <div className="mt-12 text-center flex flex-wrap items-center justify-center gap-6 text-xs text-grey-400">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-teal" />
-            <span className="font-semibold text-navy">100% Pre-Delivery Second-Level Review</span>
+            <span className="font-semibold text-white">100% Pre-Delivery Second-Level Review</span>
           </div>
-          <span className="text-grey-300">·</span>
+          <span className="text-grey-600">·</span>
           <div className="flex items-center gap-2">
-            <span className="font-semibold text-navy">4.9 / 5.0 Average Pilot Satisfaction</span>
+            <span className="font-semibold text-white">4.9 / 5.0 Average Pilot Satisfaction</span>
           </div>
-          <span className="text-grey-300">·</span>
+          <span className="text-grey-600">·</span>
           <a
             href="/contact"
-            className="font-bold text-navy hover:text-teal inline-flex items-center gap-1"
+            className="font-bold text-teal hover:text-teal-light inline-flex items-center gap-1"
           >
             <span>Start your own trial pilot</span>
             <ArrowRight className="w-3.5 h-3.5" />
