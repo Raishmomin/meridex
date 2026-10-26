@@ -34,16 +34,16 @@ const countries: CountryData[] = [
     quote: 'Document verification, lodgement support, BAS preparation & Xero reconciliations.',
     role: 'Active Support',
     pinCoordinates: { x: 82.5, y: 73.5 },
-    timezones: 'overlap with AEST / AEDT business hours, by arrangement',
+    timezones: 'Overlap with AEST / AEDT business hours, by arrangement',
     specialties: [
       'Document collection and verification for mortgage brokers',
       'BAS prep and payroll support',
       'Application prep and lodgement support',
       'Bank and credit card reconciliations',
     ],
-    regulation: 'client data handled under strict confidentiality, built around APPs',
+    regulation: 'Client data handled under strict confidentiality, built around APPs',
     commonTools: ['Xero', 'MYOB', 'BrokerEngine', 'ApplyOnline'],
-    clientCount: 'now taking pilot clients',
+    clientCount: 'Now taking pilot clients',
   },
   {
     id: 'usa',
@@ -53,16 +53,16 @@ const countries: CountryData[] = [
     quote: 'QuickBooks bookkeeping, 1099 payroll reviews, and mortgage 1003 file preparation.',
     role: 'Active Support',
     pinCoordinates: { x: 23, y: 38 },
-    timezones: 'overlap with your business hours, by arrangement',
+    timezones: 'Overlap with your business hours, by arrangement',
     specialties: [
       'AP / AR support in QuickBooks Online',
       'Bank and credit card reconciliations',
       '1099 and W-2 year end data preparation',
       'Mortgage 1003 file preparation and document checks',
     ],
-    regulation: 'confidentiality agreements and access controls on every file',
+    regulation: 'Confidentiality agreements and access controls on every file',
     commonTools: ['QuickBooks Online', 'Encompass', 'Calyx Point', 'Dext'],
-    clientCount: 'now taking pilot clients',
+    clientCount: 'Now taking pilot clients',
   },
   {
     id: 'uk',
@@ -70,7 +70,7 @@ const countries: CountryData[] = [
     flag: '🇬🇧',
     status: 'upcoming',
     quote: 'Mortgage file prep for your FCA-authorised adviser, VAT workpapers, and payroll support.',
-    role: 'Launching Q3 2026',
+    role: 'Launching 2027',
     pinCoordinates: { x: 48.5, y: 26 },
     timezones: 'GMT / BST Local Business Hours',
     specialties: [
@@ -79,9 +79,9 @@ const countries: CountryData[] = [
       'Xero UK Payroll & CIS Processing',
       'Bank and credit card reconciliations',
     ],
-    regulation: 'confidentiality-first data handling',
+    regulation: 'Confidentiality-first data handling',
     commonTools: ['Xero UK', 'FreeAgent', 'Smartr365'],
-    clientCount: 'now taking pilot clients',
+    clientCount: 'Launching 2027 · Register interest',
   },
 ];
 
@@ -243,20 +243,28 @@ export default function CountrySelection() {
                   {/* FLOATING SPEECH CARD ON DESKTOP */}
                   {isSelected && (
                     <div
-                      className="hidden sm:block cursor-default absolute z-30 left-1/2 -translate-x-1/2 bottom-8 w-68 sm:w-80 bg-white/98 backdrop-blur-md rounded-2xl p-4 shadow-2xl border border-navy/20 animate-fade-in-up"
+                      className={`hidden sm:block cursor-default absolute z-30 ${
+                        c.pinCoordinates.y < 45 ? 'top-9' : 'bottom-9'
+                      } ${
+                        c.pinCoordinates.x < 35
+                          ? 'left-0'
+                          : c.pinCoordinates.x > 70
+                          ? 'right-0'
+                          : 'left-1/2 -translate-x-1/2'
+                      } w-72 sm:w-80 bg-white/98 backdrop-blur-md rounded-2xl p-4 shadow-2xl border border-navy/20 animate-fade-in-up`}
                     >
                       <div className="flex items-center gap-2 mb-2 pb-2 border-b border-grey-100">
                         <span className="text-2xl">{c.flag}</span>
-                        <div className="min-w-0">
-                          <span className="text-xs font-bold text-navy truncate block">{c.name}</span>
-                          <span className="text-[10px] text-grey-500 block truncate">{c.timezones}</span>
+                        <div className="min-w-0 pr-1">
+                          <span className="text-xs font-bold text-navy block">{c.name}</span>
+                          <span className="text-[10px] text-grey-500 block leading-tight">{c.timezones}</span>
                         </div>
                         {c.status === 'upcoming' ? (
-                          <span className="text-[9px] bg-amber-50 text-amber-700 font-bold px-2 py-0.5 rounded-full ml-auto">
-                            Q3 2026
+                          <span className="text-[9px] bg-amber-50 text-amber-700 font-bold px-2 py-0.5 rounded-full ml-auto shrink-0">
+                            2027
                           </span>
                         ) : (
-                          <span className="text-[9px] bg-emerald-50 text-emerald-700 font-bold px-2 py-0.5 rounded-full ml-auto flex items-center gap-1">
+                          <span className="text-[9px] bg-emerald-50 text-emerald-700 font-bold px-2 py-0.5 rounded-full ml-auto flex items-center gap-1 shrink-0">
                             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                             Active Coverage
                           </span>
@@ -284,7 +292,7 @@ export default function CountrySelection() {
             <div className="flex items-center gap-2 mb-1">
               <span className="text-lg">{selectedCountry.flag}</span>
               <span className="text-xs font-bold text-navy">{selectedCountry.name}</span>
-              <span className="text-[9px] text-teal font-semibold ml-auto">{selectedCountry.status === 'upcoming' ? 'Q3 2026' : 'Active Coverage'}</span>
+              <span className="text-[9px] text-teal font-semibold ml-auto">{selectedCountry.status === 'upcoming' ? 'Launching 2027' : 'Active Coverage'}</span>
             </div>
             <p className="text-[11px] text-grey-700 leading-snug">
               &ldquo;{selectedCountry.quote}&rdquo;
@@ -336,7 +344,7 @@ export default function CountrySelection() {
                 </div>
 
                 <div className="flex flex-wrap items-center gap-1.5 pt-1">
-                  <span className="text-[10px] sm:text-[11px] font-semibold text-grey-500 mr-1">tools we work in:</span>
+                  <span className="text-[10px] sm:text-[11px] font-semibold text-grey-500 mr-1">Tools we work in:</span>
                   {(selectedCountry?.commonTools || []).map((tool) => (
                     <span
                       key={tool}
@@ -358,7 +366,7 @@ export default function CountrySelection() {
                   <ArrowRight className="w-3.5 h-3.5 text-teal-light" />
                 </a>
                 <p className="text-[10px] sm:text-[11px] text-grey-500 mt-2 text-center md:text-right">
-                  no long term lock-in. Turnround agreed upfront.
+                  No long-term lock-in. Turnaround agreed upfront.
                 </p>
               </div>
 

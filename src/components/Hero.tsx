@@ -4,50 +4,31 @@ import React, { useState } from 'react';
 import {
   ArrowRight,
   CheckCircle2,
-  TrendingUp,
   ShieldCheck,
   UserCheck,
-  Lock,
-  Clock,
-  Sparkles,
 } from 'lucide-react';
 
-interface StatusItem {
+interface QualityItem {
   id: string;
   title: string;
-  status: 'completed' | 'in-progress';
   category: string;
-  time: string;
 }
 
-const statusItems: StatusItem[] = [
+const qualityGuarantees: QualityItem[] = [
   {
     id: '1',
-    title: 'Application prepared',
-    status: 'completed',
-    category: 'Loan Processing',
-    time: '10m ago',
+    title: 'Second-level review on every file',
+    category: 'Quality Assurance',
   },
   {
     id: '2',
-    title: 'Documents verified',
-    status: 'completed',
-    category: 'Compliance & KYC',
-    time: '25m ago',
+    title: 'Strict client data access controls',
+    category: 'Confidentiality',
   },
   {
     id: '3',
-    title: 'Bank reconciliation completed',
-    status: 'completed',
-    category: 'Bookkeeping',
-    time: '1h ago',
-  },
-  {
-    id: '4',
-    title: 'Payroll ready for review',
-    status: 'in-progress',
-    category: 'Payroll Services',
-    time: 'In review',
+    title: 'Named point of contact & regular updates',
+    category: 'Direct Communication',
   },
 ];
 
@@ -74,18 +55,18 @@ export default function Hero() {
             {/* Pill Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#EFECE6] border border-[#E5E1D8] text-navy text-[11px] sm:text-xs font-semibold tracking-wide max-w-full">
               <span className="w-2 h-2 rounded-full bg-teal shrink-0 animate-pulse" />
-              <span className="truncate">Australia &amp; USA · UK Coming Soon</span>
+              <span className="truncate">Australia &amp; USA · UK Launching 2027</span>
             </div>
 
             {/* H1 Headline - Responsive font size down to 320px screens */}
             <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-bold text-navy leading-[1.15] tracking-tight break-words w-full">
-              Outsource the admin work slowing your business down.
+              Empower your business growth with reliable and efficient administrative support.
             </h1>
 
             {/* Subheadline */}
             <p className="text-sm sm:text-lg text-grey-600 leading-relaxed max-w-xl">
-              Meridex supports mortgage brokers, insurance brokers, accountants and finance firms
-              with accurate document, bookkeeping, tax and payroll support—so you can focus on clients
+              Meridex Solutions supports mortgage brokers, insurance brokers, accountants and finance firms
+              with accurate documents maintenance, bookkeeping, tax and payroll support—so you can focus on clients
               and growth.
             </p>
 
@@ -130,7 +111,7 @@ export default function Hero() {
                   href="/#how-it-works"
                   className="hover:text-navy underline underline-offset-4 decoration-grey-300"
                 >
-                  How the Pilot works
+                  How the Pilot Works
                 </a>
               </div>
             </div>
@@ -168,53 +149,48 @@ export default function Hero() {
                 {/* Scrim */}
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent pointer-events-none" />
 
-                {/* Floating Analytic Mini Card (Desktop/Tablet) */}
-                <div className="absolute bottom-4 left-4 z-20 bg-white/95 backdrop-blur-md rounded-xl p-3 shadow-md border border-white/60 max-w-[180px] hidden sm:block animate-float">
+                {/* Floating Pilot Guarantee Card (Desktop/Tablet) */}
+                <div className="absolute bottom-4 left-4 z-20 bg-white/95 backdrop-blur-md rounded-xl p-3 shadow-md border border-white/60 max-w-[200px] hidden sm:block animate-float">
                   <div className="flex items-center justify-between gap-2 mb-1.5">
-                    <span className="text-[10px] font-bold text-grey-500 uppercase">Turnaround</span>
+                    <span className="text-[10px] font-bold text-navy uppercase tracking-wider">Start Small</span>
                     <span className="px-1.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[9px] font-bold">
-                      Agreed SLA
+                      No Lock-in
                     </span>
                   </div>
-                  <div className="h-6 flex items-end gap-1 pt-1">
-                    <div className="w-2 bg-grey-200 rounded-t h-3" />
-                    <div className="w-2 bg-teal/40 rounded-t h-4" />
-                    <div className="w-2 bg-teal/60 rounded-t h-5" />
-                    <div className="w-2 bg-teal rounded-t h-6" />
-                    <div className="w-2 bg-blue-500 rounded-t h-6" />
-                  </div>
-                  <p className="text-[9px] text-grey-500 mt-1 font-medium">Reviewed task files</p>
+                  <p className="text-[11px] text-grey-700 leading-snug font-medium">
+                    A defined pilot so you can judge us on merit.
+                  </p>
                 </div>
               </div>
 
-              {/* Status / Operational Overlay Card - Fully responsive without negative off-screen margins */}
-              <div className="mt-4 sm:mt-0 sm:absolute sm:-bottom-6 sm:-right-2 lg:-right-4 z-20 glass-card rounded-2xl p-4 shadow-xl border border-white/90 w-full sm:max-w-[270px]">
+              {/* Quality Standards Overlay Card */}
+              <div className="mt-4 sm:mt-0 sm:absolute sm:-bottom-6 sm:-right-2 lg:-right-4 z-20 glass-card rounded-2xl p-4 shadow-xl border border-white/90 w-full sm:max-w-[280px]">
                 <div className="flex items-center justify-between mb-2.5 pb-2 border-b border-grey-100">
                   <div className="flex items-center gap-1.5">
-                    <div className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                    <span className="text-xs font-bold text-navy">Live Operations Queue</span>
+                    <ShieldCheck className="w-4 h-4 text-teal" />
+                    <span className="text-xs font-bold text-navy">Quality Standards</span>
                   </div>
-                  <span className="text-[9px] font-bold bg-[#EFECE6] text-grey-600 px-2 py-0.5 rounded-full">
-                    Active
+                  <span className="text-[9px] font-bold bg-[#EFECE6] text-navy px-2 py-0.5 rounded-full">
+                    Verified
                   </span>
                 </div>
 
                 <div className="space-y-2">
-                  {statusItems.slice(0, 3).map((item) => (
-                    <div key={item.id} className="flex items-center justify-between text-xs gap-2">
-                      <div className="flex items-center gap-1.5 min-w-0">
-                        <CheckCircle2 className="w-3 h-3 text-emerald-600 shrink-0" />
-                        <span className="text-grey-700 font-medium truncate text-[11px]">{item.title}</span>
+                  {qualityGuarantees.map((item) => (
+                    <div key={item.id} className="flex items-start text-xs gap-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                      <div>
+                        <span className="text-grey-800 font-semibold block text-[11px] leading-tight">{item.title}</span>
+                        <span className="text-[9px] text-grey-400 block">{item.category}</span>
                       </div>
-                      <span className="text-[9px] text-grey-400 shrink-0">{item.time}</span>
                     </div>
                   ))}
                 </div>
 
                 <div className="mt-2.5 pt-2 border-t border-grey-100 flex items-center justify-between">
-                  <span className="text-[10px] text-grey-500 font-medium">Second-Level Review</span>
+                  <span className="text-[10px] text-grey-500 font-medium">Review Standard</span>
                   <span className="text-[10px] font-bold text-teal flex items-center gap-1">
-                    <ShieldCheck className="w-3 h-3" /> Passed
+                    <ShieldCheck className="w-3 h-3" /> 100% Checked
                   </span>
                 </div>
               </div>

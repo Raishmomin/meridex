@@ -11,7 +11,7 @@ const trustItems: TrustItem[] = [
   {
     icon: Globe,
     label: 'Australia & USA',
-    sub: 'UK support coming soon',
+    sub: 'UK launching 2027',
   },
   {
     icon: Shield,

@@ -97,15 +97,25 @@ const jsonLd = {
       },
       description:
         "Meridex supports mortgage brokers, insurance brokers, accountants and finance firms with accurate document, bookkeeping, tax and payroll support across Australia and the USA.",
-      email: "info@meridex.com",
-      telephone: "+918097527110",
-      sameAs: [],
+      email: "info@meridexsolutions.com",
+      telephone: "+61406687791",
+      sameAs: [
+        "https://www.instagram.com/meridexsolutions"
+      ],
       contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: "+61406687791",
+          contactType: "customer support",
+          email: "info@meridexsolutions.com",
+          areaServed: ["AU", "US", "GB"],
+          availableLanguage: ["English"],
+        },
         {
           "@type": "ContactPoint",
           telephone: "+918097527110",
           contactType: "customer support",
-          email: "info@meridex.com",
+          email: "info@meridexsolutions.com",
           areaServed: ["AU", "US", "GB"],
           availableLanguage: ["English"],
         },

@@ -78,8 +78,8 @@ export default function ContactPage() {
                     </div>
                     <div className="min-w-0">
                       <span className="text-[10px] sm:text-[11px] font-semibold text-grey-400 block uppercase">Email us</span>
-                      <a href="mailto:info@meridex.com" className="font-bold text-xs sm:text-sm text-navy hover:text-teal transition-colors truncate block">
-                        info@meridex.com
+                      <a href="mailto:info@meridexsolutions.com" className="font-bold text-xs sm:text-sm text-navy hover:text-teal transition-colors truncate block">
+                        info@meridexsolutions.com
                       </a>
                     </div>
                   </div>
@@ -89,7 +89,19 @@ export default function ContactPage() {
                       <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-teal-light" />
                     </div>
                     <div className="min-w-0">
-                      <span className="text-[10px] sm:text-[11px] font-semibold text-grey-400 block uppercase">Call or WhatsApp</span>
+                      <span className="text-[10px] sm:text-[11px] font-semibold text-grey-400 block uppercase">Call (Australia)</span>
+                      <a href="tel:+61406687791" className="font-bold text-xs sm:text-sm text-navy hover:text-teal transition-colors truncate block">
+                        +61 406 687 791
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-3 sm:p-3.5 rounded-2xl bg-white border border-[#E5E1D8]">
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-navy text-white flex items-center justify-center shrink-0">
+                      <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-teal-light" />
+                    </div>
+                    <div className="min-w-0">
+                      <span className="text-[10px] sm:text-[11px] font-semibold text-grey-400 block uppercase">Call or WhatsApp (India)</span>
                       <a href="tel:+918097527110" className="font-bold text-xs sm:text-sm text-navy hover:text-teal transition-colors truncate block">
                         +91 8097 527 110
                       </a>

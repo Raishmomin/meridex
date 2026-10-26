@@ -67,12 +67,13 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 focus:outline-none group shrink-0">
             <Image
-              src="/meridex-logo.png"
+              src="/meridex-brand-logo.png"
               alt="Meridex Solutions"
-              width={180}
-              height={36}
+              width={190}
+              height={34}
               className="h-7 sm:h-8 w-auto object-contain"
               priority
+              unoptimized
             />
           </Link>
 

@@ -202,8 +202,8 @@ export default function Services() {
           <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-navy tracking-tight mt-2 leading-tight">
             Our Services
           </h2>
-          <p className="mt-3 text-grey-600 text-sm sm:text-lg leading-relaxed">
-            Detail-heavy admin work, handled with care and precision, so you can focus on your clients and growth.
+          <p className="mt-3 text-grey-600 text-sm sm:text-lg leading-relaxed max-w-2xl mx-auto [text-wrap:balance]">
+            Detail-heavy admin and financial work, handled with care and precision, so your team can focus on clients, relationships, and business growth.
           </p>
 
           {/* Country Buckets Navigation Tabs */}
@@ -217,7 +217,7 @@ export default function Services() {
               }`}
             >
               <span className="text-base">🇦🇺</span>
-              <span>Australia (5 Services)</span>
+              <span>Australia</span>
             </button>
 
             <button
@@ -229,7 +229,7 @@ export default function Services() {
               }`}
             >
               <span className="text-base">🇺🇸</span>
-              <span>United States (4 Services)</span>
+              <span>United States</span>
             </button>
 
             <button
@@ -243,7 +243,7 @@ export default function Services() {
               <span className="text-base">🇬🇧</span>
               <span>United Kingdom</span>
               <span className="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full font-bold ml-1">
-                Coming Soon
+                Launching 2027
               </span>
             </button>
           </div>
