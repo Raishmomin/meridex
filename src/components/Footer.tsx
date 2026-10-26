@@ -158,14 +158,6 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-grey-500">
           <p>© 2026 Meridex. All rights reserved.</p>
           <div className="flex items-center gap-4 sm:gap-6">
-            <Link href="/privacy" className="hover:text-navy transition-colors">
-              Privacy Policy
-            </Link>
-            <span aria-hidden="true">·</span>
-            <Link href="/terms" className="hover:text-navy transition-colors">
-              Terms of Use
-            </Link>
-            <span aria-hidden="true">·</span>
             <a
               href="https://www.instagram.com/meridexsolutions?dlrf=MTJlbmZ6bWo3MnYxaQ=="
               target="_blank"
