@@ -163,7 +163,7 @@ export default function CountrySelection() {
             >
               <defs>
                 <pattern id="realWorldDots" x="0" y="0" width="11" height="11" patternUnits="userSpaceOnUse">
-                  <circle cx="2" cy="2" r="1.3" fill="#2D3748" />
+                  <circle cx="2" cy="2" r="1.3" fill="#475569" />
                 </pattern>
                 <pattern id="realWorldDotsActive" x="0" y="0" width="11" height="11" patternUnits="userSpaceOnUse">
                   <circle cx="2" cy="2" r="1.6" fill="#14B8A6" />
@@ -226,7 +226,7 @@ export default function CountrySelection() {
                           ? c.status === 'upcoming'
                             ? 'bg-amber-400 animate-ping'
                             : 'bg-blue-500 animate-ping'
-                          : 'opacity-0 group-hover:opacity-40 bg-grey-600'
+                          : 'opacity-0 group-hover:opacity-40 bg-slate-500'
                       }`}
                     />
                     <span
@@ -235,7 +235,7 @@ export default function CountrySelection() {
                           ? c.status === 'upcoming'
                             ? 'bg-amber-400 scale-125 ring-2 ring-amber-400/40'
                             : 'bg-blue-500 scale-125 ring-2 ring-blue-500/40'
-                          : 'bg-grey-600'
+                          : 'bg-slate-500'
                       }`}
                     />
                   </button>

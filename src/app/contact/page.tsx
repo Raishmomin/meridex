@@ -222,9 +222,9 @@ export default function ContactPage() {
                         onChange={(e) => setFormData({ ...formData, country: e.target.value })}
                         className="w-full bg-[#0B0F14] border border-[#222A38] rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-teal"
                       >
-                        <option value="Australia">🇦🇺 Australia</option>
-                        <option value="United States">🇺🇸 United States</option>
-                        <option value="United Kingdom">🇬🇧 United Kingdom (Waitlist)</option>
+                        <option value="Australia" className="bg-[#151A22] text-white">🇦🇺 Australia</option>
+                        <option value="United States" className="bg-[#151A22] text-white">🇺🇸 United States</option>
+                        <option value="United Kingdom" className="bg-[#151A22] text-white">🇬🇧 United Kingdom (Waitlist)</option>
                       </select>
                     </div>
                     <div>
@@ -236,12 +236,12 @@ export default function ContactPage() {
                         onChange={(e) => setFormData({ ...formData, firmType: e.target.value })}
                         className="w-full bg-[#0B0F14] border border-[#222A38] rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-teal"
                       >
-                        <option value="Mortgage Brokerage">Mortgage Brokerage</option>
-                        <option value="Insurance Brokerage">Insurance Brokerage</option>
-                        <option value="Accounting & Tax Practice">Accounting &amp; Tax Practice</option>
-                        <option value="Bookkeeping Firm">Bookkeeping Firm</option>
-                        <option value="Wealth / Financial Planning">Wealth / Financial Planning</option>
-                        <option value="Other">Other Finance Firm</option>
+                        <option value="Mortgage Brokerage" className="bg-[#151A22] text-white">Mortgage Brokerage</option>
+                        <option value="Insurance Brokerage" className="bg-[#151A22] text-white">Insurance Brokerage</option>
+                        <option value="Accounting & Tax Practice" className="bg-[#151A22] text-white">Accounting &amp; Tax Practice</option>
+                        <option value="Bookkeeping Firm" className="bg-[#151A22] text-white">Bookkeeping Firm</option>
+                        <option value="Wealth / Financial Planning" className="bg-[#151A22] text-white">Wealth / Financial Planning</option>
+                        <option value="Other" className="bg-[#151A22] text-white">Other Finance Firm</option>
                       </select>
                     </div>
                   </div>
@@ -257,12 +257,12 @@ export default function ContactPage() {
                         onChange={(e) => setFormData({ ...formData, priorityTask: e.target.value })}
                         className="w-full bg-[#0B0F14] border border-[#222A38] rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-teal"
                       >
-                        <option value="Mortgage File Prep & Lodgement">Mortgage File Prep &amp; Lodgement</option>
-                        <option value="Insurance Quotes & Renewals">Insurance Quotes &amp; Renewals</option>
-                        <option value="Bank Reconciliation & AP/AR">Bank Reconciliation &amp; AP/AR</option>
-                        <option value="BAS & Tax Return Workpapers">BAS &amp; Tax Return Workpapers</option>
-                        <option value="Payroll Processing & Super">Payroll Processing &amp; Super</option>
-                        <option value="Multiple Back-Office Tasks">Multiple Back-Office Tasks</option>
+                        <option value="Mortgage File Prep & Lodgement" className="bg-[#151A22] text-white">Mortgage File Prep &amp; Lodgement</option>
+                        <option value="Insurance Quotes & Renewals" className="bg-[#151A22] text-white">Insurance Quotes &amp; Renewals</option>
+                        <option value="Bank Reconciliation & AP/AR" className="bg-[#151A22] text-white">Bank Reconciliation &amp; AP/AR</option>
+                        <option value="BAS & Tax Return Workpapers" className="bg-[#151A22] text-white">BAS &amp; Tax Return Workpapers</option>
+                        <option value="Payroll Processing & Super" className="bg-[#151A22] text-white">Payroll Processing &amp; Super</option>
+                        <option value="Multiple Back-Office Tasks" className="bg-[#151A22] text-white">Multiple Back-Office Tasks</option>
                       </select>
                     </div>
                     <div>
@@ -274,10 +274,10 @@ export default function ContactPage() {
                         onChange={(e) => setFormData({ ...formData, estimatedVolume: e.target.value })}
                         className="w-full bg-[#0B0F14] border border-[#222A38] rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-teal"
                       >
-                        <option value="1–5 files / week">1–5 files / week (Small pilot)</option>
-                        <option value="6–15 files / week">6–15 files / week (Medium pod)</option>
-                        <option value="16+ files / week">16+ files / week (Dedicated squad)</option>
-                        <option value="Unsure / Let's discuss">Unsure / Let&apos;s discuss on call</option>
+                        <option value="1–5 files / week" className="bg-[#151A22] text-white">1–5 files / week (Small pilot)</option>
+                        <option value="6–15 files / week" className="bg-[#151A22] text-white">6–15 files / week (Medium pod)</option>
+                        <option value="16+ files / week" className="bg-[#151A22] text-white">16+ files / week (Dedicated squad)</option>
+                        <option value="Unsure / Let's discuss" className="bg-[#151A22] text-white">Unsure / Let&apos;s discuss on call</option>
                       </select>
                     </div>
                   </div>
