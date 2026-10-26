@@ -202,7 +202,7 @@ export default function Services() {
           <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-white tracking-tight mt-2 leading-tight">
             Our Services
           </h2>
-          <p className="mt-3 text-grey-400 text-sm sm:text-lg leading-relaxed max-w-2xl mx-auto [text-wrap:balance]">
+          <p className="mt-3 text-slate-300 text-sm sm:text-lg leading-relaxed max-w-2xl mx-auto [text-wrap:balance]">
             Detail-heavy admin and financial work, handled with care and precision, so your team can focus on clients, relationships, and business growth.
           </p>
 
@@ -213,7 +213,7 @@ export default function Services() {
               className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 border ${
                 activeTab === 'australia'
                   ? 'bg-[#2563EB] text-white border-[#2563EB] shadow-lg'
-                  : 'bg-[#151A22] text-grey-300 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
+                  : 'bg-[#151A22] text-slate-200 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
               }`}
             >
               <span className="text-base">🇦🇺</span>
@@ -225,7 +225,7 @@ export default function Services() {
               className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 border ${
                 activeTab === 'usa'
                   ? 'bg-[#2563EB] text-white border-[#2563EB] shadow-lg'
-                  : 'bg-[#151A22] text-grey-300 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
+                  : 'bg-[#151A22] text-slate-200 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
               }`}
             >
               <span className="text-base">🇺🇸</span>
@@ -237,7 +237,7 @@ export default function Services() {
               className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 border ${
                 activeTab === 'uk'
                   ? 'bg-[#2563EB] text-white border-[#2563EB] shadow-lg'
-                  : 'bg-[#151A22] text-grey-300 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
+                  : 'bg-[#151A22] text-slate-200 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
               }`}
             >
               <span className="text-base">🇬🇧</span>
@@ -270,7 +270,7 @@ export default function Services() {
                     <div className="w-11 h-11 rounded-2xl bg-[#0B0F14] border border-[#222A38] flex items-center justify-center text-teal shadow-xs group-hover:scale-105 transition-transform duration-200">
                       <Icon className="w-5 h-5 text-teal" />
                     </div>
-                    <span className="text-[11px] font-semibold text-grey-300 bg-[#0B0F14] px-3 py-1 rounded-full border border-[#222A38]">
+                    <span className="text-[11px] font-semibold text-white bg-[#0B0F14] px-3 py-1 rounded-full border border-[#222A38]">
                       {service.category}
                     </span>
                   </div>
@@ -281,7 +281,7 @@ export default function Services() {
                   </h3>
 
                   {/* Checklist */}
-                  <ul className="space-y-2 text-xs sm:text-sm text-grey-300">
+                  <ul className="space-y-2 text-xs sm:text-sm text-slate-200">
                     {service.subServices.map((sub, idx) => (
                       <li key={idx} className="flex items-start gap-2.5">
                         <span className="w-4 h-4 rounded-full bg-[#0B0F14] border border-[#222A38] flex items-center justify-center shrink-0 mt-0.5">
@@ -294,7 +294,7 @@ export default function Services() {
                 </div>
 
                 <div className="pt-5 mt-6 border-t border-[#222A38] flex items-center justify-between">
-                  <span className="text-[11px] font-medium text-grey-400">Pilot ready</span>
+                  <span className="text-[11px] font-medium text-slate-300">Pilot ready</span>
                   <a
                     href={`/contact?service=${encodeURIComponent(service.title)}`}
                     className="inline-flex items-center gap-1 text-xs font-bold text-teal hover:text-teal-light transition-colors"
@@ -316,10 +316,10 @@ export default function Services() {
               <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight mb-2">
                 Need a Custom Task or SOP?
               </h3>
-              <p className="text-xs sm:text-sm text-grey-400 leading-relaxed mb-4">
+              <p className="text-xs sm:text-sm text-slate-200 leading-relaxed mb-4">
                 Have specific aggregator guidelines or specialized platforms? We build custom pilots calibrated directly around your firm&apos;s internal processes.
               </p>
-              <div className="p-3 rounded-xl bg-[#0B0F14] border border-[#222A38] text-xs text-grey-300 space-y-1">
+              <div className="p-3 rounded-xl bg-[#0B0F14] border border-[#222A38] text-xs text-slate-200 space-y-1">
                 <p className="font-semibold text-white">Coverage:</p>
                 <p>Australia &amp; USA Active · UK Pilot Available</p>
               </div>
@@ -347,7 +347,7 @@ export default function Services() {
               <h3 className="text-xl sm:text-2xl font-bold text-white mt-1">
                 No forced platform migrations.
               </h3>
-              <p className="text-xs sm:text-sm text-grey-400 mt-2 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
                 Our specialists integrate seamlessly into the accounting software, broker CRMs, and document tools your team already relies on.
               </p>
             </div>
@@ -362,7 +362,7 @@ export default function Services() {
                   <h4 className="text-xs sm:text-sm font-bold text-white">
                     Using proprietary or customized software?
                   </h4>
-                  <p className="text-xs text-grey-400 mt-0.5">
+                  <p className="text-xs text-slate-300 mt-0.5">
                     We adapt directly to your bespoke internal tools and screen recordings during onboarding.
                   </p>
                 </div>

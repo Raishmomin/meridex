@@ -133,7 +133,7 @@ export default function ChatbotBubble() {
                     Live
                   </span>
                 </div>
-                <p className="text-[11px] text-grey-400">
+                <p className="text-[11px] text-slate-300">
                   Australia &amp; USA Operation Desk
                 </p>
               </div>
@@ -141,7 +141,7 @@ export default function ChatbotBubble() {
 
             <button
               onClick={() => setIsOpen(false)}
-              className="p-1.5 rounded-full hover:bg-white/10 text-grey-400 hover:text-white transition-colors"
+              className="p-1.5 rounded-full hover:bg-white/10 text-slate-300 hover:text-white transition-colors"
               aria-label="Close chat"
             >
               <X className="w-5 h-5" />
@@ -161,12 +161,12 @@ export default function ChatbotBubble() {
                   className={`max-w-[85%] p-3.5 rounded-[20px] leading-relaxed ${
                     msg.sender === 'user'
                       ? 'bg-[#2563EB] text-white rounded-br-xs'
-                      : 'bg-[#151A22] text-grey-200 border border-[#222A38] shadow-md rounded-bl-xs'
+                      : 'bg-[#151A22] text-white border border-[#222A38] shadow-md rounded-bl-xs'
                   }`}
                 >
                   <p>{msg.text}</p>
                 </div>
-                <span className="text-[10px] text-grey-500 mt-1 px-1">
+                <span className="text-[10px] text-slate-400 mt-1 px-1">
                   {msg.time}
                 </span>
 
@@ -177,7 +177,7 @@ export default function ChatbotBubble() {
                       <button
                         key={opt}
                         onClick={() => handleSend(opt)}
-                        className="text-[11px] font-medium bg-[#151A22] hover:bg-[#1E2633] border border-[#222A38] text-grey-300 hover:text-white hover:border-teal px-3 py-1.5 rounded-full transition-all text-left shadow-xs"
+                        className="text-[11px] font-medium bg-[#151A22] hover:bg-[#1E2633] border border-[#222A38] text-slate-200 hover:text-white hover:border-teal px-3 py-1.5 rounded-full transition-all text-left shadow-xs"
                       >
                         {opt}
                       </button>
@@ -189,7 +189,7 @@ export default function ChatbotBubble() {
           </div>
 
           {/* Quick Action Bar */}
-          <div className="px-4 py-2 bg-[#151A22] border-t border-[#222A38] flex items-center justify-between text-[11px] text-grey-400">
+          <div className="px-4 py-2 bg-[#151A22] border-t border-[#222A38] flex items-center justify-between text-[11px] text-slate-300">
             <span className="flex items-center gap-1 font-medium">
               <ShieldCheck className="w-3.5 h-3.5 text-teal" /> 100% Confidential
             </span>

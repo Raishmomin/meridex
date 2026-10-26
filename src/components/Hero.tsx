@@ -53,7 +53,7 @@ export default function Hero() {
           {/* Left Column: Clean International Typography & Mobile-Friendly Pill Input */}
           <div className="lg:col-span-6 xl:col-span-6 flex flex-col items-start space-y-5 sm:space-y-7 w-full">
             {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-grey-200 text-[11px] sm:text-xs font-semibold tracking-wide max-w-full">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-white text-[11px] sm:text-xs font-semibold tracking-wide max-w-full shadow-sm">
               <span className="w-2 h-2 rounded-full bg-teal shrink-0 animate-pulse" />
               <span className="truncate">Australia &amp; USA · UK Launching 2027</span>
             </div>
@@ -64,7 +64,7 @@ export default function Hero() {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-sm sm:text-lg text-grey-400 leading-relaxed max-w-xl">
+            <p className="text-sm sm:text-lg text-slate-300 leading-relaxed max-w-xl">
               Meridex Solutions supports mortgage brokers, insurance brokers, accountants and finance firms
               with accurate documents maintenance, bookkeeping, tax and payroll support—so you can focus on clients
               and growth.
@@ -87,7 +87,7 @@ export default function Hero() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter work email"
                   aria-label="Your work email"
-                  className="w-full bg-transparent px-4 py-2.5 text-sm text-white placeholder-grey-500 focus:outline-none rounded-xl sm:rounded-full"
+                  className="w-full bg-transparent px-4 py-2.5 text-sm text-white placeholder-slate-400 focus:outline-none rounded-xl sm:rounded-full"
                 />
                 <button
                   type="submit"
@@ -99,17 +99,17 @@ export default function Hero() {
               </form>
 
               {/* Secondary CTA Quick Links */}
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 mt-3 px-1 text-xs font-medium text-grey-400">
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 mt-3 px-1 text-xs font-medium text-slate-300">
                 <a
                   href="/#services"
-                  className="hover:text-white underline underline-offset-4 decoration-grey-600"
+                  className="hover:text-white underline underline-offset-4 decoration-slate-600"
                 >
                   Explore Services →
                 </a>
-                <span className="text-grey-600">·</span>
+                <span className="text-slate-500">·</span>
                 <a
                   href="/#how-it-works"
-                  className="hover:text-white underline underline-offset-4 decoration-grey-600"
+                  className="hover:text-white underline underline-offset-4 decoration-slate-600"
                 >
                   How the Pilot Works
                 </a>
@@ -118,7 +118,7 @@ export default function Hero() {
 
             {/* Micro-trust line */}
             <div className="pt-4 border-t border-[#222A38] w-full max-w-xl">
-              <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-2 sm:gap-x-5 sm:gap-y-2.5 text-xs font-medium text-grey-300">
+              <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-2 sm:gap-x-5 sm:gap-y-2.5 text-xs font-medium text-slate-200">
                 {trustPoints.map((point) => (
                   <div key={point} className="inline-flex items-center gap-1.5">
                     <CheckCircle2 className="w-3.5 h-3.5 text-teal shrink-0" />
@@ -150,21 +150,21 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F14]/90 via-[#0B0F14]/30 to-transparent pointer-events-none" />
 
                 {/* Floating Pilot Guarantee Card (Desktop/Tablet) */}
-                <div className="absolute bottom-4 left-4 z-20 bg-[#151A22]/90 backdrop-blur-md rounded-xl p-3 shadow-xl border border-white/10 max-w-[200px] hidden sm:block animate-float">
+                <div className="absolute bottom-4 left-4 z-20 bg-[#151A22]/95 backdrop-blur-md rounded-xl p-3.5 shadow-xl border border-white/15 max-w-[210px] hidden sm:block animate-float">
                   <div className="flex items-center justify-between gap-2 mb-1.5">
                     <span className="text-[10px] font-bold text-white uppercase tracking-wider">Start Small</span>
                     <span className="px-1.5 py-0.5 rounded-full bg-teal/20 text-teal-light text-[9px] font-bold">
                       No Lock-in
                     </span>
                   </div>
-                  <p className="text-[11px] text-grey-300 leading-snug font-medium">
+                  <p className="text-[11px] text-slate-200 leading-snug font-medium">
                     A defined pilot so you can judge us on merit.
                   </p>
                 </div>
               </div>
 
               {/* Quality Standards Overlay Card */}
-              <div className="mt-4 sm:mt-0 sm:absolute sm:-bottom-6 sm:-right-2 lg:-right-4 z-20 glass-card rounded-2xl p-4 shadow-2xl border border-white/10 w-full sm:max-w-[280px]">
+              <div className="mt-4 sm:mt-0 sm:absolute sm:-bottom-6 sm:-right-2 lg:-right-4 z-20 glass-card rounded-2xl p-4 shadow-2xl border border-white/15 w-full sm:max-w-[280px]">
                 <div className="flex items-center justify-between mb-2.5 pb-2 border-b border-[#222A38]">
                   <div className="flex items-center gap-1.5">
                     <ShieldCheck className="w-4 h-4 text-teal" />
@@ -175,20 +175,20 @@ export default function Hero() {
                   </span>
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-2.5">
                   {qualityGuarantees.map((item) => (
                     <div key={item.id} className="flex items-start text-xs gap-2">
                       <CheckCircle2 className="w-3.5 h-3.5 text-teal shrink-0 mt-0.5" />
                       <div>
-                        <span className="text-grey-200 font-semibold block text-[11px] leading-tight">{item.title}</span>
-                        <span className="text-[9px] text-grey-400 block">{item.category}</span>
+                        <span className="text-white font-semibold block text-[11px] leading-tight">{item.title}</span>
+                        <span className="text-[10px] text-slate-300 block">{item.category}</span>
                       </div>
                     </div>
                   ))}
                 </div>
 
                 <div className="mt-2.5 pt-2 border-t border-[#222A38] flex items-center justify-between">
-                  <span className="text-[10px] text-grey-400 font-medium">Review Standard</span>
+                  <span className="text-[10px] text-slate-300 font-medium">Review Standard</span>
                   <span className="text-[10px] font-bold text-teal flex items-center gap-1">
                     <ShieldCheck className="w-3.5 h-3.5" /> 100% Checked
                   </span>
@@ -196,7 +196,7 @@ export default function Hero() {
               </div>
 
               {/* Floating Pill Top Left - Safe on mobile */}
-              <div className="hidden sm:flex animate-float-delay absolute -top-4 -left-3 z-20 glass-card px-3.5 py-2 rounded-full items-center gap-2 shadow-xl border border-white/10">
+              <div className="hidden sm:flex animate-float-delay absolute -top-4 -left-3 z-20 glass-card px-3.5 py-2 rounded-full items-center gap-2 shadow-xl border border-white/15">
                 <div className="w-5 h-5 rounded-full bg-[#151A22] border border-[#222A38] flex items-center justify-center text-white">
                   <UserCheck className="w-3 h-3 text-teal-light" />
                 </div>

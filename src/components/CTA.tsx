@@ -27,7 +27,7 @@ export default function CTA() {
               Let&apos;s take the detailed work off your plate.
             </h2>
             
-            <p className="mt-5 text-base sm:text-lg text-grey-300 max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-5 text-base sm:text-lg text-slate-200 max-w-2xl mx-auto leading-relaxed">
               Tell us the task that eats up most of your week. We&apos;ll suggest a small pilot that fits your business.
             </p>
 
@@ -49,7 +49,7 @@ export default function CTA() {
             </div>
 
             {/* Reassurance Row */}
-            <div className="mt-12 pt-8 border-t border-[#222A38] flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm text-grey-400">
+            <div className="mt-12 pt-8 border-t border-[#222A38] flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm text-slate-300">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-teal" />
                 <span>No lock-in or minimum term</span>

@@ -106,13 +106,13 @@ export default function ToolsShowcase() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[11px] font-bold uppercase tracking-widest text-grey-400 mb-4">
+          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[11px] font-bold uppercase tracking-widest text-slate-300 mb-4">
             SOFTWARE &amp; ECOSYSTEM COMPATIBILITY
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-white tracking-tight leading-tight">
             We work inside your existing software stack
           </h2>
-          <p className="mt-3 text-grey-400 text-base sm:text-lg">
+          <p className="mt-3 text-slate-300 text-base sm:text-lg">
             No forced platform migrations. Our specialists integrate seamlessly into the accounting software, broker CRMs, and document tools your team already relies on.
           </p>
 
@@ -125,7 +125,7 @@ export default function ToolsShowcase() {
                 className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 border ${
                   activeTab === tab
                     ? 'bg-[#2563EB] text-white border-[#2563EB] shadow-md'
-                    : 'bg-[#151A22] text-grey-300 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
+                    : 'bg-[#151A22] text-slate-200 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
                 }`}
               >
                 {tab}
@@ -161,12 +161,12 @@ export default function ToolsShowcase() {
                   {tool.popularIn}
                 </span>
 
-                <p className="text-xs text-grey-400 leading-relaxed">
+                <p className="text-xs text-slate-300 leading-relaxed">
                   {tool.description}
                 </p>
               </div>
 
-              <div className="pt-4 mt-5 border-t border-[#222A38] flex items-center justify-between text-[11px] text-grey-400 font-medium">
+              <div className="pt-4 mt-5 border-t border-[#222A38] flex items-center justify-between text-[11px] text-slate-300 font-medium">
                 <span className="flex items-center gap-1 text-emerald-400">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" /> Plug &amp; Play
                 </span>
@@ -184,7 +184,7 @@ export default function ToolsShowcase() {
             </div>
             <div>
               <h4 className="text-sm font-bold text-white">Using proprietary or customized firm software?</h4>
-              <p className="text-xs text-grey-400">
+              <p className="text-xs text-slate-300">
                 During onboarding, we review your screen recordings and custom SOPs to train our dedicated pod.
               </p>
             </div>

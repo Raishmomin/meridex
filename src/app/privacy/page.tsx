@@ -19,20 +19,20 @@ export default function PrivacyPage() {
           
           {/* Header */}
           <div className="mb-10 sm:mb-14">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#151A22] border border-[#222A38] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-grey-400 mb-3">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#151A22] border border-[#222A38] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-3">
               <Shield className="w-3.5 h-3.5 text-teal" />
               <span>Data Protection &amp; Confidentiality</span>
             </div>
             <h1 className="text-3xl sm:text-5xl font-bold text-white tracking-tight">
               Privacy Policy
             </h1>
-            <p className="mt-3 text-sm sm:text-base text-grey-400">
+            <p className="mt-3 text-sm sm:text-base text-slate-400">
               Last updated: October 2026
             </p>
           </div>
 
           {/* Policy Content Card */}
-          <div className="bg-[#151A22] border border-[#222A38] rounded-[24px] sm:rounded-[32px] p-6 sm:p-12 shadow-2xl space-y-8 text-grey-300 text-sm sm:text-base leading-relaxed">
+          <div className="bg-[#151A22] border border-[#222A38] rounded-[24px] sm:rounded-[32px] p-6 sm:p-12 shadow-2xl space-y-8 text-slate-200 text-sm sm:text-base leading-relaxed">
             
             <section className="space-y-3">
               <h2 className="text-xl sm:text-2xl font-bold text-white">

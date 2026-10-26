@@ -33,7 +33,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#0B0F14] border-t border-[#222A38] text-grey-400 pt-16 pb-12">
+    <footer className="bg-[#0B0F14] border-t border-[#222A38] text-slate-300 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main 3-column layout */}
@@ -56,7 +56,7 @@ export default function Footer() {
               Where merit meets dexterity.
             </p>
             
-            <p className="text-sm text-grey-400 leading-relaxed max-w-md">
+            <p className="text-sm text-slate-300 leading-relaxed max-w-md">
               Supporting mortgage brokers, insurance brokers, accountants and finance firms across Australia and the USA with precision outsourcing.
             </p>
 
@@ -79,7 +79,7 @@ export default function Footer() {
                   <Phone className="w-3.5 h-3.5 text-teal" />
                   <span>+61 406 687 791 (AU)</span>
                 </a>
-                <span className="hidden sm:inline text-grey-600">·</span>
+                <span className="hidden sm:inline text-slate-500">·</span>
                 <a
                   href="tel:+918097527110"
                   className="inline-flex items-center gap-1.5 hover:text-teal transition-colors"
@@ -104,7 +104,7 @@ export default function Footer() {
                   <span className="text-xs font-semibold text-white group-hover:text-[#DD2A7B] transition-colors">
                     Instagram
                   </span>
-                  <span className="text-[11px] text-grey-400">
+                  <span className="text-[11px] text-slate-300">
                     @meridexsolutions
                   </span>
                 </a>
@@ -122,7 +122,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-grey-400 hover:text-white transition-colors inline-flex items-center gap-1 group"
+                    className="text-slate-300 hover:text-white transition-colors inline-flex items-center gap-1 group"
                   >
                     <span>{item.label}</span>
                   </Link>
@@ -136,7 +136,7 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
               Coverage
             </h4>
-            <div className="space-y-3 text-xs text-grey-400">
+            <div className="space-y-3 text-xs text-slate-300">
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-400" />
                 <span className="font-semibold text-white">Australia (Active)</span>
@@ -145,7 +145,7 @@ export default function Footer() {
                 <span className="w-2 h-2 rounded-full bg-emerald-400" />
                 <span className="font-semibold text-white">United States (Active)</span>
               </div>
-              <div className="flex items-center gap-2 text-grey-400">
+              <div className="flex items-center gap-2 text-slate-300">
                 <span className="w-2 h-2 rounded-full bg-amber-400" />
                 <span>United Kingdom (Launching 2027)</span>
               </div>
@@ -155,25 +155,25 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-grey-400">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-300">
           <p>© 2026 Meridex Solutions. All rights reserved.</p>
           <div className="flex items-center gap-4 sm:gap-6">
             <Link href="/privacy" className="hover:text-white transition-colors">
               Privacy Policy
             </Link>
-            <span aria-hidden="true" className="text-grey-600">·</span>
+            <span aria-hidden="true" className="text-slate-500">·</span>
             <Link href="/terms" className="hover:text-white transition-colors">
               Terms of Use
             </Link>
-            <span aria-hidden="true" className="text-grey-600">·</span>
+            <span aria-hidden="true" className="text-slate-500">·</span>
             <a
               href="https://www.instagram.com/meridexsolutions?dlrf=MTJlbmZ6bWo3MnYxaQ=="
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 hover:text-[#DD2A7B] transition-colors text-grey-400"
+              className="inline-flex items-center gap-1.5 hover:text-[#DD2A7B] transition-colors text-slate-300"
               aria-label="Instagram @meridexsolutions"
             >
-              <InstagramIcon className="w-3.5 h-3.5 text-grey-400 group-hover:text-[#DD2A7B]" />
+              <InstagramIcon className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#DD2A7B]" />
               <span>Instagram</span>
             </a>
           </div>

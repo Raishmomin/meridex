@@ -96,13 +96,13 @@ export default function Testimonials(): React.JSX.Element {
         
         {/* Header with pill tag */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[11px] font-bold uppercase tracking-widest text-grey-400 mb-4">
+          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[11px] font-bold uppercase tracking-widest text-slate-300 mb-4">
             CLIENT SUCCESS &amp; VERIFIED FEEDBACK
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-white tracking-tight leading-tight">
             What our clients say
           </h2>
-          <p className="mt-3 text-grey-400 text-base sm:text-lg">
+          <p className="mt-3 text-slate-300 text-base sm:text-lg">
             Hear from finance industry leaders in Australia and the USA who trust Meridex for their most critical operations.
           </p>
 
@@ -115,7 +115,7 @@ export default function Testimonials(): React.JSX.Element {
                 className={`px-4 py-2 rounded-full text-xs font-semibold transition-all duration-200 border ${
                   filter === cat
                     ? 'bg-[#2563EB] text-white border-[#2563EB] shadow-md'
-                    : 'bg-[#151A22] text-grey-300 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
+                    : 'bg-[#151A22] text-slate-200 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
                 }`}
               >
                 {cat}
@@ -158,7 +158,7 @@ export default function Testimonials(): React.JSX.Element {
                 </div>
 
                 {/* Quote Text */}
-                <p className="text-sm text-grey-300 leading-relaxed font-normal">
+                <p className="text-sm text-slate-200 leading-relaxed font-normal">
                   &ldquo;{item.quote}&rdquo;
                 </p>
               </div>
@@ -178,17 +178,17 @@ export default function Testimonials(): React.JSX.Element {
                     <h3 className="font-bold text-sm text-white truncate">
                       {item.clientName}
                     </h3>
-                    <p className="text-[11px] text-grey-400 truncate font-medium">
+                    <p className="text-[11px] text-slate-300 truncate font-medium">
                       {item.role}
                     </p>
-                    <p className="text-[10px] text-grey-400 truncate">
+                    <p className="text-[10px] text-slate-400 truncate">
                       {item.company}
                     </p>
                   </div>
                 </div>
 
                 {/* Verified SLA Audit Footer */}
-                <div className="pt-2 border-t border-[#222A38] flex items-center justify-between text-[10px] text-grey-400 font-medium">
+                <div className="pt-2 border-t border-[#222A38] flex items-center justify-between text-[10px] text-slate-300 font-medium">
                   <span className="flex items-center gap-1 text-emerald-400 font-semibold">
                     <ShieldCheck className="w-3 h-3 text-emerald-400" />
                     {item.verifiedSLA}
@@ -201,16 +201,16 @@ export default function Testimonials(): React.JSX.Element {
         </div>
 
         {/* Bottom Social Proof Bar */}
-        <div className="mt-12 text-center flex flex-wrap items-center justify-center gap-6 text-xs text-grey-400">
+        <div className="mt-12 text-center flex flex-wrap items-center justify-center gap-6 text-xs text-slate-300">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-teal" />
             <span className="font-semibold text-white">100% Pre-Delivery Second-Level Review</span>
           </div>
-          <span className="text-grey-600">·</span>
+          <span className="text-slate-500">·</span>
           <div className="flex items-center gap-2">
             <span className="font-semibold text-white">4.9 / 5.0 Average Pilot Satisfaction</span>
           </div>
-          <span className="text-grey-600">·</span>
+          <span className="text-slate-500">·</span>
           <a
             href="/contact"
             className="font-bold text-teal hover:text-teal-light inline-flex items-center gap-1"

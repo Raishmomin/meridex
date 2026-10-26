@@ -50,7 +50,7 @@ export default function TrustBar() {
                     <p className="text-xs sm:text-sm font-semibold text-white tracking-tight truncate">
                       {item.label}
                     </p>
-                    <p className="text-[10px] sm:text-[11px] text-grey-400 truncate mt-0.5">
+                    <p className="text-[10px] sm:text-[11px] text-slate-300 truncate mt-0.5 font-medium">
                       {item.sub}
                     </p>
                   </div>

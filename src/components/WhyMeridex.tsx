@@ -21,13 +21,13 @@ export default function WhyMeridex(): React.JSX.Element {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16">
-          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[11px] font-bold uppercase tracking-widest text-grey-400 mb-4">
+          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[11px] font-bold uppercase tracking-widest text-slate-300 mb-4">
             ADVANTAGE &amp; PROOF
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-white tracking-tight leading-tight">
             Why finance leaders choose Meridex
           </h2>
-          <p className="mt-3 text-grey-400 text-base sm:text-lg">
+          <p className="mt-3 text-slate-300 text-base sm:text-lg">
             Exceptional accuracy and second-level reviewed support that sets the standard for admin and finance operations.
           </p>
         </div>
@@ -59,7 +59,7 @@ export default function WhyMeridex(): React.JSX.Element {
               <h3 className="text-2xl sm:text-[28px] font-bold text-white tracking-tight leading-snug mb-3">
                 Checked by senior reviewers to deliver flawless files and unmatched peace of mind.
               </h3>
-              <p className="text-sm text-grey-400 leading-relaxed">
+              <p className="text-sm text-slate-300 leading-relaxed">
                 Every mortgage application note, BAS workpaper, and payroll reconciliation goes through a mandatory second-level review before hitting your desk.
               </p>
             </div>
@@ -99,9 +99,9 @@ export default function WhyMeridex(): React.JSX.Element {
                 </div>
                 <div>
                   <h4 className="text-lg sm:text-2xl font-bold text-white tracking-tight leading-snug">
-                    Trusted by <span className="text-grey-400 font-medium">finance firms across Australia &amp; the USA.</span>
+                    Trusted by <span className="text-slate-300 font-medium">finance firms across Australia &amp; the USA.</span>
                   </h4>
-                  <p className="text-xs text-grey-400 mt-2">
+                  <p className="text-xs text-slate-300 mt-2">
                     Mortgage brokers, insurance brokerages &amp; CPA practices.
                   </p>
                 </div>
@@ -122,10 +122,10 @@ export default function WhyMeridex(): React.JSX.Element {
                   <div className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-1">
                     99.8%
                   </div>
-                  <p className="text-xs font-semibold text-grey-300">
+                  <p className="text-xs font-semibold text-slate-200">
                     Audit compliance rate
                   </p>
-                  <p className="text-[11px] text-grey-400 mt-1">
+                  <p className="text-[11px] text-slate-300 mt-1">
                     Zero-error benchmark across lodgements and reconciliations.
                   </p>
                 </div>
@@ -147,12 +147,12 @@ export default function WhyMeridex(): React.JSX.Element {
                   <span>Empowers Growth</span>
                 </div>
                 <h4 className="text-lg sm:text-2xl font-bold text-white tracking-tight leading-snug mb-2 sm:mb-3">
-                  Elevates team focus and <span className="text-grey-400 font-medium">transforms your operational capacity.</span>
+                  Elevates team focus and <span className="text-slate-300 font-medium">transforms your operational capacity.</span>
                 </h4>
-                <p className="text-xs sm:text-sm text-grey-400 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                   Take the detail-heavy routine work off your plate so your brokers and advisors spend 100% of their energy advising clients and writing business.
                 </p>
-                <div className="mt-3 sm:mt-4 flex flex-wrap items-center gap-3 text-xs font-semibold text-grey-300">
+                <div className="mt-3 sm:mt-4 flex flex-wrap items-center gap-3 text-xs font-semibold text-slate-200">
                   <span>✓ Named Account Lead</span>
                   <span>✓ Secure NDAs</span>
                 </div>

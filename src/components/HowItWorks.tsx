@@ -65,13 +65,13 @@ export default function HowItWorks() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16">
-          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[11px] font-bold uppercase tracking-widest text-grey-400 mb-4">
+          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[11px] font-bold uppercase tracking-widest text-slate-300 mb-4">
             PROVEN OPERATING PRINCIPLES
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-white tracking-tight leading-tight">
             How We Work
           </h2>
-          <p className="mt-3 text-grey-400 text-sm sm:text-lg leading-relaxed max-w-2xl mx-auto [text-wrap:balance]">
+          <p className="mt-3 text-slate-300 text-sm sm:text-lg leading-relaxed max-w-2xl mx-auto [text-wrap:balance]">
             Start small, judge us on results, and continue only when the work has earned its place.
           </p>
         </div>
@@ -96,15 +96,15 @@ export default function HowItWorks() {
                   </div>
 
                   <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight mb-1.5">
-                    {item.title} <span className="text-grey-300 font-medium block text-base mt-0.5">{item.shortDesc}</span>
+                    {item.title} <span className="text-slate-200 font-medium block text-base mt-0.5">{item.shortDesc}</span>
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-grey-400 leading-relaxed mt-3">
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mt-3">
                     {item.detail}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#222A38] flex items-center gap-2 text-xs font-semibold text-grey-300">
+                <div className="mt-6 pt-4 border-t border-[#222A38] flex items-center gap-2 text-xs font-semibold text-slate-200">
                   <CheckCircle2 className="w-3.5 h-3.5 text-teal shrink-0" />
                   <span>Guaranteed on every file</span>
                 </div>
@@ -133,15 +133,15 @@ export default function HowItWorks() {
                   </div>
 
                   <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight mb-1.5">
-                    {item.title} <span className="text-grey-300 font-medium block text-base mt-0.5">{item.shortDesc}</span>
+                    {item.title} <span className="text-slate-200 font-medium block text-base mt-0.5">{item.shortDesc}</span>
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-grey-400 leading-relaxed mt-3">
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mt-3">
                     {item.detail}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#222A38] flex items-center gap-2 text-xs font-semibold text-grey-300">
+                <div className="mt-6 pt-4 border-t border-[#222A38] flex items-center gap-2 text-xs font-semibold text-slate-200">
                   <CheckCircle2 className="w-3.5 h-3.5 text-teal shrink-0" />
                   <span>Guaranteed on every file</span>
                 </div>
@@ -159,7 +159,7 @@ export default function HowItWorks() {
             <h4 className="text-lg sm:text-xl font-bold text-white">
               Ready to test us on merit? Start with a defined pilot.
             </h4>
-            <p className="text-xs sm:text-sm text-grey-400 mt-1">
+            <p className="text-xs sm:text-sm text-slate-300 mt-1">
               A short consultation, clear agreed scope, and then judged on results.
             </p>
           </div>

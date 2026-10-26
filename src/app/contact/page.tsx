@@ -46,13 +46,13 @@ export default function ContactPage() {
           
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-grey-400 mb-4 max-w-full truncate">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-300 mb-4 max-w-full truncate">
               START A PILOT · 24-HOUR RESPONSE
             </div>
             <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-bold text-white tracking-tight leading-tight">
               Let&apos;s talk about the tasks slowing you down.
             </h1>
-            <p className="mt-3 sm:mt-4 text-sm sm:text-lg text-grey-400 leading-relaxed">
+            <p className="mt-3 sm:mt-4 text-sm sm:text-lg text-slate-300 leading-relaxed">
               Tell us your volume, tools, and backlog. We will propose a tailored, zero-lock-in pilot so you can judge us purely on results.
             </p>
           </div>
@@ -67,7 +67,7 @@ export default function ContactPage() {
                 <h3 className="text-lg sm:text-xl font-bold text-white mb-1">
                   Connect directly with our team
                 </h3>
-                <p className="text-xs sm:text-sm text-grey-400 mb-5 sm:mb-6">
+                <p className="text-xs sm:text-sm text-slate-300 mb-5 sm:mb-6">
                   Schedule a discovery session or send us your scope for an immediate pilot proposal.
                 </p>
 
@@ -77,7 +77,7 @@ export default function ContactPage() {
                       <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-teal" />
                     </div>
                     <div className="min-w-0">
-                      <span className="text-[10px] sm:text-[11px] font-semibold text-grey-400 block uppercase">Email us</span>
+                      <span className="text-[10px] sm:text-[11px] font-semibold text-slate-400 block uppercase">Email us</span>
                       <a href="mailto:info@meridexsolutions.com" className="font-bold text-xs sm:text-sm text-white hover:text-teal transition-colors truncate block">
                         info@meridexsolutions.com
                       </a>
@@ -89,7 +89,7 @@ export default function ContactPage() {
                       <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-teal" />
                     </div>
                     <div className="min-w-0">
-                      <span className="text-[10px] sm:text-[11px] font-semibold text-grey-400 block uppercase">Call (Australia)</span>
+                      <span className="text-[10px] sm:text-[11px] font-semibold text-slate-400 block uppercase">Call (Australia)</span>
                       <a href="tel:+61406687791" className="font-bold text-xs sm:text-sm text-white hover:text-teal transition-colors truncate block">
                         +61 406 687 791
                       </a>
@@ -101,7 +101,7 @@ export default function ContactPage() {
                       <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-teal" />
                     </div>
                     <div className="min-w-0">
-                      <span className="text-[10px] sm:text-[11px] font-semibold text-grey-400 block uppercase">Call or WhatsApp (India)</span>
+                      <span className="text-[10px] sm:text-[11px] font-semibold text-slate-400 block uppercase">Call or WhatsApp (India)</span>
                       <a href="tel:+918097527110" className="font-bold text-xs sm:text-sm text-white hover:text-teal transition-colors truncate block">
                         +91 8097 527 110
                       </a>
@@ -110,10 +110,10 @@ export default function ContactPage() {
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-[#222A38] space-y-2">
-                  <span className="text-[11px] font-semibold text-grey-400 uppercase tracking-wider block">
+                  <span className="text-[11px] font-semibold text-slate-300 uppercase tracking-wider block">
                     Our Working Standard
                   </span>
-                  <p className="text-xs text-grey-400 leading-relaxed">
+                  <p className="text-xs text-slate-300 leading-relaxed">
                     We work inside the platforms you already use, under access you control. No long-term lock-in—turnaround agreed upfront.
                   </p>
                 </div>
@@ -131,7 +131,7 @@ export default function ContactPage() {
                   <h3 className="text-2xl font-bold text-white">
                     Thank you! Your inquiry has been received.
                   </h3>
-                  <p className="text-sm text-grey-300 max-w-md mx-auto leading-relaxed">
+                  <p className="text-sm text-slate-200 max-w-md mx-auto leading-relaxed">
                     A senior operations director will review your requirements and reach out within 24 hours with a scoped pilot proposal.
                   </p>
                   <button
@@ -147,7 +147,7 @@ export default function ContactPage() {
                     <h3 className="text-2xl font-bold text-white tracking-tight">
                       Request a Pilot Quote or Discovery Call
                     </h3>
-                    <p className="text-xs text-grey-400 mt-1">
+                    <p className="text-xs text-slate-300 mt-1">
                       Fill out the details below and we will prepare a clear proposal for your firm.
                     </p>
                   </div>
@@ -155,7 +155,7 @@ export default function ContactPage() {
                   {/* Name & Email Row */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-grey-200 mb-1.5">
+                      <label className="block text-xs font-bold text-white mb-1.5">
                         Your Full Name *
                       </label>
                       <input
@@ -164,11 +164,11 @@ export default function ContactPage() {
                         placeholder="e.g. Sarah Mitchell"
                         value={formData.fullName}
                         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                        className="w-full bg-[#0B0F14] border border-[#222A38] rounded-xl px-4 py-3 text-sm text-white placeholder-grey-500 focus:outline-none focus:border-teal"
+                        className="w-full bg-[#0B0F14] border border-[#222A38] rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-teal"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-grey-200 mb-1.5">
+                      <label className="block text-xs font-bold text-white mb-1.5">
                         Work Email *
                       </label>
                       <input
@@ -177,7 +177,7 @@ export default function ContactPage() {
                         placeholder="sarah@yourfirm.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full bg-[#0B0F14] border border-[#222A38] rounded-xl px-4 py-3 text-sm text-white placeholder-grey-500 focus:outline-none focus:border-teal"
+                        className="w-full bg-[#0B0F14] border border-[#222A38] rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-teal"
                       />
                     </div>
                   </div>
@@ -185,7 +185,7 @@ export default function ContactPage() {
                   {/* Phone & Firm Name */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-grey-200 mb-1.5">
+                      <label className="block text-xs font-bold text-white mb-1.5">
                         Contact Phone
                       </label>
                       <input
@@ -193,11 +193,11 @@ export default function ContactPage() {
                         placeholder="+61 400 000 000"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full bg-[#0B0F14] border border-[#222A38] rounded-xl px-4 py-3 text-sm text-white placeholder-grey-500 focus:outline-none focus:border-teal"
+                        className="w-full bg-[#0B0F14] border border-[#222A38] rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-teal"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-grey-200 mb-1.5">
+                      <label className="block text-xs font-bold text-white mb-1.5">
                         Firm / Business Name *
                       </label>
                       <input
@@ -206,7 +206,7 @@ export default function ContactPage() {
                         placeholder="e.g. Pacific Finance Group"
                         value={formData.firmName}
                         onChange={(e) => setFormData({ ...formData, firmName: e.target.value })}
-                        className="w-full bg-[#0B0F14] border border-[#222A38] rounded-xl px-4 py-3 text-sm text-white placeholder-grey-500 focus:outline-none focus:border-teal"
+                        className="w-full bg-[#0B0F14] border border-[#222A38] rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-teal"
                       />
                     </div>
                   </div>
@@ -214,7 +214,7 @@ export default function ContactPage() {
                   {/* Country & Firm Type */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-grey-200 mb-1.5">
+                      <label className="block text-xs font-bold text-white mb-1.5">
                         Jurisdiction / Country *
                       </label>
                       <select
@@ -228,7 +228,7 @@ export default function ContactPage() {
                       </select>
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-grey-200 mb-1.5">
+                      <label className="block text-xs font-bold text-white mb-1.5">
                         Firm Type *
                       </label>
                       <select
@@ -249,7 +249,7 @@ export default function ContactPage() {
                   {/* Task & Estimated Volume */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-grey-200 mb-1.5">
+                      <label className="block text-xs font-bold text-white mb-1.5">
                         Primary Task to Hand Over *
                       </label>
                       <select
@@ -266,7 +266,7 @@ export default function ContactPage() {
                       </select>
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-grey-200 mb-1.5">
+                      <label className="block text-xs font-bold text-white mb-1.5">
                         Estimated Weekly Volume
                       </label>
                       <select
@@ -284,7 +284,7 @@ export default function ContactPage() {
 
                   {/* Message */}
                   <div>
-                    <label className="block text-xs font-bold text-grey-200 mb-1.5">
+                    <label className="block text-xs font-bold text-white mb-1.5">
                       Tell us the specific task eating up your week
                     </label>
                     <textarea
@@ -292,7 +292,7 @@ export default function ContactPage() {
                       placeholder="e.g. We use BrokerEngine & Xero. We need help packaging serviceability sheets and doing daily bank reconciliations..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full bg-[#0B0F14] border border-[#222A38] rounded-xl px-4 py-3 text-sm text-white placeholder-grey-500 focus:outline-none focus:border-teal"
+                      className="w-full bg-[#0B0F14] border border-[#222A38] rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-teal"
                     />
                   </div>
 
@@ -305,7 +305,7 @@ export default function ContactPage() {
                       <span>Request Your Pilot Proposal</span>
                       <ArrowRight className="w-4 h-4" />
                     </button>
-                    <div className="flex items-center justify-center gap-2 mt-3 text-[11px] text-grey-400 font-medium">
+                    <div className="flex items-center justify-center gap-2 mt-3 text-[11px] text-slate-300 font-medium">
                       <Lock className="w-3 h-3 text-teal" />
                       <span>Zero obligation · 24-hour turnaround · Strictly confidential</span>
                     </div>

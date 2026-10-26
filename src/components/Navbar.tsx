@@ -83,7 +83,7 @@ export default function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-grey-400 hover:text-white transition-colors duration-150"
+                className="text-sm font-medium text-slate-200 hover:text-white transition-colors duration-150"
               >
                 {item.label}
               </a>
@@ -107,7 +107,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen((prev) => !prev)}
               aria-expanded={mobileMenuOpen}
               aria-label="Toggle navigation menu"
-              className="p-2 rounded-xl text-grey-300 hover:text-white hover:bg-[#151A22] transition-colors focus:outline-none"
+              className="p-2 rounded-xl text-slate-200 hover:text-white hover:bg-[#151A22] transition-colors focus:outline-none"
             >
               {mobileMenuOpen ? (
                 <X className="h-6 w-6" aria-hidden="true" />
@@ -131,7 +131,7 @@ export default function Navbar() {
               key={item.href}
               href={item.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 rounded-xl text-base font-medium text-grey-300 hover:text-white hover:bg-[#151A22] transition-colors"
+              className="block px-3 py-2 rounded-xl text-base font-medium text-slate-200 hover:text-white hover:bg-[#151A22] transition-colors"
             >
               {item.label}
             </a>

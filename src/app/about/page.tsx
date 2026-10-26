@@ -61,7 +61,7 @@ export default function AboutPage() {
         {/* SECTION 1: ABOUT US */}
         <section className="pt-16 pb-16 sm:pt-24 sm:pb-20 border-b border-[#222A38]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-grey-400 mb-6">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-300 mb-6">
               ABOUT MERIDEX
             </div>
             
@@ -69,12 +69,12 @@ export default function AboutPage() {
               About Us
             </h1>
 
-            <div className="space-y-6 text-base sm:text-xl text-grey-300 leading-relaxed font-normal">
+            <div className="space-y-6 text-base sm:text-xl text-slate-200 leading-relaxed font-normal">
               <p>
                 Meridex is an outsourcing partner for businesses that want their admin and finance work handled reliably, so they can spend their time on clients and growth.
               </p>
               
-              <p className="text-grey-400 text-sm sm:text-lg">
+              <p className="text-slate-300 text-sm sm:text-lg">
                 We take on the detailed, recurring work that keeps a business running: document collection and checking, application preparation, bookkeeping, accounting support and tax return preparation. We work with clients in Australia, the US and the UK.
               </p>
             </div>
@@ -97,7 +97,7 @@ export default function AboutPage() {
         {/* SECTION 2: WHY MERIDEX */}
         <section className="py-16 sm:py-24 bg-[#0E1217] border-b border-[#222A38]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-grey-400 mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-300 mb-4">
               NAME &amp; ETHOS
             </div>
             
@@ -105,7 +105,7 @@ export default function AboutPage() {
               Why Meridex
             </h2>
             
-            <p className="text-base sm:text-lg text-grey-400 mb-10">
+            <p className="text-base sm:text-lg text-slate-300 mb-10">
               The name comes from two words, merit and dexterity.
             </p>
 
@@ -119,7 +119,7 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold text-white mb-3">
                     Merit
                   </h3>
-                  <p className="text-sm sm:text-base text-grey-300 leading-relaxed">
+                  <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
                     Merit is how we earn work. We start with a small pilot, you judge us on the results, and we continue only when the work has earned its place.
                   </p>
                 </div>
@@ -138,7 +138,7 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold text-white mb-3">
                     Dexterity
                   </h3>
-                  <p className="text-sm sm:text-base text-grey-300 leading-relaxed">
+                  <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
                     Dexterity is how we keep it. Every task gets careful, precise handling, and every file is reviewed before it comes back to you.
                   </p>
                 </div>
@@ -155,7 +155,7 @@ export default function AboutPage() {
         {/* SECTION 3: HOW WE WORK */}
         <section className="py-16 sm:py-24 bg-[#0B0F14] border-b border-[#222A38]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-grey-400 mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-slate-300 mb-4">
               PRINCIPLES IN PRACTICE
             </div>
             
@@ -177,7 +177,7 @@ export default function AboutPage() {
                     <div>
                       <h3 className="text-base sm:text-lg font-bold text-white">
                         {item.title}{' '}
-                        <span className="font-normal text-grey-300 ml-1">
+                        <span className="font-normal text-slate-200 ml-1">
                           {item.desc}
                         </span>
                       </h3>
@@ -205,7 +205,7 @@ export default function AboutPage() {
                 <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight mb-3">
                   Let&apos;s talk
                 </h2>
-                <p className="text-sm sm:text-base text-grey-300 leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
                   If you&apos;d like to see how this would work for your business, get in touch. A short conversation, and then a small pilot, is the best way to judge us on merit.
                 </p>
               </div>

@@ -80,7 +80,7 @@ export default function FAQ() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-2">
             Frequently Asked Questions
           </h2>
-          <p className="mt-3 text-grey-400 text-sm sm:text-base">
+          <p className="mt-3 text-slate-300 text-sm sm:text-base">
             Everything you need to know about starting a pilot with Meridex.
           </p>
         </div>
@@ -115,7 +115,7 @@ export default function FAQ() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 pb-6 sm:px-6 text-sm sm:text-base text-grey-300 leading-relaxed border-t border-[#222A38] pt-4">
+                  <div className="px-5 pb-6 sm:px-6 text-sm sm:text-base text-slate-200 leading-relaxed border-t border-[#222A38] pt-4 font-normal">
                     {faq.answer}
                   </div>
                 )}
