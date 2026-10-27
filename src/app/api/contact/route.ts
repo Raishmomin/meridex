@@ -110,7 +110,7 @@ export async function POST(request: Request) {
     const smtpPort = Number(process.env.SMTP_PORT) || 587;
     const smtpUser = process.env.SMTP_USER;
     const smtpPass = process.env.SMTP_PASS;
-    const smtpFrom = process.env.SMTP_FROM_EMAIL || smtpUser || 'c02e25001@smtp-brevo.com';
+    const smtpFrom = process.env.SMTP_FROM_EMAIL || smtpUser || 'info@meridexsolutions.com';
 
     // Log the contact inquiry for persistence
     console.log('[NEW INQUIRY RECEIVED]', {
