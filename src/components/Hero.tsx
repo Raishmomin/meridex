@@ -58,9 +58,11 @@ export default function Hero() {
               <span className="truncate">Australia &amp; USA · UK Launching 2027</span>
             </div>
 
-            {/* H1 Headline - Responsive font size down to 320px screens */}
-            <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-bold text-navy leading-[1.15] tracking-tight break-words w-full">
-              Empower your business growth with reliable and efficient administrative support.
+            {/* H1 Headline - Guaranteed 3-line layout avoiding dangling 4th line */}
+            <h1 className="text-3xl sm:text-4xl lg:text-[46px] xl:text-[50px] font-bold text-navy leading-[1.18] tracking-tight break-words w-full max-w-xl">
+              Empower your business with <br className="hidden sm:inline" />
+              <span className="text-teal">reliable</span> and <span className="text-teal">efficient</span> <br className="hidden sm:inline" />
+              administrative support.
             </h1>
 
             {/* Subheadline */}
