@@ -48,18 +48,18 @@ export default function Hero() {
       className="relative bg-[#F7F5F0] pt-8 pb-16 sm:pt-12 sm:pb-20 lg:pt-16 lg:pb-28 overflow-hidden w-full"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12 items-center">
           
           {/* Left Column: Clean International Typography & Mobile-Friendly Pill Input */}
-          <div className="lg:col-span-6 xl:col-span-6 flex flex-col items-start space-y-5 sm:space-y-7 w-full">
+          <div className="lg:col-span-7 xl:col-span-7 flex flex-col items-start space-y-5 sm:space-y-6 w-full">
             {/* Pill Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#EFECE6] border border-[#E5E1D8] text-navy text-[11px] sm:text-xs font-semibold tracking-wide max-w-full">
               <span className="w-2 h-2 rounded-full bg-teal shrink-0 animate-pulse" />
               <span className="truncate">Australia &amp; USA · UK Launching 2027</span>
             </div>
 
-            {/* H1 Headline - Strictly 3 lines across viewports */}
-            <h1 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] font-bold text-navy leading-[1.18] tracking-tight break-words w-full max-w-2xl lg:max-w-3xl">
+            {/* H1 Headline - Strictly 3 lines across viewports with ample spacing from image */}
+            <h1 className="text-3xl sm:text-4xl lg:text-[38px] xl:text-[46px] font-bold text-navy leading-[1.18] tracking-tight w-full max-w-xl lg:max-w-2xl">
               <span className="block whitespace-normal sm:whitespace-nowrap">Empower your business with</span>
               <span className="block whitespace-normal sm:whitespace-nowrap"><span className="text-teal">reliable</span> and <span className="text-teal">efficient</span></span>
               <span className="block whitespace-normal sm:whitespace-nowrap">administrative support.</span>
@@ -132,7 +132,7 @@ export default function Hero() {
           </div>
 
           {/* Right Column: Hero Visual with Responsive Rounded Frame */}
-          <div className="lg:col-span-6 xl:col-span-6 relative w-full pt-4 sm:pt-0">
+          <div className="lg:col-span-5 xl:col-span-5 relative w-full pt-4 sm:pt-0">
             <div className="relative mx-auto max-w-lg lg:max-w-none w-full">
               
               {/* Main Visual Frame */}
