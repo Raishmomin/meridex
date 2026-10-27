@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     fullName: '',
     email: '',
     phone: '',
@@ -29,28 +29,49 @@ export default function ContactPage() {
     priorityTask: 'Mortgage File Prep & Lodgement',
     estimatedVolume: '1–5 files / week',
     message: '',
-  });
+  };
 
+  const [formData, setFormData] = useState(initialFormData);
+  const [honeypot, setHoneypot] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMessage(null);
 
     try {
-      await fetch('/api/contact', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          _hp: honeypot,
+        }),
       });
-      setIsSubmitted(true);
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setErrorMessage(data.error || 'Failed to send inquiry. Please try again.');
+      } else {
+        setIsSubmitted(true);
+      }
     } catch (err) {
       console.error('Contact submission error:', err);
-      setIsSubmitted(true);
+      setErrorMessage('A network error occurred. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const handleReset = () => {
+    setFormData(initialFormData);
+    setHoneypot('');
+    setErrorMessage(null);
+    setIsSubmitted(false);
   };
 
   return (
@@ -150,7 +171,7 @@ export default function ContactPage() {
                     A senior operations director will review your requirements and reach out within 24 hours with a scoped pilot proposal.
                   </p>
                   <button
-                    onClick={() => setIsSubmitted(false)}
+                    onClick={handleReset}
                     className="mt-6 px-6 py-2.5 rounded-full bg-[#2563EB] hover:bg-blue-600 text-white text-xs font-semibold transition-colors shadow-md"
                   >
                     Submit another response
@@ -158,6 +179,18 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Anti-spam honeypot (hidden from human users, catches spam bots) */}
+                  <div className="hidden" aria-hidden="true">
+                    <input
+                      type="text"
+                      name="_hp"
+                      value={honeypot}
+                      onChange={(e) => setHoneypot(e.target.value)}
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                  </div>
+
                   <div>
                     <h3 className="text-2xl font-bold text-white tracking-tight">
                       Request a Pilot Quote or Discovery Call
@@ -166,6 +199,14 @@ export default function ContactPage() {
                       Fill out the details below and we will prepare a clear proposal for your firm.
                     </p>
                   </div>
+
+                  {/* Error Notification Banner */}
+                  {errorMessage && (
+                    <div className="p-3.5 sm:p-4 rounded-xl bg-red-950/50 border border-red-500/40 text-red-200 text-xs sm:text-sm flex items-start gap-2.5">
+                      <span className="w-2 h-2 rounded-full bg-red-400 shrink-0 mt-1.5" />
+                      <span>{errorMessage}</span>
+                    </div>
+                  )}
 
                   {/* Name & Email Row */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
