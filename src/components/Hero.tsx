@@ -58,11 +58,11 @@ export default function Hero() {
               <span className="truncate">Australia &amp; USA · UK Launching 2027</span>
             </div>
 
-            {/* H1 Headline - Guaranteed 3-line layout avoiding dangling 4th line */}
-            <h1 className="text-3xl sm:text-4xl lg:text-[46px] xl:text-[50px] font-bold text-navy leading-[1.18] tracking-tight break-words w-full max-w-xl">
-              Empower your business with <br className="hidden sm:inline" />
-              <span className="text-teal">reliable</span> and <span className="text-teal">efficient</span> <br className="hidden sm:inline" />
-              administrative support.
+            {/* H1 Headline - Strictly 3 lines across viewports */}
+            <h1 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] font-bold text-navy leading-[1.18] tracking-tight break-words w-full max-w-2xl lg:max-w-3xl">
+              <span className="block whitespace-normal sm:whitespace-nowrap">Empower your business with</span>
+              <span className="block whitespace-normal sm:whitespace-nowrap"><span className="text-teal">reliable</span> and <span className="text-teal">efficient</span></span>
+              <span className="block whitespace-normal sm:whitespace-nowrap">administrative support.</span>
             </h1>
 
             {/* Subheadline */}

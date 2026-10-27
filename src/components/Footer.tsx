@@ -137,8 +137,15 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-grey-500">
-          <p>© 2026 Meridex. All rights reserved.</p>
+          <p>© 2026 Meridex Solutions. All rights reserved.</p>
           <div className="flex items-center gap-4 sm:gap-6">
+            <Link
+              href="/privacy"
+              className="text-grey-600 hover:text-navy transition-colors underline underline-offset-4"
+            >
+              Privacy Policy
+            </Link>
+            <span className="text-grey-300">·</span>
             <a
               href="https://www.instagram.com/meridexsolutions?dlrf=MTJlbmZ6bWo3MnYxaQ=="
               target="_blank"
