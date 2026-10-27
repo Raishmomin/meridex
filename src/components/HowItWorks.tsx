@@ -16,6 +16,7 @@ interface PrincipleItem {
   number: string;
   title: string;
   shortDesc: string;
+  detail: string;
   icon: React.ComponentType<{ className?: string }>;
 }
 
@@ -24,30 +25,35 @@ const principles: PrincipleItem[] = [
     number: '01',
     title: 'Start small.',
     shortDesc: 'A defined pilot, with no lock-in.',
+    detail: 'Test our precision on a single loan file, batch of reconciliations, or discrete workflow before committing to ongoing support.',
     icon: Rocket,
   },
   {
     number: '02',
     title: 'Checked work.',
-    shortDesc: 'Each file and lodgement is audited with a second-level review before delivery.',
+    shortDesc: 'Each file goes through a second-level review before delivery.',
+    detail: 'Every document pack, BAS workpaper, and lodgement is audited by a senior reviewer before it reaches your desk.',
     icon: ShieldCheck,
   },
   {
     number: '03',
     title: 'Clear communication.',
     shortDesc: 'A named point of contact and regular updates.',
+    detail: 'Work directly with your designated specialist with clear communication channels, agreed turnaround times, and proactive status updates.',
     icon: MessageSquare,
   },
   {
     number: '04',
     title: 'Confidential handling.',
-    shortDesc: 'Client data is treated with strict care and access controls under international standards.',
+    shortDesc: 'Client data is treated with strict care and access controls.',
+    detail: 'Role-based access, strict confidentiality agreements, and data handling protocols built around international data protection standards.',
     icon: Lock,
   },
   {
     number: '05',
     title: 'Flexible scope.',
     shortDesc: 'You choose which tasks to hand over, and we scale up as trust grows.',
+    detail: 'Delegate the administrative bottlenecks slowing your firm down, and expand your support pod as your business scales.',
     icon: SlidersHorizontal,
   },
 ];
@@ -89,18 +95,21 @@ export default function HowItWorks() {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-white tracking-tight mb-2">
-                    {item.title}
+                  <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight mb-1.5">
+                    {item.title}{' '}
+                    <span className="text-slate-300 font-medium block text-base mt-0.5">
+                      {item.shortDesc}
+                    </span>
                   </h3>
 
-                  <p className="text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
-                    {item.shortDesc}
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mt-3">
+                    {item.detail}
                   </p>
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-[#222A38] flex items-center gap-2 text-xs font-semibold text-slate-300">
                   <CheckCircle2 className="w-3.5 h-3.5 text-teal shrink-0" />
-                  <span>Standard on every task</span>
+                  <span>Guaranteed on every file</span>
                 </div>
               </div>
             );
