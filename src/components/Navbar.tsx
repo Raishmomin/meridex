@@ -11,12 +11,11 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: 'Home', href: '/#hero' },
   { label: 'Services', href: '/#services' },
   { label: 'How It Works', href: '/#how-it-works' },
-  { label: 'About', href: '/about' },
+  { label: 'About Us', href: '/about' },
   { label: 'FAQ', href: '/#faq' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Contact Us', href: '/contact' },
 ];
 
 export default function Navbar() {

@@ -58,9 +58,11 @@ export default function Hero() {
               <span className="truncate">Australia &amp; USA · UK Launching 2027</span>
             </div>
 
-            {/* H1 Headline - Responsive font size down to 320px screens */}
-            <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-bold text-white leading-[1.15] tracking-tight break-words w-full">
-              Empower your business growth with <span className="text-teal">reliable</span> and <span className="text-teal">efficient</span> administrative support.
+            {/* H1 Headline - Guaranteed 3-line layout avoiding dangling 4th line */}
+            <h1 className="text-3xl sm:text-4xl lg:text-[46px] xl:text-[50px] font-bold text-white leading-[1.18] tracking-tight break-words w-full max-w-xl">
+              Empower your business with <br className="hidden sm:inline" />
+              <span className="text-teal">reliable</span> and <span className="text-teal">efficient</span> <br className="hidden sm:inline" />
+              administrative support.
             </h1>
 
             {/* Subheadline */}
@@ -150,7 +152,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F14]/90 via-[#0B0F14]/30 to-transparent pointer-events-none" />
 
                 {/* Floating Pilot Guarantee Card (Desktop/Tablet) */}
-                <div className="absolute bottom-4 left-4 z-20 bg-[#151A22]/95 backdrop-blur-md rounded-xl p-3.5 shadow-xl border border-white/15 max-w-[210px] hidden sm:block animate-float">
+                <div className="absolute bottom-4 left-4 z-20 bg-[#151A22]/95 backdrop-blur-md rounded-xl p-3.5 shadow-xl border border-[#222A38] max-w-[210px] hidden sm:block animate-float">
                   <div className="flex items-center justify-between gap-2 mb-1.5">
                     <span className="text-[10px] font-bold text-white uppercase tracking-wider">Start Small</span>
                     <span className="px-1.5 py-0.5 rounded-full bg-teal/20 text-teal-light text-[9px] font-bold">
@@ -164,13 +166,13 @@ export default function Hero() {
               </div>
 
               {/* Quality Standards Overlay Card */}
-              <div className="mt-4 sm:mt-0 sm:absolute sm:-bottom-6 sm:-right-2 lg:-right-4 z-20 glass-card rounded-2xl p-4 shadow-2xl border border-white/15 w-full sm:max-w-[280px]">
+              <div className="mt-4 sm:mt-0 sm:absolute sm:-bottom-6 sm:-right-2 lg:-right-4 z-20 bg-[#151A22]/95 backdrop-blur-md rounded-2xl p-4 shadow-2xl border border-[#222A38] w-full sm:max-w-[280px]">
                 <div className="flex items-center justify-between mb-2.5 pb-2 border-b border-[#222A38]">
                   <div className="flex items-center gap-1.5">
                     <ShieldCheck className="w-4 h-4 text-teal" />
                     <span className="text-xs font-bold text-white">Quality Standards</span>
                   </div>
-                  <span className="text-[9px] font-bold bg-[#151A22] text-teal-light border border-[#222A38] px-2 py-0.5 rounded-full">
+                  <span className="text-[9px] font-bold bg-[#0B0F14] text-teal-light border border-[#222A38] px-2 py-0.5 rounded-full">
                     Verified
                   </span>
                 </div>
@@ -196,8 +198,8 @@ export default function Hero() {
               </div>
 
               {/* Floating Pill Top Left - Safe on mobile */}
-              <div className="hidden sm:flex animate-float-delay absolute -top-4 -left-3 z-20 glass-card px-3.5 py-2 rounded-full items-center gap-2 shadow-xl border border-white/15">
-                <div className="w-5 h-5 rounded-full bg-[#151A22] border border-[#222A38] flex items-center justify-center text-white">
+              <div className="hidden sm:flex animate-float-delay absolute -top-4 -left-3 z-20 bg-[#151A22]/95 backdrop-blur-md px-3.5 py-2 rounded-full items-center gap-2 shadow-xl border border-[#222A38]">
+                <div className="w-5 h-5 rounded-full bg-[#0B0F14] border border-[#222A38] flex items-center justify-center text-white">
                   <UserCheck className="w-3 h-3 text-teal-light" />
                 </div>
                 <span className="text-[11px] font-semibold text-white">Named Point of Contact</span>

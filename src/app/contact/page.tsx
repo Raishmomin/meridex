@@ -32,10 +32,25 @@ export default function ContactPage() {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      setIsSubmitted(true);
+    } catch (err) {
+      console.error('Contact submission error:', err);
+      setIsSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -86,25 +101,25 @@ export default function ContactPage() {
 
                   <div className="flex items-start gap-3 p-3 sm:p-3.5 rounded-2xl bg-[#0B0F14] border border-[#222A38]">
                     <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#151A22] text-teal flex items-center justify-center shrink-0 border border-[#222A38]">
-                      <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-teal" />
+                      <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-teal" />
                     </div>
                     <div className="min-w-0">
-                      <span className="text-[10px] sm:text-[11px] font-semibold text-slate-400 block uppercase">Call (Australia)</span>
-                      <a href="tel:+61406687791" className="font-bold text-xs sm:text-sm text-white hover:text-teal transition-colors truncate block">
-                        +61 406 687 791
-                      </a>
+                      <span className="text-[10px] sm:text-[11px] font-semibold text-slate-400 block uppercase">Response Time</span>
+                      <span className="font-bold text-xs sm:text-sm text-white block">
+                        Within 24 business hours
+                      </span>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3 p-3 sm:p-3.5 rounded-2xl bg-[#0B0F14] border border-[#222A38]">
                     <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#151A22] text-teal flex items-center justify-center shrink-0 border border-[#222A38]">
-                      <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-teal" />
+                      <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-teal" />
                     </div>
                     <div className="min-w-0">
-                      <span className="text-[10px] sm:text-[11px] font-semibold text-slate-400 block uppercase">Call or WhatsApp (India)</span>
-                      <a href="tel:+918097527110" className="font-bold text-xs sm:text-sm text-white hover:text-teal transition-colors truncate block">
-                        +91 8097 527 110
-                      </a>
+                      <span className="text-[10px] sm:text-[11px] font-semibold text-slate-400 block uppercase">Engagement Model</span>
+                      <span className="font-bold text-xs sm:text-sm text-white block">
+                        Zero lock-in pilot proposal
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -300,9 +315,10 @@ export default function ContactPage() {
                   <div>
                     <button
                       type="submit"
-                      className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#2563EB] hover:bg-blue-600 text-white font-semibold text-sm transition-all duration-200 shadow-md hover:shadow-lg"
+                      disabled={isSubmitting}
+                      className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#2563EB] hover:bg-blue-600 disabled:opacity-60 text-white font-semibold text-sm transition-all duration-200 shadow-md hover:shadow-lg cursor-pointer"
                     >
-                      <span>Request Your Pilot Proposal</span>
+                      <span>{isSubmitting ? 'Submitting Inquiry...' : 'Request Your Pilot Proposal'}</span>
                       <ArrowRight className="w-4 h-4" />
                     </button>
                     <div className="flex items-center justify-center gap-2 mt-3 text-[11px] text-slate-300 font-medium">

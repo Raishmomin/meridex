@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, Phone } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 function InstagramIcon({ className = 'w-4 h-4' }: { className?: string }) {
   return (
@@ -24,10 +24,9 @@ function InstagramIcon({ className = 'w-4 h-4' }: { className?: string }) {
 
 export default function Footer() {
   const quickLinks = [
-    { label: 'Home', href: '/#hero' },
-    { label: 'About Us', href: '/about' },
     { label: 'Services', href: '/#services' },
     { label: 'How It Works', href: '/#how-it-works' },
+    { label: 'About Us', href: '/about' },
     { label: 'FAQ', href: '/#faq' },
     { label: 'Contact Us', href: '/contact' },
   ];
@@ -68,24 +67,6 @@ export default function Footer() {
                 >
                   <Mail className="w-3.5 h-3.5 text-teal" />
                   <span>info@meridexsolutions.com</span>
-                </a>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs font-semibold text-white">
-                <a
-                  href="tel:+61406687791"
-                  className="inline-flex items-center gap-1.5 hover:text-teal transition-colors"
-                >
-                  <Phone className="w-3.5 h-3.5 text-teal" />
-                  <span>+61 406 687 791 (AU)</span>
-                </a>
-                <span className="hidden sm:inline text-slate-500">·</span>
-                <a
-                  href="tel:+918097527110"
-                  className="inline-flex items-center gap-1.5 hover:text-teal transition-colors"
-                >
-                  <Phone className="w-3.5 h-3.5 text-teal" />
-                  <span>+91 8097 527 110 (IN)</span>
                 </a>
               </div>
 

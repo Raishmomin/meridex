@@ -251,27 +251,31 @@ export default function CountrySelection() {
                           : c.pinCoordinates.x > 70
                           ? 'right-0'
                           : 'left-1/2 -translate-x-1/2'
-                      } w-72 sm:w-80 bg-[#151A22]/98 backdrop-blur-md rounded-2xl p-4 shadow-2xl border border-[#222A38] animate-fade-in-up`}
+                      } w-80 sm:w-88 bg-[#151A22]/98 backdrop-blur-md rounded-2xl p-4 shadow-2xl border border-[#222A38] animate-fade-in-up`}
                     >
-                      <div className="flex items-center gap-2 mb-2 pb-2 border-b border-[#222A38]">
-                        <span className="text-2xl">{c.flag}</span>
-                        <div className="min-w-0 pr-1">
-                          <span className="text-xs font-bold text-white block">{c.name}</span>
-                          <span className="text-[10px] text-slate-300 block leading-tight">{c.timezones}</span>
+                      <div className="flex items-center justify-between gap-2 mb-2 pb-2 border-b border-[#222A38]">
+                        <div className="flex items-center gap-2 min-w-0">
+                          <span className="text-2xl shrink-0">{c.flag}</span>
+                          <span className="text-sm font-bold text-white truncate">{c.name}</span>
                         </div>
                         {c.status === 'upcoming' ? (
-                          <span className="text-[9px] bg-amber-950/60 text-amber-300 border border-amber-800/40 font-bold px-2 py-0.5 rounded-full ml-auto shrink-0">
-                            2027
+                          <span className="text-[9px] bg-amber-950/60 text-amber-300 border border-amber-800/40 font-bold px-2 py-0.5 rounded-full shrink-0">
+                            Launching 2027
                           </span>
                         ) : (
-                          <span className="text-[9px] bg-emerald-950/60 text-emerald-400 border border-emerald-800/40 font-bold px-2 py-0.5 rounded-full ml-auto flex items-center gap-1 shrink-0">
+                          <span className="text-[9px] bg-emerald-950/60 text-emerald-400 border border-emerald-800/40 font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shrink-0">
                             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                             Active Coverage
                           </span>
                         )}
                       </div>
 
-                      <p className="text-[11.5px] sm:text-xs text-slate-200 leading-snug font-normal">
+                      <div className="flex items-center gap-1.5 text-[11px] text-teal font-medium mb-2.5">
+                        <Clock className="w-3.5 h-3.5 text-teal shrink-0" />
+                        <span className="leading-snug">{c.timezones}</span>
+                      </div>
+
+                      <p className="text-[11.5px] sm:text-xs text-slate-200 leading-relaxed font-normal">
                         &ldquo;{c.quote}&rdquo;
                       </p>
 
@@ -288,11 +292,15 @@ export default function CountrySelection() {
           </div>
 
           {/* Mobile Quote Snippet */}
-          <div className="sm:hidden mt-3 p-3.5 rounded-2xl bg-[#151A22] border border-[#222A38] text-left">
-            <div className="flex items-center gap-2 mb-1">
+          <div className="sm:hidden mt-3 p-3.5 rounded-2xl bg-[#151A22] border border-[#222A38] text-left space-y-1.5">
+            <div className="flex items-center gap-2">
               <span className="text-lg">{selectedCountry.flag}</span>
               <span className="text-xs font-bold text-white">{selectedCountry.name}</span>
               <span className="text-[9px] text-teal font-semibold ml-auto">{selectedCountry.status === 'upcoming' ? 'Launching 2027' : 'Active Coverage'}</span>
+            </div>
+            <div className="flex items-center gap-1.5 text-[10px] text-teal font-medium">
+              <Clock className="w-3 h-3 text-teal shrink-0" />
+              <span>{selectedCountry.timezones}</span>
             </div>
             <p className="text-[11px] text-slate-200 leading-snug">
               &ldquo;{selectedCountry.quote}&rdquo;

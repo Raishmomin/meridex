@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 const siteUrl = "https://meridex.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+  },
   title: {
     default: "Meridex Solutions — Outsource Admin Work | Australia & USA",
     template: "%s | Meridex Solutions",
@@ -98,22 +102,12 @@ const jsonLd = {
       description:
         "Meridex supports mortgage brokers, insurance brokers, accountants and finance firms with accurate document, bookkeeping, tax and payroll support across Australia and the USA.",
       email: "info@meridexsolutions.com",
-      telephone: "+61406687791",
       sameAs: [
         "https://www.instagram.com/meridexsolutions"
       ],
       contactPoint: [
         {
           "@type": "ContactPoint",
-          telephone: "+61406687791",
-          contactType: "customer support",
-          email: "info@meridexsolutions.com",
-          areaServed: ["AU", "US", "GB"],
-          availableLanguage: ["English"],
-        },
-        {
-          "@type": "ContactPoint",
-          telephone: "+918097527110",
           contactType: "customer support",
           email: "info@meridexsolutions.com",
           areaServed: ["AU", "US", "GB"],
@@ -283,15 +277,41 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+  const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+
   return (
     <html lang="en" className="h-full antialiased dark">
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/meridex-logo.png" />
+        {googleSiteVerification && (
+          <meta name="google-site-verification" content={googleSiteVerification} />
+        )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {gaId && (
+          <>
+            <Script
+              strategy="afterInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+            />
+            <Script
+              id="google-analytics"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${gaId}');
+                `,
+              }}
+            />
+          </>
+        )}
       </head>
       <body className="min-h-full flex flex-col font-sans bg-[#0B0F14] text-[#F1F5F9]">{children}</body>
     </html>

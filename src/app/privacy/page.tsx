@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import { Shield, Lock, Eye, FileText, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — Meridex',
+  title: 'Privacy Policy — Meridex Solutions',
   description:
     'Our commitment to confidentiality, data protection, and strict access controls across all client engagements.',
 };
@@ -39,7 +39,7 @@ export default function PrivacyPage() {
                 1. Our Commitment to Privacy
               </h2>
               <p>
-                At Meridex, we recognise the fundamental importance of confidentiality and data security to professional firms, including mortgage brokers, insurance brokers, accountants, and finance practices.
+                At Meridex Solutions, we recognise the fundamental importance of confidentiality and data security to professional firms, including mortgage brokers, insurance brokers, accountants, and finance practices.
               </p>
               <p>
                 This Privacy Policy explains how we handle business information, client documents, and personal data in the course of providing our administrative and operational support services.
@@ -86,16 +86,7 @@ export default function PrivacyPage() {
 
             <section className="space-y-3">
               <h2 className="text-xl sm:text-2xl font-bold text-white">
-                4. Confidentiality Agreements &amp; Legal Compliance
-              </h2>
-              <p>
-                Every engagement is governed by confidentiality agreements and strict non-disclosure obligations. Where applicable to our Australian operations, our practices are aligned with the Australian Privacy Principles (APPs) established under the Privacy Act 1988 (Cth). For US engagements, we enforce strict file-level access controls and confidentiality protocols.
-              </p>
-            </section>
-
-            <section className="space-y-3">
-              <h2 className="text-xl sm:text-2xl font-bold text-white">
-                5. Data Retention &amp; Deletion
+                4. Data Retention &amp; Deletion
               </h2>
               <p>
                 Because we work primarily inside your systems, your firm retains ownership and control over primary records. Any local temporary working papers or review logs are stored securely and deleted upon completion of review or upon contract termination in accordance with agreed handover protocols.
@@ -104,15 +95,14 @@ export default function PrivacyPage() {
 
             <section className="space-y-3">
               <h2 className="text-xl sm:text-2xl font-bold text-white">
-                6. Contacting Us About Privacy
+                5. Contacting Us About Privacy
               </h2>
               <p>
                 If you have questions, feedback, or wish to review our confidentiality standard, please reach out to us at:
               </p>
               <div className="p-4 rounded-xl bg-[#0B0F14] border border-[#222A38] space-y-1 text-sm font-medium">
-                <p className="text-white font-bold">Meridex Operations &amp; Privacy</p>
+                <p className="text-white font-bold">Meridex Solutions</p>
                 <p>Email: <a href="mailto:info@meridexsolutions.com" className="text-teal hover:underline">info@meridexsolutions.com</a></p>
-                <p>Phone: <a href="tel:+61406687791" className="text-teal hover:underline">+61 406 687 791 (AU)</a> · <a href="tel:+918097527110" className="text-teal hover:underline">+91 8097 527 110 (IN)</a></p>
               </div>
             </section>
 
