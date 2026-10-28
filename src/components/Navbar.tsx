@@ -57,8 +57,8 @@ export default function Navbar() {
           isVisible ? 'translate-y-0' : '-translate-y-full'
         } ${
           isScrolled
-            ? 'bg-[#F7F5F0]/95 backdrop-blur-md shadow-sm border-b border-[#E5E1D8]'
-            : 'bg-[#F7F5F0]'
+            ? 'bg-[#0B0F14]/95 backdrop-blur-md shadow-md border-b border-[#222A38]'
+            : 'bg-[#0B0F14]'
         }`}
       >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,7 +66,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 focus:outline-none group shrink-0">
             <Image
-              src="/meridex-brand-logo.png"
+              src="/meridex-logo-light.png"
               alt="Meridex Solutions"
               width={190}
               height={34}
@@ -82,18 +82,18 @@ export default function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-grey-700 hover:text-navy transition-colors duration-150"
+                className="text-sm font-medium text-slate-200 hover:text-white transition-colors duration-150"
               >
                 {item.label}
               </a>
             ))}
           </nav>
 
-          {/* Right Action: Pill Button styled like reference image */}
+          {/* Right Action: Pill Button */}
           <div className="hidden lg:flex items-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium text-white bg-navy hover:bg-navy-light rounded-full transition-all duration-200 shadow-sm hover:shadow"
+              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-[#2563EB] hover:bg-blue-600 rounded-full transition-all duration-200 shadow-sm hover:shadow"
             >
               Book a Discovery Call
             </Link>
@@ -106,7 +106,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen((prev) => !prev)}
               aria-expanded={mobileMenuOpen}
               aria-label="Toggle navigation menu"
-              className="p-2 rounded-xl text-grey-700 hover:text-navy hover:bg-[#EFECE6] transition-colors focus:outline-none"
+              className="p-2 rounded-xl text-slate-200 hover:text-white hover:bg-[#151A22] transition-colors focus:outline-none"
             >
               {mobileMenuOpen ? (
                 <X className="h-6 w-6" aria-hidden="true" />
@@ -120,8 +120,8 @@ export default function Navbar() {
 
       {/* Mobile Menu Panel */}
       <div
-        className={`lg:hidden transition-all duration-300 ease-in-out border-b border-[#E5E1D8] bg-[#F7F5F0] overflow-hidden ${
-          mobileMenuOpen ? 'max-h-[520px] opacity-100 py-4 shadow-lg' : 'max-h-0 opacity-0 pointer-events-none'
+        className={`lg:hidden transition-all duration-300 ease-in-out border-b border-[#222A38] bg-[#0B0F14] overflow-hidden ${
+          mobileMenuOpen ? 'max-h-[520px] opacity-100 py-4 shadow-xl' : 'max-h-0 opacity-0 pointer-events-none'
         }`}
       >
         <div className="px-4 space-y-2 sm:px-6">
@@ -130,7 +130,7 @@ export default function Navbar() {
               key={item.href}
               href={item.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 rounded-xl text-base font-medium text-grey-800 hover:text-navy hover:bg-[#EFECE6] transition-colors"
+              className="block px-3 py-2 rounded-xl text-base font-medium text-slate-200 hover:text-white hover:bg-[#151A22] transition-colors"
             >
               {item.label}
             </a>
@@ -139,7 +139,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="block w-full text-center px-6 py-3 text-sm font-medium text-white bg-navy hover:bg-navy-light rounded-full transition-colors shadow-sm"
+              className="block w-full text-center px-6 py-3 text-sm font-semibold text-white bg-[#2563EB] hover:bg-blue-600 rounded-full transition-colors shadow-sm"
             >
               Book a Discovery Call
             </Link>

@@ -94,7 +94,7 @@ export default function ChatbotBubble() {
         <button
           onClick={() => setIsOpen(true)}
           aria-label="Open live chat assistant"
-          className="group relative flex items-center gap-2.5 bg-navy hover:bg-navy-light text-white p-3 sm:px-5 sm:py-3.5 rounded-full shadow-2xl transition-all duration-300 hover:scale-105 border border-[#E5E1D8]/20"
+          className="group relative flex items-center gap-2.5 bg-[#151A22] hover:bg-[#1E2633] text-white p-3 sm:px-5 sm:py-3.5 rounded-full shadow-2xl transition-all duration-300 hover:scale-105 border border-[#222A38]"
         >
           {/* Notification ping badge */}
           <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
@@ -115,25 +115,25 @@ export default function ChatbotBubble() {
 
       {/* Expanded Chat Drawer / Card */}
       {isOpen && (
-        <div className="w-[calc(100vw-32px)] max-w-[380px] h-[480px] sm:h-[520px] max-h-[85vh] bg-[#F7F5F0] rounded-[24px] sm:rounded-[28px] border border-[#E5E1D8] shadow-2xl flex flex-col overflow-hidden animate-fade-in-up">
+        <div className="w-[calc(100vw-32px)] max-w-[380px] h-[480px] sm:h-[520px] max-h-[85vh] bg-[#11151C] rounded-[24px] sm:rounded-[28px] border border-[#222A38] shadow-2xl flex flex-col overflow-hidden animate-fade-in-up">
           
           {/* Header */}
-          <div className="bg-navy p-4 sm:p-5 text-white flex items-center justify-between">
+          <div className="bg-[#151A22] p-4 sm:p-5 text-white flex items-center justify-between border-b border-[#222A38]">
             <div className="flex items-center gap-3">
               <div className="relative">
                 <div className="w-9 h-9 rounded-full bg-teal/20 text-teal-light flex items-center justify-center font-bold text-sm">
                   <Bot className="w-5 h-5" />
                 </div>
-                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-400 border-2 border-navy rounded-full" />
+                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-400 border-2 border-[#151A22] rounded-full" />
               </div>
               <div>
                 <div className="flex items-center gap-1.5">
                   <h3 className="font-bold text-sm">Meridex Pilot Assistant</h3>
-                  <span className="text-[9px] bg-white/10 px-1.5 py-0.5 rounded text-teal-light font-semibold">
+                  <span className="text-[9px] bg-teal/20 px-1.5 py-0.5 rounded text-teal-light font-semibold">
                     Live
                   </span>
                 </div>
-                <p className="text-[11px] text-grey-300">
+                <p className="text-[11px] text-slate-300">
                   Australia &amp; USA Operation Desk
                 </p>
               </div>
@@ -141,7 +141,7 @@ export default function ChatbotBubble() {
 
             <button
               onClick={() => setIsOpen(false)}
-              className="p-1.5 rounded-full hover:bg-white/10 text-grey-300 hover:text-white transition-colors"
+              className="p-1.5 rounded-full hover:bg-white/10 text-slate-300 hover:text-white transition-colors"
               aria-label="Close chat"
             >
               <X className="w-5 h-5" />
@@ -160,13 +160,13 @@ export default function ChatbotBubble() {
                 <div
                   className={`max-w-[85%] p-3.5 rounded-[20px] leading-relaxed ${
                     msg.sender === 'user'
-                      ? 'bg-navy text-white rounded-br-xs'
-                      : 'bg-white text-navy border border-[#E5E1D8] shadow-xs rounded-bl-xs'
+                      ? 'bg-[#2563EB] text-white rounded-br-xs'
+                      : 'bg-[#151A22] text-white border border-[#222A38] shadow-md rounded-bl-xs'
                   }`}
                 >
                   <p>{msg.text}</p>
                 </div>
-                <span className="text-[10px] text-grey-400 mt-1 px-1">
+                <span className="text-[10px] text-slate-400 mt-1 px-1">
                   {msg.time}
                 </span>
 
@@ -177,7 +177,7 @@ export default function ChatbotBubble() {
                       <button
                         key={opt}
                         onClick={() => handleSend(opt)}
-                        className="text-[11px] font-medium bg-[#EFECE6] hover:bg-white border border-[#E5E1D8] text-navy px-3 py-1.5 rounded-full transition-all text-left shadow-xs hover:border-navy"
+                        className="text-[11px] font-medium bg-[#151A22] hover:bg-[#1E2633] border border-[#222A38] text-slate-200 hover:text-white hover:border-teal px-3 py-1.5 rounded-full transition-all text-left shadow-xs"
                       >
                         {opt}
                       </button>
@@ -189,14 +189,14 @@ export default function ChatbotBubble() {
           </div>
 
           {/* Quick Action Bar */}
-          <div className="px-4 py-2 bg-[#EFECE6] border-t border-[#E5E1D8] flex items-center justify-between text-[11px] text-grey-600">
+          <div className="px-4 py-2 bg-[#151A22] border-t border-[#222A38] flex items-center justify-between text-[11px] text-slate-300">
             <span className="flex items-center gap-1 font-medium">
               <ShieldCheck className="w-3.5 h-3.5 text-teal" /> 100% Confidential
             </span>
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
-              className="text-navy font-bold hover:underline"
+              className="text-teal hover:text-teal-light font-bold hover:underline"
             >
               Book call directly →
             </Link>
@@ -208,19 +208,19 @@ export default function ChatbotBubble() {
               e.preventDefault();
               handleSend();
             }}
-            className="p-3 bg-white border-t border-[#E5E1D8] flex items-center gap-2"
+            className="p-3 bg-[#11151C] border-t border-[#222A38] flex items-center gap-2"
           >
             <input
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask anything about our pilot, tools, or SLA..."
-              className="flex-1 bg-[#F7F5F0] border border-[#E5E1D8] rounded-full px-4 py-2 text-xs sm:text-sm text-navy placeholder-grey-400 focus:outline-none focus:border-navy"
+              className="flex-1 bg-[#151A22] border border-[#222A38] rounded-full px-4 py-2 text-xs sm:text-sm text-white placeholder-grey-500 focus:outline-none focus:border-teal"
             />
             <button
               type="submit"
               disabled={!input.trim()}
-              className="w-8 h-8 rounded-full bg-navy disabled:opacity-40 text-white flex items-center justify-center shrink-0 hover:bg-navy-light transition-colors"
+              className="w-8 h-8 rounded-full bg-[#2563EB] disabled:opacity-40 text-white flex items-center justify-center shrink-0 hover:bg-blue-600 transition-colors"
               aria-label="Send message"
             >
               <Send className="w-3.5 h-3.5" />

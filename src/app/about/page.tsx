@@ -61,55 +61,55 @@ export default function AboutPage() {
   return (
     <>
       <Navbar />
-      <main className="bg-[#F7F5F0] min-h-screen py-16 sm:py-24">
+      <main className="bg-[#0B0F14] min-h-screen py-16 sm:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-20">
           
           {/* SECTION 1: ABOUT US */}
           <section className="space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E5E1D8] text-[11px] font-bold uppercase tracking-widest text-grey-700 shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[11px] font-bold uppercase tracking-widest text-slate-300">
               <span className="w-2 h-2 rounded-full bg-teal animate-pulse" />
               <span>ABOUT MERIDEX SOLUTIONS</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-navy tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
               About Us
             </h1>
 
-            <p className="text-lg sm:text-2xl text-navy leading-relaxed font-normal">
+            <p className="text-lg sm:text-2xl text-slate-100 leading-relaxed font-normal">
               Meridex is an outsourcing partner for businesses that want their admin and finance work handled reliably, so they can spend their time on clients and growth.
             </p>
 
-            <p className="text-base sm:text-lg text-grey-600 leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
               We take on the detailed, recurring work that keeps a business running: document collection and checking, application preparation, bookkeeping, accounting support and tax return preparation. We work with clients in Australia, the US and the UK.
             </p>
 
             {/* Jurisdiction Coverage Chips */}
             <div className="pt-2 flex flex-wrap items-center gap-2.5">
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-[#E5E1D8] text-xs font-semibold text-navy shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-xs font-semibold text-white">
+                <span className="w-2 h-2 rounded-full bg-emerald-400" />
                 Australia
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-[#E5E1D8] text-xs font-semibold text-navy shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-xs font-semibold text-white">
+                <span className="w-2 h-2 rounded-full bg-emerald-400" />
                 United States
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-[#E5E1D8] text-xs font-semibold text-grey-600 shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-amber-500" />
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-xs font-semibold text-slate-300">
+                <span className="w-2 h-2 rounded-full bg-amber-400" />
                 United Kingdom (Launching 2027)
               </span>
             </div>
           </section>
 
           {/* SECTION 2: WHY MERIDEX */}
-          <section className="space-y-6 pt-12 border-t border-[#E5E1D8]">
+          <section className="space-y-6 pt-12 border-t border-[#222A38]">
             <div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal/10 border border-teal/20 text-[10px] font-bold uppercase tracking-wider text-teal mb-3">
-                CORE PHILOSOPHY
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#151A22] border border-[#222A38] text-[10px] font-bold uppercase tracking-wider text-teal mb-3">
+                OUR PHILOSOPHY
               </div>
-              <h2 className="text-2xl sm:text-4xl font-bold text-navy tracking-tight">
+              <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
                 Why Meridex
               </h2>
-              <p className="mt-2 text-base sm:text-lg text-grey-700 leading-relaxed">
+              <p className="mt-2 text-base sm:text-lg text-slate-300 leading-relaxed">
                 The name comes from two words, <span className="text-teal font-semibold">merit</span> and <span className="text-teal font-semibold">dexterity</span>.
               </p>
             </div>
@@ -118,7 +118,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
               
               {/* MERIT BOX */}
-              <div className="relative rounded-[28px] p-7 sm:p-8 bg-gradient-to-br from-[#EEF7F7] via-white to-[#F2F8F8] border border-teal/40 shadow-sm overflow-hidden group hover:border-teal/70 transition-all">
+              <div className="relative rounded-[28px] p-7 sm:p-8 bg-gradient-to-br from-[#101A26] via-[#151E2B] to-[#0D131C] border border-teal/40 shadow-xl overflow-hidden group hover:border-teal/70 transition-all">
                 <div className="absolute top-0 right-0 -mr-12 -mt-12 w-44 h-44 rounded-full bg-teal/10 blur-3xl pointer-events-none" />
                 <div className="relative z-10 flex flex-col justify-between h-full space-y-6">
                   <div>
@@ -127,17 +127,17 @@ export default function AboutPage() {
                         <Award className="w-3.5 h-3.5" />
                         MERIT
                       </span>
-                      <span className="text-xs font-semibold text-grey-500">Earning Trust</span>
+                      <span className="text-xs font-semibold text-slate-400">Earning Trust</span>
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-navy tracking-tight mb-2">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight mb-2">
                       How we earn work.
                     </h3>
-                    <p className="text-sm sm:text-base text-grey-600 leading-relaxed font-normal">
+                    <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
                       We start with a small pilot, you judge us on the results, and we continue only when the work has earned its place.
                     </p>
                   </div>
                   
-                  <div className="pt-4 border-t border-[#E5E1D8] flex items-center gap-2 text-xs font-medium text-teal">
+                  <div className="pt-4 border-t border-[#222A38]/70 flex items-center gap-2 text-xs font-medium text-teal">
                     <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse" />
                     <span>No lock-in · Judged purely on results</span>
                   </div>
@@ -145,27 +145,27 @@ export default function AboutPage() {
               </div>
 
               {/* DEXTERITY BOX */}
-              <div className="relative rounded-[28px] p-7 sm:p-8 bg-gradient-to-br from-[#EFF4FB] via-white to-[#F0F5FD] border border-blue-400/40 shadow-sm overflow-hidden group hover:border-blue-500/70 transition-all">
+              <div className="relative rounded-[28px] p-7 sm:p-8 bg-gradient-to-br from-[#141B2D] via-[#172036] to-[#0D131C] border border-blue-500/40 shadow-xl overflow-hidden group hover:border-blue-400/70 transition-all">
                 <div className="absolute top-0 right-0 -mr-12 -mt-12 w-44 h-44 rounded-full bg-blue-500/10 blur-3xl pointer-events-none" />
                 <div className="relative z-10 flex flex-col justify-between h-full space-y-6">
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-[11px] font-black tracking-widest uppercase text-blue-600">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-[11px] font-black tracking-widest uppercase text-blue-400">
                         <ShieldCheck className="w-3.5 h-3.5" />
                         DEXTERITY
                       </span>
-                      <span className="text-xs font-semibold text-grey-500">Operational Precision</span>
+                      <span className="text-xs font-semibold text-slate-400">Operational Precision</span>
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-navy tracking-tight mb-2">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight mb-2">
                       How we keep it.
                     </h3>
-                    <p className="text-sm sm:text-base text-grey-600 leading-relaxed font-normal">
+                    <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
                       Every task gets careful, precise handling, and every file is reviewed before it comes back to you.
                     </p>
                   </div>
                   
-                  <div className="pt-4 border-t border-[#E5E1D8] flex items-center gap-2 text-xs font-medium text-blue-600">
-                    <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" />
+                  <div className="pt-4 border-t border-[#222A38]/70 flex items-center gap-2 text-xs font-medium text-blue-400">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
                     <span>Second-level review on every single file</span>
                   </div>
                 </div>
@@ -175,12 +175,12 @@ export default function AboutPage() {
           </section>
 
           {/* SECTION 3: HOW WE WORK */}
-          <section className="space-y-6 pt-12 border-t border-[#E5E1D8]">
+          <section className="space-y-6 pt-12 border-t border-[#222A38]">
             <div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal/10 border border-teal/20 text-[10px] font-bold uppercase tracking-wider text-teal mb-3">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#151A22] border border-[#222A38] text-[10px] font-bold uppercase tracking-wider text-teal mb-3">
                 OPERATIONAL PRINCIPLES
               </div>
-              <h2 className="text-2xl sm:text-4xl font-bold text-navy tracking-tight">
+              <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
                 How we work
               </h2>
             </div>
@@ -192,9 +192,9 @@ export default function AboutPage() {
                 return (
                   <div
                     key={item.step}
-                    className="p-5 sm:p-6 rounded-2xl bg-white border border-[#E5E1D8] hover:border-teal/50 hover:shadow-md transition-all flex items-start gap-4 shadow-sm group"
+                    className="p-5 sm:p-6 rounded-2xl bg-[#151A22] border border-[#222A38] hover:border-teal/40 transition-all flex items-start gap-4 shadow-sm group"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-[#F7F5F0] border border-[#E5E1D8] text-teal flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    <div className="w-10 h-10 rounded-xl bg-[#0B0F14] border border-[#222A38] text-teal flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                       <Icon className="w-5 h-5 text-teal" />
                     </div>
                     <div className="min-w-0 flex-1">
@@ -203,9 +203,9 @@ export default function AboutPage() {
                           STEP {item.step}
                         </span>
                       </div>
-                      <h3 className="text-base sm:text-lg font-bold text-navy tracking-tight">
+                      <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
                         {item.title}{' '}
-                        <span className="text-grey-600 font-normal text-sm sm:text-base ml-1">
+                        <span className="text-slate-300 font-normal text-sm sm:text-base ml-1">
                           {item.desc}
                         </span>
                       </h3>
@@ -218,17 +218,17 @@ export default function AboutPage() {
           </section>
 
           {/* SECTION 4: LET'S TALK */}
-          <section className="pt-12 border-t border-[#E5E1D8]">
-            <div className="relative bg-white border border-[#E5E1D8] rounded-3xl p-8 sm:p-12 shadow-sm overflow-hidden group">
+          <section className="pt-12 border-t border-[#222A38]">
+            <div className="relative bg-gradient-to-br from-[#151A22] via-[#11151C] to-[#0B0F14] border border-[#222A38] rounded-3xl p-8 sm:p-12 shadow-2xl overflow-hidden group">
               <div className="absolute top-0 right-0 -mr-16 -mt-16 w-56 h-56 rounded-full bg-teal/10 blur-3xl pointer-events-none" />
               <div className="relative z-10 space-y-4">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal/10 border border-teal/20 text-[10px] font-bold uppercase tracking-wider text-teal">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal/10 border border-teal/30 text-[10px] font-bold uppercase tracking-wider text-teal">
                   ZERO LOCK-IN PILOT
                 </div>
-                <h2 className="text-2xl sm:text-4xl font-bold text-navy tracking-tight">
+                <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
                   Let&apos;s talk
                 </h2>
-                <p className="text-base sm:text-lg text-grey-600 leading-relaxed max-w-2xl">
+                <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
                   If you&apos;d like to see how this would work for your business, get in touch. A short conversation, and then a small pilot, is the best way to judge us on merit.
                 </p>
                 <div className="pt-4">

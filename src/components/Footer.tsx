@@ -32,17 +32,17 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#EFECE6] border-t border-[#E5E1D8] text-grey-600 pt-16 pb-12">
+    <footer className="bg-[#0B0F14] border-t border-[#222A38] text-slate-300 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main 3-column layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-14 border-b border-[#E5E1D8]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-14 border-b border-[#222A38]">
           
           {/* Brand & Contact Info */}
           <div className="lg:col-span-6 space-y-4">
             <Link href="/" className="inline-block">
               <Image
-                src="/meridex-brand-logo.png"
+                src="/meridex-logo-light.png"
                 alt="Meridex Solutions"
                 width={190}
                 height={34}
@@ -51,16 +51,16 @@ export default function Footer() {
               />
             </Link>
             
-            <p className="text-sm font-medium text-grey-500 italic">
+            <p className="text-sm font-medium text-teal italic">
               Where merit meets dexterity.
             </p>
             
-            <p className="text-sm text-grey-600 leading-relaxed max-w-md">
+            <p className="text-sm text-slate-300 leading-relaxed max-w-md">
               Supporting mortgage brokers, insurance brokers, accountants and finance firms across Australia and the USA with precision outsourcing.
             </p>
 
             <div className="pt-2 flex flex-col gap-2.5">
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs font-semibold text-navy">
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs font-semibold text-white">
                 <a
                   href="mailto:info@meridexsolutions.com"
                   className="inline-flex items-center gap-1.5 hover:text-teal transition-colors"
@@ -76,16 +76,16 @@ export default function Footer() {
                   href="https://www.instagram.com/meridexsolutions?dlrf=MTJlbmZ6bWo3MnYxaQ=="
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E5E1D8] hover:border-[#DD2A7B]/50 transition-all shadow-xs group"
+                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] hover:border-[#DD2A7B]/50 transition-all shadow-md group"
                   aria-label="Follow Meridex Solutions on Instagram"
                 >
-                  <div className="w-5 h-5 rounded-md bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] flex items-center justify-center text-white shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
+                  <div className="w-5 h-5 rounded-md bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] flex items-center justify-center text-white shrink-0 shadow-xs group-hover:scale-105 transition-transform">
                     <InstagramIcon className="w-3 h-3" />
                   </div>
-                  <span className="text-xs font-semibold text-navy group-hover:text-[#DD2A7B] transition-colors">
+                  <span className="text-xs font-semibold text-white group-hover:text-[#DD2A7B] transition-colors">
                     Instagram
                   </span>
-                  <span className="text-[11px] text-grey-400">
+                  <span className="text-[11px] text-slate-300">
                     @meridexsolutions
                   </span>
                 </a>
@@ -95,7 +95,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-navy mb-4">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
               Navigation
             </h4>
             <ul className="space-y-2.5 text-sm">
@@ -103,7 +103,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-grey-600 hover:text-navy transition-colors inline-flex items-center gap-1 group"
+                    className="text-slate-300 hover:text-white transition-colors inline-flex items-center gap-1 group"
                   >
                     <span>{item.label}</span>
                   </Link>
@@ -114,19 +114,19 @@ export default function Footer() {
 
           {/* Regions & Coverage */}
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-navy mb-4">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
               Coverage
             </h4>
-            <div className="space-y-3 text-xs text-grey-600">
+            <div className="space-y-3 text-xs text-slate-300">
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                <span className="font-semibold text-navy">Australia (Active)</span>
+                <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                <span className="font-semibold text-white">Australia (Active)</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                <span className="font-semibold text-navy">United States (Active)</span>
+                <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                <span className="font-semibold text-white">United States (Active)</span>
               </div>
-              <div className="flex items-center gap-2 text-grey-500">
+              <div className="flex items-center gap-2 text-slate-300">
                 <span className="w-2 h-2 rounded-full bg-amber-400" />
                 <span>United Kingdom (Launching 2027)</span>
               </div>
@@ -136,24 +136,24 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-grey-500">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-300">
           <p>© 2026 Meridex Solutions. All rights reserved.</p>
           <div className="flex items-center gap-4 sm:gap-6">
             <Link
               href="/privacy"
-              className="text-grey-600 hover:text-navy transition-colors underline underline-offset-4"
+              className="text-slate-300 hover:text-white transition-colors underline underline-offset-4"
             >
               Privacy Policy
             </Link>
-            <span className="text-grey-300">·</span>
+            <span className="text-slate-600">·</span>
             <a
               href="https://www.instagram.com/meridexsolutions?dlrf=MTJlbmZ6bWo3MnYxaQ=="
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 hover:text-[#DD2A7B] transition-colors text-grey-500"
+              className="inline-flex items-center gap-1.5 hover:text-[#DD2A7B] transition-colors text-slate-300"
               aria-label="Instagram @meridexsolutions"
             >
-              <InstagramIcon className="w-3.5 h-3.5 text-navy/70 group-hover:text-[#DD2A7B]" />
+              <InstagramIcon className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#DD2A7B]" />
               <span>Instagram</span>
             </a>
           </div>

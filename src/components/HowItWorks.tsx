@@ -60,18 +60,18 @@ const principles: PrincipleItem[] = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-20 lg:py-28 bg-[#F7F5F0] border-t border-[#E5E1D8]">
+    <section id="how-it-works" className="py-20 lg:py-28 bg-[#0B0F14] border-t border-[#222A38]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#EFECE6] border border-[#E5E1D8] text-[11px] font-bold uppercase tracking-widest text-grey-600 mb-4">
+          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] text-[11px] font-bold uppercase tracking-widest text-slate-300 mb-4">
             PROVEN OPERATING PRINCIPLES
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-navy tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-white tracking-tight leading-tight">
             How We Work
           </h2>
-          <p className="mt-3 text-grey-600 text-sm sm:text-lg leading-relaxed max-w-2xl mx-auto [text-wrap:balance]">
+          <p className="mt-3 text-slate-300 text-sm sm:text-lg leading-relaxed max-w-2xl mx-auto [text-wrap:balance]">
             Start small, judge us on results, and continue only when the work has earned its place.
           </p>
         </div>
@@ -83,31 +83,31 @@ export default function HowItWorks() {
             return (
               <div
                 key={item.number}
-                className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-[#EFECE6] border border-[#E5E1D8] rounded-[24px] sm:rounded-[28px] p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-md hover:border-navy/20 group"
+                className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-[#151A22] border border-[#222A38] rounded-[24px] sm:rounded-[28px] p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:border-teal/40 group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
                     <span className="text-xs font-black tracking-wider text-teal">
                       STEP {item.number}
                     </span>
-                    <div className="w-10 h-10 rounded-2xl bg-white border border-[#DDD8CD] flex items-center justify-center text-navy shadow-xs group-hover:scale-105 transition-transform">
+                    <div className="w-10 h-10 rounded-2xl bg-[#0B0F14] border border-[#222A38] flex items-center justify-center text-teal shadow-xs group-hover:scale-105 transition-transform">
                       <Icon className="w-5 h-5 text-teal" />
                     </div>
                   </div>
 
-                  <h3 className="text-lg sm:text-xl font-bold text-navy tracking-tight mb-1.5">
+                  <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight mb-1.5">
                     {item.title}{' '}
-                    <span className="text-grey-600 font-medium block text-base mt-0.5">
+                    <span className="text-slate-300 font-medium block text-base mt-0.5">
                       {item.shortDesc}
                     </span>
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-grey-600 leading-relaxed mt-3">
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mt-3">
                     {item.detail}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#DDD8CD]/80 flex items-center gap-2 text-xs font-semibold text-navy">
+                <div className="mt-6 pt-4 border-t border-[#222A38] flex items-center gap-2 text-xs font-semibold text-slate-300">
                   <CheckCircle2 className="w-3.5 h-3.5 text-teal shrink-0" />
                   <span>Guaranteed on every file</span>
                 </div>
@@ -117,25 +117,25 @@ export default function HowItWorks() {
         </div>
 
         {/* Bottom Action Strip */}
-        <div className="mt-12 sm:mt-14 max-w-6xl mx-auto bg-white border border-[#E5E1D8] rounded-[24px] sm:rounded-[32px] p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-5 shadow-xs">
+        <div className="mt-12 sm:mt-14 max-w-6xl mx-auto bg-[#11151C] border border-[#222A38] rounded-[24px] sm:rounded-[32px] p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-5 shadow-xl">
           <div>
             <span className="text-[10px] font-bold uppercase tracking-wider text-teal block mb-1">
               Zero Lock-In
             </span>
-            <h4 className="text-lg sm:text-xl font-bold text-navy">
+            <h4 className="text-lg sm:text-xl font-bold text-white">
               Ready to test us on merit? Start with a defined pilot.
             </h4>
-            <p className="text-xs sm:text-sm text-grey-600 mt-1">
+            <p className="text-xs sm:text-sm text-slate-300 mt-1">
               A short consultation, clear agreed scope, and then judged on results.
             </p>
           </div>
 
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-navy hover:bg-navy-light text-white text-xs sm:text-sm font-semibold transition-all shadow-sm shrink-0 w-full sm:w-auto"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#2563EB] hover:bg-blue-600 text-white text-xs sm:text-sm font-semibold transition-all shadow-md shrink-0 w-full sm:w-auto"
           >
             <span>Book a Discovery Call</span>
-            <ArrowRight className="w-4 h-4 text-teal-light" />
+            <ArrowRight className="w-4 h-4 text-white" />
           </Link>
         </div>
 

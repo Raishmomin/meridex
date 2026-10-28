@@ -69,7 +69,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-20 lg:py-28 bg-white border-t border-[#E5E1D8]">
+    <section id="faq" className="py-20 lg:py-28 bg-[#0B0F14] border-t border-[#222A38]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -77,10 +77,10 @@ export default function FAQ() {
           <span className="text-xs font-bold uppercase tracking-wider text-teal">
             Clarifications &amp; Details
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-navy tracking-tight mt-2">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-2">
             Frequently Asked Questions
           </h2>
-          <p className="mt-3 text-grey-600 text-sm sm:text-base">
+          <p className="mt-3 text-slate-300 text-sm sm:text-base">
             Everything you need to know about starting a pilot with Meridex.
           </p>
         </div>
@@ -94,8 +94,8 @@ export default function FAQ() {
                 key={index}
                 className={`rounded-[20px] transition-all duration-200 border ${
                   isOpen
-                    ? "bg-[#F7F5F0] border-[#DDD8CD] shadow-xs"
-                    : "bg-[#FAFAF9] border-[#E5E1D8] hover:bg-[#F7F5F0]"
+                    ? "bg-[#151A22] border-[#2E3846] shadow-xl"
+                    : "bg-[#11151C] border-[#222A38] hover:bg-[#151A22]"
                 }`}
               >
                 <button
@@ -104,18 +104,18 @@ export default function FAQ() {
                   className="w-full flex items-center justify-between text-left p-5 sm:p-6 focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-semibold text-base sm:text-lg text-navy pr-4 leading-snug">
+                  <span className="font-semibold text-base sm:text-lg text-white pr-4 leading-snug">
                     {faq.question}
                   </span>
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                    isOpen ? "bg-navy text-white rotate-180" : "bg-[#EFECE6] text-navy"
+                    isOpen ? "bg-[#2563EB] text-white rotate-180" : "bg-[#0B0F14] text-white border border-[#222A38]"
                   }`}>
                     <ChevronDown className="w-4 h-4" />
                   </div>
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 pb-6 sm:px-6 text-sm sm:text-base text-grey-600 leading-relaxed border-t border-[#E5E1D8]/60 pt-4">
+                  <div className="px-5 pb-6 sm:px-6 text-sm sm:text-base text-slate-200 leading-relaxed border-t border-[#222A38] pt-4 font-normal">
                     {faq.answer}
                   </div>
                 )}
