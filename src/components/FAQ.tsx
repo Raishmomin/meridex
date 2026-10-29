@@ -108,7 +108,7 @@ export default function FAQ() {
                     {faq.question}
                   </span>
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                    isOpen ? "bg-[#2563EB] text-white rotate-180" : "bg-[#0B0F14] text-white border border-[#222A38]"
+                    isOpen ? "bg-teal/20 text-teal-light border border-teal/40 rotate-180" : "bg-[#0B0F14] text-teal border border-[#222A38]"
                   }`}>
                     <ChevronDown className="w-4 h-4" />
                   </div>

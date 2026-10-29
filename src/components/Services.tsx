@@ -212,7 +212,7 @@ export default function Services() {
               onClick={() => setActiveTab('australia')}
               className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 border ${
                 activeTab === 'australia'
-                  ? 'bg-[#2563EB] text-white border-[#2563EB] shadow-lg'
+                  ? 'bg-teal/20 text-teal-light border-teal/60 shadow-sm'
                   : 'bg-[#151A22] text-slate-200 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
               }`}
             >
@@ -224,7 +224,7 @@ export default function Services() {
               onClick={() => setActiveTab('usa')}
               className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 border ${
                 activeTab === 'usa'
-                  ? 'bg-[#2563EB] text-white border-[#2563EB] shadow-lg'
+                  ? 'bg-teal/20 text-teal-light border-teal/60 shadow-sm'
                   : 'bg-[#151A22] text-slate-200 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
               }`}
             >
@@ -236,7 +236,7 @@ export default function Services() {
               onClick={() => setActiveTab('uk')}
               className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 border ${
                 activeTab === 'uk'
-                  ? 'bg-[#2563EB] text-white border-[#2563EB] shadow-lg'
+                  ? 'bg-teal/20 text-teal-light border-teal/60 shadow-sm'
                   : 'bg-[#151A22] text-slate-200 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
               }`}
             >
@@ -323,10 +323,10 @@ export default function Services() {
             <div className="pt-5 mt-6 border-t border-[#222A38]">
               <a
                 href="/contact"
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-[#2563EB] hover:bg-blue-600 text-white font-semibold text-xs transition-colors shadow-md"
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-teal/20 hover:bg-teal/30 text-teal-light hover:text-white border border-teal/40 hover:border-teal/60 font-semibold text-xs transition-colors shadow-sm"
               >
                 <span>Request Custom Pilot</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <ArrowRight className="w-3.5 h-3.5 text-teal-light" />
               </a>
             </div>
           </div>
@@ -364,7 +364,7 @@ export default function Services() {
               </div>
               <a
                 href="/contact"
-                className="w-full sm:w-auto text-center whitespace-nowrap px-5 py-2.5 rounded-full bg-[#2563EB] hover:bg-blue-600 text-white text-xs font-semibold transition-all shadow-md shrink-0"
+                className="w-full sm:w-auto text-center whitespace-nowrap px-5 py-2.5 rounded-full bg-teal/20 hover:bg-teal/30 text-teal-light hover:text-white border border-teal/40 hover:border-teal/60 text-xs font-semibold transition-all shadow-sm shrink-0"
               >
                 Confirm Compatibility
               </a>

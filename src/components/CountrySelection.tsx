@@ -114,7 +114,7 @@ export default function CountrySelection() {
                   onClick={() => setSelectedCountry(country)}
                   className={`inline-flex items-center gap-1.5 sm:gap-2.5 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 border ${
                     isSelected
-                      ? 'bg-[#2563EB] text-white border-[#2563EB] shadow-lg scale-102 sm:scale-105'
+                      ? 'bg-teal/20 text-teal-light border-teal/60 shadow-sm scale-102 sm:scale-105'
                       : 'bg-[#151A22] text-slate-200 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
                   }`}
                 >
@@ -144,7 +144,7 @@ export default function CountrySelection() {
             </div>
             <div className="flex items-center gap-3 text-[10px] sm:text-[11px] font-medium text-slate-300">
               <span className="flex items-center gap-1">
-                <span className="w-2 h-2 rounded-full bg-blue-500" /> Aus &amp; US Active
+                <span className="w-2 h-2 rounded-full bg-teal" /> Aus &amp; US Active
               </span>
               <span className="flex items-center gap-1">
                 <span className="w-2 h-2 rounded-full bg-amber-500" /> UK Soon
@@ -225,7 +225,7 @@ export default function CountrySelection() {
                         isSelected
                           ? c.status === 'upcoming'
                             ? 'bg-amber-400 animate-ping'
-                            : 'bg-blue-500 animate-ping'
+                            : 'bg-teal animate-ping'
                           : 'opacity-0 group-hover:opacity-40 bg-slate-500'
                       }`}
                     />
@@ -234,7 +234,7 @@ export default function CountrySelection() {
                         isSelected
                           ? c.status === 'upcoming'
                             ? 'bg-amber-400 scale-125 ring-2 ring-amber-400/40'
-                            : 'bg-blue-500 scale-125 ring-2 ring-blue-500/40'
+                            : 'bg-teal scale-125 ring-2 ring-teal/40'
                           : 'bg-slate-500'
                       }`}
                     />
@@ -281,7 +281,7 @@ export default function CountrySelection() {
 
                       <div className="mt-3 pt-2 border-t border-[#222A38] flex items-center justify-between text-[10px] text-slate-300 font-medium">
                         <span className="text-teal font-semibold">{c.role}</span>
-                        <span className="text-blue-400 font-bold">Selected ✓</span>
+                        <span className="text-teal font-bold">Selected ✓</span>
                       </div>
                     </div>
                   )}
@@ -368,10 +368,10 @@ export default function CountrySelection() {
               <div className="md:col-span-3 flex flex-col items-stretch md:items-end justify-between h-full pt-2">
                 <a
                   href={`/contact?country=${encodeURIComponent(selectedCountry.name)}`}
-                  className="w-full inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 rounded-full bg-[#2563EB] hover:bg-blue-600 text-white text-xs font-semibold transition-all shadow-md"
+                  className="w-full inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 rounded-full bg-teal/20 hover:bg-teal/30 text-teal-light hover:text-white border border-teal/40 hover:border-teal/60 text-xs font-semibold transition-all shadow-sm"
                 >
                   <span>Launch Pilot in {selectedCountry.name}</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-white" />
+                  <ArrowRight className="w-3.5 h-3.5 text-teal-light" />
                 </a>
                 <p className="text-[10px] sm:text-[11px] text-slate-300 mt-2 text-center md:text-right">
                   No long-term lock-in. Turnaround agreed upfront.

@@ -68,9 +68,9 @@ export default function Navbar() {
             <Image
               src="/meridex-logo-light.png"
               alt="Meridex Solutions"
-              width={190}
-              height={34}
-              className="h-7 sm:h-8 w-auto object-contain"
+              width={180}
+              height={55}
+              className="h-9 sm:h-10 w-auto object-contain"
               priority
               unoptimized
             />
@@ -93,7 +93,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-[#2563EB] hover:bg-blue-600 rounded-full transition-all duration-200 shadow-sm hover:shadow"
+              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-teal-light hover:text-white bg-teal/20 hover:bg-teal/30 border border-teal/40 hover:border-teal/60 rounded-full transition-all duration-200 shadow-sm hover:shadow"
             >
               Book a Discovery Call
             </Link>
@@ -109,9 +109,9 @@ export default function Navbar() {
               className="p-2 rounded-xl text-slate-200 hover:text-white hover:bg-[#151A22] transition-colors focus:outline-none"
             >
               {mobileMenuOpen ? (
-                <X className="h-6 w-6" aria-hidden="true" />
+                <X className="h-6 w-6 text-teal" aria-hidden="true" />
               ) : (
-                <Menu className="h-6 w-6" aria-hidden="true" />
+                <Menu className="h-6 w-6 text-teal" aria-hidden="true" />
               )}
             </button>
           </div>
@@ -139,7 +139,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="block w-full text-center px-6 py-3 text-sm font-semibold text-white bg-[#2563EB] hover:bg-blue-600 rounded-full transition-colors shadow-sm"
+              className="block w-full text-center px-6 py-3 text-sm font-semibold text-teal-light hover:text-white bg-teal/20 hover:bg-teal/30 border border-teal/40 hover:border-teal/60 rounded-full transition-colors shadow-sm"
             >
               Book a Discovery Call
             </Link>

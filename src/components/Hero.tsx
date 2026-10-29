@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import {
   ArrowRight,
   CheckCircle2,
@@ -92,10 +93,10 @@ export default function Hero() {
                 />
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap px-6 py-3 rounded-xl sm:rounded-full bg-[#2563EB] hover:bg-blue-600 text-white font-medium text-sm transition-all duration-200 shadow-sm shrink-0 w-full sm:w-auto"
+                  className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap px-6 py-3 rounded-xl sm:rounded-full bg-teal/20 hover:bg-teal/30 text-teal-light hover:text-white border border-teal/40 hover:border-teal/60 font-semibold text-sm transition-all duration-200 shadow-sm shrink-0 w-full sm:w-auto"
                 >
                   <span>Book Call</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 text-teal-light" />
                 </button>
               </form>
 

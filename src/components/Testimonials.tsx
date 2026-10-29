@@ -114,7 +114,7 @@ export default function Testimonials(): React.JSX.Element {
                 onClick={() => setFilter(cat)}
                 className={`px-4 py-2 rounded-full text-xs font-semibold transition-all duration-200 border ${
                   filter === cat
-                    ? 'bg-[#2563EB] text-white border-[#2563EB] shadow-md'
+                    ? 'bg-teal/20 text-teal-light border-teal/60 shadow-sm'
                     : 'bg-[#151A22] text-slate-200 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
                 }`}
               >
@@ -189,8 +189,8 @@ export default function Testimonials(): React.JSX.Element {
 
                 {/* Verified SLA Audit Footer */}
                 <div className="pt-2 border-t border-[#222A38] flex items-center justify-between text-[10px] text-slate-300 font-medium">
-                  <span className="flex items-center gap-1 text-emerald-400 font-semibold">
-                    <ShieldCheck className="w-3 h-3 text-emerald-400" />
+                  <span className="flex items-center gap-1 text-teal font-semibold">
+                    <ShieldCheck className="w-3 h-3 text-teal" />
                     {item.verifiedSLA}
                   </span>
                   <span className="text-white">{item.serviceCategory}</span>

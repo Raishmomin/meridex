@@ -132,10 +132,10 @@ export default function HowItWorks() {
 
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#2563EB] hover:bg-blue-600 text-white text-xs sm:text-sm font-semibold transition-all shadow-md shrink-0 w-full sm:w-auto"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-teal/20 hover:bg-teal/30 text-teal-light hover:text-white border border-teal/40 hover:border-teal/60 text-xs sm:text-sm font-semibold transition-all shadow-sm shrink-0 w-full sm:w-auto"
           >
             <span>Book a Discovery Call</span>
-            <ArrowRight className="w-4 h-4 text-white" />
+            <ArrowRight className="w-4 h-4 text-teal-light" />
           </Link>
         </div>
 

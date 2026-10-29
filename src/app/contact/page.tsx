@@ -172,7 +172,7 @@ export default function ContactPage() {
                   </p>
                   <button
                     onClick={handleReset}
-                    className="mt-6 px-6 py-2.5 rounded-full bg-[#2563EB] hover:bg-blue-600 text-white text-xs font-semibold transition-colors shadow-md"
+                    className="mt-6 px-6 py-2.5 rounded-full bg-teal/20 hover:bg-teal/30 text-teal-light hover:text-white border border-teal/40 hover:border-teal/60 text-xs font-semibold transition-colors shadow-sm"
                   >
                     Submit another response
                   </button>
@@ -357,10 +357,10 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#2563EB] hover:bg-blue-600 disabled:opacity-60 text-white font-semibold text-sm transition-all duration-200 shadow-md hover:shadow-lg cursor-pointer"
+                      className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-teal/20 hover:bg-teal/30 text-teal-light hover:text-white border border-teal/40 hover:border-teal/60 disabled:opacity-50 font-semibold text-sm transition-all duration-200 shadow-sm hover:shadow cursor-pointer"
                     >
                       <span>{isSubmitting ? 'Submitting Inquiry...' : 'Request Your Pilot Proposal'}</span>
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4 text-teal-light" />
                     </button>
                     <div className="flex items-center justify-center gap-2 mt-3 text-[11px] text-slate-300 font-medium">
                       <Lock className="w-3 h-3 text-teal" />

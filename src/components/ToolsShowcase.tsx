@@ -124,7 +124,7 @@ export default function ToolsShowcase() {
                 onClick={() => setActiveTab(tab)}
                 className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 border ${
                   activeTab === tab
-                    ? 'bg-[#2563EB] text-white border-[#2563EB] shadow-md'
+                    ? 'bg-teal/20 text-teal-light border-teal/60 shadow-sm'
                     : 'bg-[#151A22] text-slate-200 border-[#222A38] hover:bg-[#1E2633] hover:text-white'
                 }`}
               >
@@ -167,8 +167,8 @@ export default function ToolsShowcase() {
               </div>
 
               <div className="pt-4 mt-5 border-t border-[#222A38] flex items-center justify-between text-[11px] text-slate-300 font-medium">
-                <span className="flex items-center gap-1 text-emerald-400">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" /> Plug &amp; Play
+                <span className="flex items-center gap-1 text-teal">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-teal" /> Plug &amp; Play
                 </span>
                 <span className="text-teal group-hover:underline">Pilot ready →</span>
               </div>
@@ -191,7 +191,7 @@ export default function ToolsShowcase() {
           </div>
           <a
             href="/contact"
-            className="whitespace-nowrap px-5 py-2.5 rounded-full bg-[#2563EB] hover:bg-blue-600 text-white text-xs font-semibold transition-all shadow-md"
+            className="whitespace-nowrap px-5 py-2.5 rounded-full bg-teal/20 hover:bg-teal/30 text-teal-light hover:text-white border border-teal/40 hover:border-teal/60 text-xs font-semibold transition-all shadow-sm"
           >
             Confirm Tool Compatibility
           </a>

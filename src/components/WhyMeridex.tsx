@@ -68,11 +68,11 @@ export default function WhyMeridex(): React.JSX.Element {
             <div className="pt-8">
               <Link
                 href="/#services"
-                className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-[#2563EB] text-white text-xs font-semibold hover:bg-blue-600 transition-all shadow-md group-hover:shadow"
+                className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-teal/20 hover:bg-teal/30 text-teal-light hover:text-white border border-teal/40 hover:border-teal/60 text-xs font-semibold transition-all shadow-sm group-hover:shadow"
               >
                 <span>Explore Services</span>
-                <span className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
-                  <ArrowRight className="w-3.5 h-3.5 text-white" />
+                <span className="w-6 h-6 rounded-full bg-teal/20 flex items-center justify-center">
+                  <ArrowRight className="w-3.5 h-3.5 text-teal-light" />
                 </span>
               </Link>
             </div>

@@ -14,12 +14,12 @@ export default function CTA() {
           
           {/* Subtle Ambient Decorative Glows */}
           <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-teal/15 blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-blue-500/15 blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-teal/10 blur-3xl pointer-events-none" />
 
           <div className="relative z-10 max-w-3xl mx-auto">
             {/* Pill */}
             <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 text-teal-light text-[11px] sm:text-xs font-semibold mb-4 sm:mb-6 max-w-full border border-white/10">
-              <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
+              <ShieldCheck className="w-3.5 h-3.5 text-teal shrink-0" />
               <span className="truncate">Low-Risk Exploration · Australia &amp; USA Ready</span>
             </div>
 
@@ -35,10 +35,10 @@ export default function CTA() {
             <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3.5">
               <Link
                 href="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#2563EB] hover:bg-blue-600 text-white font-medium text-sm transition-all duration-200 shadow-md hover:shadow-lg"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-teal/20 hover:bg-teal/30 text-teal-light hover:text-white border border-teal/40 hover:border-teal/60 font-semibold text-sm transition-all duration-200 shadow-sm hover:shadow"
               >
                 <span>Book a Discovery Call</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 text-teal-light" />
               </Link>
               <Link
                 href="/contact"

@@ -145,13 +145,13 @@ export default function AboutPage() {
               </div>
 
               {/* DEXTERITY BOX */}
-              <div className="relative rounded-[28px] p-7 sm:p-8 bg-gradient-to-br from-[#141B2D] via-[#172036] to-[#0D131C] border border-blue-500/40 shadow-xl overflow-hidden group hover:border-blue-400/70 transition-all">
-                <div className="absolute top-0 right-0 -mr-12 -mt-12 w-44 h-44 rounded-full bg-blue-500/10 blur-3xl pointer-events-none" />
+              <div className="relative rounded-[28px] p-7 sm:p-8 bg-gradient-to-br from-[#101A26] via-[#151E2B] to-[#0D131C] border border-teal/40 shadow-xl overflow-hidden group hover:border-teal/70 transition-all">
+                <div className="absolute top-0 right-0 -mr-12 -mt-12 w-44 h-44 rounded-full bg-teal/10 blur-3xl pointer-events-none" />
                 <div className="relative z-10 flex flex-col justify-between h-full space-y-6">
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-[11px] font-black tracking-widest uppercase text-blue-400">
-                        <ShieldCheck className="w-3.5 h-3.5" />
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal/10 border border-teal/30 text-[11px] font-black tracking-widest uppercase text-teal">
+                        <ShieldCheck className="w-3.5 h-3.5 text-teal" />
                         DEXTERITY
                       </span>
                       <span className="text-xs font-semibold text-slate-400">Operational Precision</span>
@@ -164,8 +164,8 @@ export default function AboutPage() {
                     </p>
                   </div>
                   
-                  <div className="pt-4 border-t border-[#222A38]/70 flex items-center gap-2 text-xs font-medium text-blue-400">
-                    <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+                  <div className="pt-4 border-t border-[#222A38]/70 flex items-center gap-2 text-xs font-medium text-teal">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse" />
                     <span>Second-level review on every single file</span>
                   </div>
                 </div>
@@ -234,10 +234,10 @@ export default function AboutPage() {
                 <div className="pt-4">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#2563EB] hover:bg-blue-600 text-white text-sm font-semibold transition-all shadow-md hover:shadow-lg"
+                    className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-teal/20 hover:bg-teal/30 text-teal-light hover:text-white border border-teal/40 hover:border-teal/60 text-sm font-semibold transition-all shadow-sm hover:shadow"
                   >
                     <span>Get in touch</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4 text-teal-light" />
                   </Link>
                 </div>
               </div>

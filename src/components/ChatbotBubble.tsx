@@ -160,7 +160,7 @@ export default function ChatbotBubble() {
                 <div
                   className={`max-w-[85%] p-3.5 rounded-[20px] leading-relaxed ${
                     msg.sender === 'user'
-                      ? 'bg-[#2563EB] text-white rounded-br-xs'
+                      ? 'bg-teal/20 text-teal-light border border-teal/40 rounded-br-xs'
                       : 'bg-[#151A22] text-white border border-[#222A38] shadow-md rounded-bl-xs'
                   }`}
                 >
@@ -220,7 +220,7 @@ export default function ChatbotBubble() {
             <button
               type="submit"
               disabled={!input.trim()}
-              className="w-8 h-8 rounded-full bg-[#2563EB] disabled:opacity-40 text-white flex items-center justify-center shrink-0 hover:bg-blue-600 transition-colors"
+              className="w-8 h-8 rounded-full bg-teal/20 disabled:opacity-40 text-teal-light hover:text-white border border-teal/40 hover:border-teal/60 flex items-center justify-center shrink-0 hover:bg-teal/30 transition-colors"
               aria-label="Send message"
             >
               <Send className="w-3.5 h-3.5" />
