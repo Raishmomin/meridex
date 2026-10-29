@@ -40,20 +40,21 @@ export default function Footer() {
           
           {/* Brand & Contact Info */}
           <div className="lg:col-span-6 space-y-4">
-            <Link href="/" className="inline-block">
-              <Image
-                src="/meridex-logo-light.png"
-                alt="Meridex Solutions"
-                width={190}
-                height={34}
-                className="h-8 w-auto object-contain"
-                unoptimized
-              />
-            </Link>
-            
-            <p className="text-sm font-medium text-teal italic">
-              Where merit meets dexterity.
-            </p>
+            <div className="space-y-2">
+              <Link href="/" className="inline-block">
+                <Image
+                  src="/meridex-logo-light.png"
+                  alt="Meridex Solutions"
+                  width={190}
+                  height={34}
+                  className="h-8 w-auto object-contain"
+                  unoptimized
+                />
+              </Link>
+              <p className="text-xs sm:text-sm font-medium text-teal italic tracking-wide">
+                Where merit meets dexterity.
+              </p>
+            </div>
             
             <p className="text-sm text-slate-300 leading-relaxed max-w-md">
               Supporting mortgage brokers, insurance brokers, accountants and finance firms across Australia and the USA with precision outsourcing.
@@ -76,16 +77,16 @@ export default function Footer() {
                   href="https://www.instagram.com/meridexsolutions?dlrf=MTJlbmZ6bWo3MnYxaQ=="
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] hover:border-[#DD2A7B]/50 transition-all shadow-md group"
+                  className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#151A22] border border-[#222A38] hover:border-teal/40 transition-all shadow-md group"
                   aria-label="Follow Meridex Solutions on Instagram"
                 >
-                  <div className="w-5 h-5 rounded-md bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] flex items-center justify-center text-white shrink-0 shadow-xs group-hover:scale-105 transition-transform">
-                    <InstagramIcon className="w-3 h-3" />
+                  <div className="w-5 h-5 rounded-md bg-[#0B0F14] border border-[#222A38] flex items-center justify-center text-slate-300 group-hover:text-teal group-hover:border-teal/40 shrink-0 transition-colors">
+                    <InstagramIcon className="w-3.5 h-3.5" />
                   </div>
-                  <span className="text-xs font-semibold text-white group-hover:text-[#DD2A7B] transition-colors">
+                  <span className="text-xs font-semibold text-white group-hover:text-teal transition-colors">
                     Instagram
                   </span>
-                  <span className="text-[11px] text-slate-300">
+                  <span className="text-[11px] text-slate-400 group-hover:text-slate-300 transition-colors">
                     @meridexsolutions
                   </span>
                 </a>
@@ -150,10 +151,10 @@ export default function Footer() {
               href="https://www.instagram.com/meridexsolutions?dlrf=MTJlbmZ6bWo3MnYxaQ=="
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 hover:text-[#DD2A7B] transition-colors text-slate-300"
+              className="inline-flex items-center gap-1.5 hover:text-teal transition-colors text-slate-300 group"
               aria-label="Instagram @meridexsolutions"
             >
-              <InstagramIcon className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#DD2A7B]" />
+              <InstagramIcon className="w-3.5 h-3.5 text-slate-300 group-hover:text-teal transition-colors" />
               <span>Instagram</span>
             </a>
           </div>

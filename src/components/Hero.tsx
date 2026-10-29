@@ -5,7 +5,6 @@ import {
   ArrowRight,
   CheckCircle2,
   ShieldCheck,
-  UserCheck,
 } from 'lucide-react';
 
 interface QualityItem {
@@ -165,8 +164,8 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Quality Standards Overlay Card */}
-              <div className="mt-4 sm:mt-0 sm:absolute sm:-bottom-6 sm:-right-2 lg:-right-4 z-20 bg-[#151A22]/95 backdrop-blur-md rounded-2xl p-4 shadow-2xl border border-[#222A38] w-full sm:max-w-[280px]">
+              {/* Quality Standards Overlay Card - Aligned cleanly within the image frame */}
+              <div className="mt-4 sm:mt-0 sm:absolute sm:bottom-4 sm:right-4 z-20 bg-[#151A22]/95 backdrop-blur-md rounded-2xl p-4 shadow-2xl border border-[#222A38] w-full sm:max-w-[270px]">
                 <div className="flex items-center justify-between mb-2.5 pb-2 border-b border-[#222A38]">
                   <div className="flex items-center gap-1.5">
                     <ShieldCheck className="w-4 h-4 text-teal" />
@@ -195,14 +194,6 @@ export default function Hero() {
                     <ShieldCheck className="w-3.5 h-3.5" /> 100% Checked
                   </span>
                 </div>
-              </div>
-
-              {/* Floating Pill Top Left - Safe on mobile */}
-              <div className="hidden sm:flex animate-float-delay absolute -top-4 -left-3 z-20 bg-[#151A22]/95 backdrop-blur-md px-3.5 py-2 rounded-full items-center gap-2 shadow-xl border border-[#222A38]">
-                <div className="w-5 h-5 rounded-full bg-[#0B0F14] border border-[#222A38] flex items-center justify-center text-white">
-                  <UserCheck className="w-3 h-3 text-teal-light" />
-                </div>
-                <span className="text-[11px] font-semibold text-white">Named Point of Contact</span>
               </div>
 
             </div>

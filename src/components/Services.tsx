@@ -191,7 +191,7 @@ export default function Services() {
       : ukServices;
 
   return (
-    <section id="services" className="bg-[#0E1217] py-16 sm:py-20 lg:py-28 rounded-t-[32px] sm:rounded-t-[44px] shadow-2xl border-t border-[#222A38]">
+    <section id="services" className="bg-[#0B0F14] py-16 sm:py-20 lg:py-28 border-t border-[#222A38]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -251,18 +251,13 @@ export default function Services() {
 
         {/* Dynamic Country Service Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7">
-          {currentServices.map((service, index) => {
+          {currentServices.map((service) => {
             const Icon = service.icon;
-            const isFeatured = index === 0;
 
             return (
               <div
                 key={service.id}
-                className={`group rounded-[22px] sm:rounded-[26px] p-5 sm:p-7 transition-all duration-300 flex flex-col justify-between border ${
-                  isFeatured
-                    ? 'bg-[#151A22] border-[#2E3846] shadow-xl hover:border-teal/50'
-                    : 'bg-[#11151C] border-[#222A38] hover:bg-[#151A22] hover:border-[#2E3846]'
-                }`}
+                className="group rounded-[22px] sm:rounded-[26px] p-5 sm:p-7 transition-all duration-300 flex flex-col justify-between border bg-[#11151C] border-[#222A38] hover:bg-[#151A22] hover:border-teal/40 hover:shadow-xl"
               >
                 <div>
                   {/* Card Top */}
@@ -308,7 +303,7 @@ export default function Services() {
           })}
 
           {/* Custom Workflow Card */}
-          <div className="rounded-[22px] sm:rounded-[26px] p-5 sm:p-7 bg-[#151A22] text-white flex flex-col justify-between border border-[#2E3846] shadow-xl">
+          <div className="rounded-[22px] sm:rounded-[26px] p-5 sm:p-7 bg-[#11151C] hover:bg-[#151A22] text-white flex flex-col justify-between border border-[#222A38] hover:border-teal/40 transition-all duration-300 shadow-xl">
             <div>
               <div className="w-11 h-11 rounded-2xl bg-[#0B0F14] border border-[#222A38] flex items-center justify-center text-teal-light mb-5">
                 <Globe className="w-5 h-5 text-teal-light" />

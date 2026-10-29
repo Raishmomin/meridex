@@ -89,7 +89,7 @@ export default function CountrySelection() {
   const [selectedCountry, setSelectedCountry] = useState<CountryData>(countries[0]);
 
   return (
-    <section id="regions" className="py-14 sm:py-20 lg:py-28 bg-[#0B0F14] border-t border-[#222A38] relative overflow-hidden w-full">
+    <section id="regions" className="py-12 sm:py-16 lg:py-24 bg-[#0B0F14] relative overflow-hidden w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         {/* Section Header */}
