@@ -68,9 +68,9 @@ export default function Navbar() {
             <Image
               src="/meridex-logo-light.png"
               alt="Meridex Solutions"
-              width={180}
-              height={55}
-              className="h-9 sm:h-10 w-auto object-contain"
+              width={204}
+              height={34}
+              className="h-8 sm:h-9 w-auto object-contain"
               priority
               unoptimized
             />

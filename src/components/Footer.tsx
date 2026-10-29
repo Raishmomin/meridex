@@ -45,9 +45,9 @@ export default function Footer() {
                 <Image
                   src="/meridex-logo-light.png"
                   alt="Meridex Solutions"
-                  width={220}
-                  height={70}
-                  className="h-11 sm:h-13 w-auto object-contain"
+                  width={240}
+                  height={40}
+                  className="h-9 sm:h-11 w-auto object-contain"
                   unoptimized
                 />
               </Link>
