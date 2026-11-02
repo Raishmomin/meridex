@@ -370,9 +370,6 @@ export default function CountrySelection() {
                     >
                       <span>Coming Soon (2027)</span>
                     </button>
-                    <p className="text-[10px] sm:text-[11px] text-slate-400 mt-2 text-center md:text-right">
-                      Launching in 2027. Currently not accepting UK inquiries.
-                    </p>
                   </div>
                 ) : (
                   <>
