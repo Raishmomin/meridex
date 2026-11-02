@@ -34,7 +34,7 @@ const countries: CountryData[] = [
     quote: 'Document verification, lodgement support, BAS preparation & Xero reconciliations.',
     role: 'Active Support',
     pinCoordinates: { x: 82.5, y: 73.5 },
-    timezones: 'Overlap with AEST / AEDT business hours, by arrangement',
+    timezones: 'Overlap with AEST / AEDT business hours',
     specialties: [
       'Document collection and verification for mortgage brokers',
       'BAS prep and payroll support',
@@ -60,7 +60,7 @@ const countries: CountryData[] = [
       '1099 and W-2 year end data preparation',
       'Mortgage 1003 file preparation and document checks',
     ],
-    regulation: 'Confidentiality agreements and access controls on every file',
+    regulation: 'Confidentiality and access controls on every file',
     commonTools: ['QuickBooks Online', 'Encompass', 'Calyx Point', 'Dext'],
     clientCount: 'Now taking pilot clients',
   },
@@ -81,7 +81,7 @@ const countries: CountryData[] = [
     ],
     regulation: 'Confidentiality-first data handling',
     commonTools: ['Xero UK', 'FreeAgent', 'Smartr365'],
-    clientCount: 'Launching 2027 · Register interest',
+    clientCount: 'Launching 2027',
   },
 ];
 
@@ -121,9 +121,7 @@ export default function CountrySelection() {
                   <span className="text-base">{country.flag}</span>
                   <span>{country.name}</span>
                   {country.status === 'upcoming' ? (
-                    <span className="text-[9px] sm:text-[10px] bg-amber-950/60 text-amber-300 border border-amber-800/40 px-1.5 py-0.5 rounded-full font-bold">
-                      Soon
-                    </span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
                   ) : (
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                   )}
@@ -258,14 +256,9 @@ export default function CountrySelection() {
                           <span className="text-2xl shrink-0">{c.flag}</span>
                           <span className="text-sm font-bold text-white truncate">{c.name}</span>
                         </div>
-                        {c.status === 'upcoming' ? (
+                        {c.status === 'upcoming' && (
                           <span className="text-[9px] bg-amber-950/60 text-amber-300 border border-amber-800/40 font-bold px-2 py-0.5 rounded-full shrink-0">
                             Launching 2027
-                          </span>
-                        ) : (
-                          <span className="text-[9px] bg-emerald-950/60 text-emerald-400 border border-emerald-800/40 font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shrink-0">
-                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                            Active Coverage
                           </span>
                         )}
                       </div>
@@ -296,7 +289,9 @@ export default function CountrySelection() {
             <div className="flex items-center gap-2">
               <span className="text-lg">{selectedCountry.flag}</span>
               <span className="text-xs font-bold text-white">{selectedCountry.name}</span>
-              <span className="text-[9px] text-teal font-semibold ml-auto">{selectedCountry.status === 'upcoming' ? 'Launching 2027' : 'Active Coverage'}</span>
+              {selectedCountry.status === 'upcoming' && (
+                <span className="text-[9px] text-amber-400 font-semibold ml-auto">Launching 2027</span>
+              )}
             </div>
             <div className="flex items-center gap-1.5 text-[10px] text-teal font-medium">
               <Clock className="w-3 h-3 text-teal shrink-0" />
@@ -325,14 +320,14 @@ export default function CountrySelection() {
                   </div>
                 </div>
 
-                <div className="mt-3 sm:mt-4 space-y-2 text-xs text-slate-200">
-                  <div className="flex items-center gap-2 font-medium">
-                    <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-teal shrink-0" />
-                    <span>{selectedCountry.timezones}</span>
+                <div className="mt-3 sm:mt-4 space-y-2.5 text-xs text-slate-300">
+                  <div className="flex items-start gap-2">
+                    <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-teal shrink-0 mt-0.5" />
+                    <span className="leading-snug text-slate-300 font-normal">{selectedCountry.timezones}</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-teal shrink-0 mt-0.5" />
-                    <span className="leading-snug text-slate-300">{selectedCountry.regulation}</span>
+                    <span className="leading-snug text-slate-300 font-normal">{selectedCountry.regulation}</span>
                   </div>
                 </div>
               </div>
@@ -366,16 +361,33 @@ export default function CountrySelection() {
 
               {/* Action Column */}
               <div className="md:col-span-3 flex flex-col items-stretch md:items-end justify-between h-full pt-2">
-                <a
-                  href={`/contact?country=${encodeURIComponent(selectedCountry.name)}`}
-                  className="w-full inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 rounded-full bg-teal/20 hover:bg-teal/30 text-teal-light hover:text-white border border-teal/40 hover:border-teal/60 text-xs font-semibold transition-all shadow-sm"
-                >
-                  <span>Launch Pilot in {selectedCountry.name}</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-teal-light" />
-                </a>
-                <p className="text-[10px] sm:text-[11px] text-slate-300 mt-2 text-center md:text-right">
-                  No long-term lock-in. Turnaround agreed upfront.
-                </p>
+                {selectedCountry.id === 'uk' ? (
+                  <div className="w-full">
+                    <button
+                      type="button"
+                      disabled
+                      className="w-full inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 rounded-full bg-[#1A2230] text-slate-400 border border-[#2D3748] text-xs font-semibold cursor-not-allowed shadow-none"
+                    >
+                      <span>Coming Soon (2027)</span>
+                    </button>
+                    <p className="text-[10px] sm:text-[11px] text-slate-400 mt-2 text-center md:text-right">
+                      Launching in 2027. Currently not accepting UK inquiries.
+                    </p>
+                  </div>
+                ) : (
+                  <>
+                    <a
+                      href={`/contact?country=${encodeURIComponent(selectedCountry.name)}`}
+                      className="w-full inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 rounded-full bg-teal/20 hover:bg-teal/30 text-teal-light hover:text-white border border-teal/40 hover:border-teal/60 text-xs font-semibold transition-all shadow-sm"
+                    >
+                      <span>Launch Pilot in {selectedCountry.name}</span>
+                      <ArrowRight className="w-3.5 h-3.5 text-teal-light" />
+                    </a>
+                    <p className="text-[10px] sm:text-[11px] text-slate-300 mt-2 text-center md:text-right">
+                      No long-term lock-in. Turnaround agreed upfront.
+                    </p>
+                  </>
+                )}
               </div>
 
             </div>

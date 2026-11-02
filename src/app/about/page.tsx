@@ -6,11 +6,6 @@ import {
   ArrowRight,
   Award,
   ShieldCheck,
-  Rocket,
-  MessageSquare,
-  Lock,
-  SlidersHorizontal,
-  CheckCircle2,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -23,39 +18,6 @@ export const metadata: Metadata = {
       'Where merit meets dexterity. Supporting finance and advisory practices across Australia, the US and the UK.',
   },
 };
-
-const howWeWorkItems = [
-  {
-    step: '01',
-    title: 'Start small.',
-    desc: 'A defined pilot, with no lock-in.',
-    icon: Rocket,
-  },
-  {
-    step: '02',
-    title: 'Checked work.',
-    desc: 'Each file goes through a second-level review before delivery.',
-    icon: ShieldCheck,
-  },
-  {
-    step: '03',
-    title: 'Clear communication.',
-    desc: 'A named point of contact and regular updates.',
-    icon: MessageSquare,
-  },
-  {
-    step: '04',
-    title: 'Confidential handling.',
-    desc: 'Client data is treated with strict care and access controls.',
-    icon: Lock,
-  },
-  {
-    step: '05',
-    title: 'Flexible scope.',
-    desc: 'You choose which tasks to hand over, and we scale up as trust grows.',
-    icon: SlidersHorizontal,
-  },
-];
 
 export default function AboutPage() {
   return (
@@ -174,50 +136,7 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* SECTION 3: HOW WE WORK */}
-          <section className="space-y-6 pt-12 border-t border-[#222A38]">
-            <div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#151A22] border border-[#222A38] text-[10px] font-bold uppercase tracking-wider text-teal mb-3">
-                OPERATIONAL PRINCIPLES
-              </div>
-              <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
-                How we work
-              </h2>
-            </div>
-
-            {/* 5 Process Cards */}
-            <div className="grid grid-cols-1 gap-3.5">
-              {howWeWorkItems.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <div
-                    key={item.step}
-                    className="p-5 sm:p-6 rounded-2xl bg-[#151A22] border border-[#222A38] hover:border-teal/40 transition-all flex items-start gap-4 shadow-sm group"
-                  >
-                    <div className="w-10 h-10 rounded-xl bg-[#0B0F14] border border-[#222A38] text-teal flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                      <Icon className="w-5 h-5 text-teal" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="text-[11px] font-black tracking-wider text-teal">
-                          STEP {item.step}
-                        </span>
-                      </div>
-                      <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
-                        {item.title}{' '}
-                        <span className="text-slate-300 font-normal text-sm sm:text-base ml-1">
-                          {item.desc}
-                        </span>
-                      </h3>
-                    </div>
-                    <CheckCircle2 className="w-5 h-5 text-teal/40 group-hover:text-teal shrink-0 mt-1 transition-colors hidden sm:block" />
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-
-          {/* SECTION 4: LET'S TALK */}
+          {/* SECTION 3: LET'S TALK */}
           <section className="pt-12 border-t border-[#222A38]">
             <div className="relative bg-gradient-to-br from-[#151A22] via-[#11151C] to-[#0B0F14] border border-[#222A38] rounded-3xl p-8 sm:p-12 shadow-2xl overflow-hidden group">
               <div className="absolute top-0 right-0 -mr-16 -mt-16 w-56 h-56 rounded-full bg-teal/10 blur-3xl pointer-events-none" />

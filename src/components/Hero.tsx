@@ -8,28 +8,10 @@ import {
   ShieldCheck,
 } from 'lucide-react';
 
-interface QualityItem {
-  id: string;
-  title: string;
-  category: string;
-}
-
-const qualityGuarantees: QualityItem[] = [
-  {
-    id: '1',
-    title: 'Second-level review on every file',
-    category: 'Quality Assurance',
-  },
-  {
-    id: '2',
-    title: 'Strict client data access controls',
-    category: 'Confidentiality',
-  },
-  {
-    id: '3',
-    title: 'Named point of contact & regular updates',
-    category: 'Direct Communication',
-  },
+const qualityGuarantees = [
+  'Second-level review on every file',
+  'Strict client data access controls',
+  'Named point of contact & regular updates',
 ];
 
 const trustPoints = [
@@ -58,18 +40,16 @@ export default function Hero() {
               <span className="truncate">Australia &amp; USA · UK Launching 2027</span>
             </div>
 
-            {/* H1 Headline - Strictly 3 lines across viewports with ample spacing from image */}
-            <h1 className="text-3xl sm:text-4xl lg:text-[34px] xl:text-[42px] 2xl:text-[46px] font-bold text-white leading-[1.18] tracking-tight w-full max-w-xl">
-              <span className="block whitespace-normal sm:whitespace-nowrap">Empower your business with</span>
-              <span className="block whitespace-normal sm:whitespace-nowrap"><span className="text-teal">reliable</span> and <span className="text-teal">efficient</span></span>
-              <span className="block whitespace-normal sm:whitespace-nowrap">administrative support.</span>
+            {/* H1 Headline - Strictly 3 lines across mobile, tablet and desktop viewports without dot */}
+            <h1 className="text-[21px] xs:text-2xl sm:text-3xl md:text-4xl lg:text-[38px] xl:text-[42px] font-bold text-white leading-[1.2] tracking-tight w-full max-w-xl">
+              <span className="block whitespace-nowrap">Empower your business with</span>
+              <span className="block whitespace-nowrap"><span className="text-teal">reliable</span> and <span className="text-teal">efficient</span></span>
+              <span className="block whitespace-nowrap">administrative support</span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-sm sm:text-lg text-slate-300 leading-relaxed max-w-xl">
-              Meridex Solutions supports mortgage brokers, insurance brokers, accountants and finance firms
-              with accurate documents maintenance, bookkeeping, tax and payroll support—so you can focus on clients
-              and growth.
+            <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed max-w-xl">
+              Meridex Solutions supports mortgage brokers, accountants and finance firms with detail-heavy admin and finance work including document collection and verification, lodgement support, bookkeeping, tax and payroll support—so you can focus on clients and growth.
             </p>
 
             {/* Mobile-Perfect Input & Action Pill Group */}
@@ -165,35 +145,25 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Quality Standards Overlay Card - Aligned cleanly within the image frame */}
-              <div className="mt-4 sm:mt-0 sm:absolute sm:bottom-4 sm:right-4 z-20 bg-[#151A22]/95 backdrop-blur-md rounded-2xl p-4 shadow-2xl border border-[#222A38] w-full sm:max-w-[270px]">
-                <div className="flex items-center justify-between mb-2.5 pb-2 border-b border-[#222A38]">
-                  <div className="flex items-center gap-1.5">
-                    <ShieldCheck className="w-4 h-4 text-teal" />
-                    <span className="text-xs font-bold text-white">Quality Standards</span>
+              {/* Quality Standards Overlay Card */}
+              <div className="mt-4 sm:mt-0 sm:absolute sm:bottom-4 sm:right-4 z-20 bg-[#151A22]/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-2xl border border-[#222A38] w-full sm:max-w-[290px]">
+                <div className="flex items-center justify-between mb-3 pb-2.5 border-b border-[#222A38]">
+                  <div className="flex items-center gap-2">
+                    <ShieldCheck className="w-5 h-5 text-teal" />
+                    <span className="text-sm sm:text-base font-bold text-white">Quality Standards</span>
                   </div>
-                  <span className="text-[9px] font-bold bg-[#0B0F14] text-teal-light border border-[#222A38] px-2 py-0.5 rounded-full">
+                  <span className="text-[10px] font-bold bg-[#0B0F14] text-teal-light border border-[#222A38] px-2.5 py-0.5 rounded-full">
                     Verified
                   </span>
                 </div>
 
                 <div className="space-y-2.5">
-                  {qualityGuarantees.map((item) => (
-                    <div key={item.id} className="flex items-start text-xs gap-2">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-teal shrink-0 mt-0.5" />
-                      <div>
-                        <span className="text-white font-semibold block text-[11px] leading-tight">{item.title}</span>
-                        <span className="text-[10px] text-slate-300 block">{item.category}</span>
-                      </div>
+                  {qualityGuarantees.map((title, idx) => (
+                    <div key={idx} className="flex items-start text-xs sm:text-[13px] gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-teal shrink-0 mt-0.5" />
+                      <span className="text-white font-medium leading-snug">{title}</span>
                     </div>
                   ))}
-                </div>
-
-                <div className="mt-2.5 pt-2 border-t border-[#222A38] flex items-center justify-between">
-                  <span className="text-[10px] text-slate-300 font-medium">Review Standard</span>
-                  <span className="text-[10px] font-bold text-teal flex items-center gap-1">
-                    <ShieldCheck className="w-3.5 h-3.5" /> 100% Checked
-                  </span>
                 </div>
               </div>
 

@@ -43,17 +43,14 @@ export default function Footer() {
             <div className="space-y-1.5">
               <Link href="/" className="inline-block">
                 <Image
-                  src="/meridex-logo-light.png"
-                  alt="Meridex Solutions"
-                  width={240}
-                  height={40}
-                  className="h-9 sm:h-11 w-auto object-contain"
+                  src="/meridex-logo-footer.png"
+                  alt="Meridex Solutions - Where merit meets dexterity"
+                  width={320}
+                  height={88}
+                  className="h-14 sm:h-16 md:h-20 w-auto object-contain"
                   unoptimized
                 />
               </Link>
-              <p className="text-xs sm:text-sm font-medium text-teal italic tracking-wide">
-                Where merit meets dexterity.
-              </p>
             </div>
             
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-md">
@@ -136,17 +133,6 @@ export default function Footer() {
             >
               Privacy Policy
             </Link>
-            <span className="text-slate-600">·</span>
-            <a
-              href="https://www.instagram.com/meridexsolutions?dlrf=MTJlbmZ6bWo3MnYxaQ=="
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal/10 hover:bg-teal/20 text-teal-light hover:text-white border border-teal/30 hover:border-teal/50 transition-all text-xs font-medium group shadow-xs"
-              aria-label="Follow Meridex Solutions on Instagram"
-            >
-              <InstagramIcon className="w-3.5 h-3.5 text-teal-light group-hover:scale-110 transition-transform" />
-              <span>Instagram</span>
-            </a>
           </div>
         </div>
 

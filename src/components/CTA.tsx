@@ -9,16 +9,12 @@ export default function CTA() {
     <section id="contact" className="relative bg-[#0B0F14] py-16 sm:py-24 border-t border-[#222A38]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Large Rounded Container echoing the international modern aesthetic */}
-        <div className="relative rounded-[24px] sm:rounded-[36px] bg-[#151A22] overflow-hidden p-6 sm:p-14 lg:p-20 text-center shadow-2xl border border-[#222A38] w-full">
+        {/* Large Rounded Container with clean dark styling */}
+        <div className="relative rounded-[24px] sm:rounded-[36px] bg-[#11151C] overflow-hidden p-6 sm:p-14 lg:p-20 text-center shadow-2xl border border-[#222A38] w-full">
           
-          {/* Subtle Ambient Decorative Glows */}
-          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-teal/15 blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-teal/10 blur-3xl pointer-events-none" />
-
           <div className="relative z-10 max-w-3xl mx-auto">
             {/* Pill */}
-            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 text-teal-light text-[11px] sm:text-xs font-semibold mb-4 sm:mb-6 max-w-full border border-white/10">
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#151A22] text-teal text-[11px] sm:text-xs font-semibold mb-4 sm:mb-6 max-w-full border border-[#222A38]">
               <ShieldCheck className="w-3.5 h-3.5 text-teal shrink-0" />
               <span className="truncate">Low-Risk Exploration · Australia &amp; USA Ready</span>
             </div>
@@ -42,7 +38,7 @@ export default function CTA() {
               </Link>
               <Link
                 href="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-white/10 hover:bg-white/15 text-white font-medium text-sm border border-white/20 transition-all duration-200"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#151A22] hover:bg-[#1E2633] text-white font-medium text-sm border border-[#222A38] transition-all duration-200"
               >
                 Request a Pilot Quote
               </Link>

@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import TrustBar from "@/components/TrustBar";
 import CountrySelection from "@/components/CountrySelection";
 import Services from "@/components/Services";
 import HowItWorks from "@/components/HowItWorks";
@@ -14,7 +13,6 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <TrustBar />
         <CountrySelection />
         <Services />
         <HowItWorks />

@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import {
@@ -18,17 +19,22 @@ import {
   Lock,
 } from 'lucide-react';
 
-export default function ContactPage() {
+function ContactFormContent() {
+  const searchParams = useSearchParams();
+  const emailParam = searchParams.get('email') || '';
+  const countryParam = searchParams.get('country') || '';
+  const serviceParam = searchParams.get('service') || '';
+
   const initialFormData = {
     fullName: '',
-    email: '',
+    email: emailParam,
     phone: '',
     firmName: '',
-    country: 'Australia',
+    country: countryParam === 'United States' ? 'United States' : 'Australia',
     firmType: 'Mortgage Brokerage',
     priorityTask: 'Mortgage File Prep & Lodgement',
     estimatedVolume: '1–5 files / week',
-    message: '',
+    message: serviceParam ? `Inquiry regarding: ${serviceParam}` : '',
   };
 
   const [formData, setFormData] = useState(initialFormData);
@@ -36,6 +42,12 @@ export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (emailParam && formData.email !== emailParam) {
+      setFormData((prev) => ({ ...prev, email: emailParam }));
+    }
+  }, [emailParam]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -68,17 +80,19 @@ export default function ContactPage() {
   };
 
   const handleReset = () => {
-    setFormData(initialFormData);
+    setFormData({
+      ...initialFormData,
+      email: '',
+      message: '',
+    });
     setHoneypot('');
     setErrorMessage(null);
     setIsSubmitted(false);
   };
 
   return (
-    <>
-      <Navbar />
-      <main className="bg-[#0B0F14] min-h-screen py-10 sm:py-20 w-full overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <main className="bg-[#0B0F14] min-h-screen py-10 sm:py-20 w-full overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
@@ -296,8 +310,7 @@ export default function ContactPage() {
                         <option value="Insurance Brokerage" className="bg-[#151A22] text-white">Insurance Brokerage</option>
                         <option value="Accounting & Tax Practice" className="bg-[#151A22] text-white">Accounting &amp; Tax Practice</option>
                         <option value="Bookkeeping Firm" className="bg-[#151A22] text-white">Bookkeeping Firm</option>
-                        <option value="Wealth / Financial Planning" className="bg-[#151A22] text-white">Wealth / Financial Planning</option>
-                        <option value="Other" className="bg-[#151A22] text-white">Other Finance Firm</option>
+                        <option value="Other" className="bg-[#151A22] text-white">Other</option>
                       </select>
                     </div>
                   </div>
@@ -314,11 +327,10 @@ export default function ContactPage() {
                         className="w-full bg-[#0B0F14] border border-[#222A38] rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-teal"
                       >
                         <option value="Mortgage File Prep & Lodgement" className="bg-[#151A22] text-white">Mortgage File Prep &amp; Lodgement</option>
-                        <option value="Insurance Quotes & Renewals" className="bg-[#151A22] text-white">Insurance Quotes &amp; Renewals</option>
                         <option value="Bank Reconciliation & AP/AR" className="bg-[#151A22] text-white">Bank Reconciliation &amp; AP/AR</option>
                         <option value="BAS & Tax Return Workpapers" className="bg-[#151A22] text-white">BAS &amp; Tax Return Workpapers</option>
                         <option value="Payroll Processing & Super" className="bg-[#151A22] text-white">Payroll Processing &amp; Super</option>
-                        <option value="Multiple Back-Office Tasks" className="bg-[#151A22] text-white">Multiple Back-Office Tasks</option>
+                        <option value="Others" className="bg-[#151A22] text-white">Others</option>
                       </select>
                     </div>
                     <div>
@@ -375,6 +387,22 @@ export default function ContactPage() {
 
         </div>
       </main>
+  );
+}
+
+export default function ContactPage() {
+  return (
+    <>
+      <Navbar />
+      <Suspense
+        fallback={
+          <div className="min-h-screen bg-[#0B0F14] flex items-center justify-center">
+            <div className="w-8 h-8 rounded-full border-2 border-teal border-t-transparent animate-spin" />
+          </div>
+        }
+      >
+        <ContactFormContent />
+      </Suspense>
       <Footer />
     </>
   );

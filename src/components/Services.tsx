@@ -7,12 +7,9 @@ import {
   Calculator,
   Receipt,
   Banknote,
-  Globe,
   ArrowRight,
   Check,
   Workflow,
-  Sparkles,
-  Layers,
 } from 'lucide-react';
 
 interface SubServiceItem {
@@ -90,51 +87,47 @@ const ausServices: SubServiceItem[] = [
 
 const usaServices: SubServiceItem[] = [
   {
-    id: 'us-mortgage-1003-prep',
-    title: 'Mortgage 1003 & Loan File Preparation',
-    category: 'US Lending Ops',
-    icon: FileText,
-    subServices: [
-      'Mortgage 1003 file prep and document checks',
-      'Borrower income, asset & credit document verification',
-      'Trailing docs, disclosures packaging, and VOE tracking',
-      'Encompass and Calyx Point pipeline support',
-    ],
-  },
-  {
-    id: 'us-bookkeeping-ap-ar',
-    title: 'Bookkeeping & AP / AR Management',
-    category: 'QuickBooks Support',
+    id: 'us-bookkeeping-accounting',
+    title: 'Bookkeeping and accounting support',
+    category: 'Financial Records',
     icon: Calculator,
     subServices: [
-      'AP / AR support in QuickBooks Online',
-      'Vendor bill entry and payment scheduling',
-      'Month-end closing support and journal entry prep',
-      'Chart of accounts maintenance and cleanups',
+      'Bank and credit card reconciliations',
+      'AP/AR processing',
+      'Month-end close support and reporting',
+      'QuickBooks and Xero data work',
     ],
   },
   {
-    id: 'us-1099-w2-prep',
-    title: '1099 & W-2 Year-End Data Preparation',
-    category: 'Compliance Prep',
+    id: 'us-tax-return-preparation',
+    title: 'Tax return preparation',
+    category: 'Tax & Compliance',
     icon: Receipt,
     subServices: [
-      '1099 and W-2 year end data preparation',
-      'Independent contractor 1099-NEC & 1099-MISC compilation',
-      'W-9 collection and vendor tax ID verification',
-      'Review-ready workpapers for CPA sign-off',
+      'Federal and state return preparation support',
+      'Individual, self-employed and small business returns',
+      'Working papers and document organisation',
+      'Review-ready files for your licensed preparer or CPA',
     ],
   },
   {
-    id: 'us-bank-reconciliations',
-    title: 'Bank & Credit Card Reconciliations',
-    category: 'Ledger Audit',
+    id: 'us-payroll-support',
+    title: 'Payroll support',
+    category: 'Payroll Operations',
     icon: Banknote,
     subServices: [
-      'Bank and credit card reconciliations',
-      'Daily/weekly transaction matching across merchant accounts',
-      'Unreconciled transaction identification and resolution',
-      'Clear discrepancy audit logs ready for review',
+      'Pay run preparation and processing support',
+      'Payroll tax calculations and reconciliations',
+      'Year-end data preparation',
+    ],
+  },
+  {
+    id: 'us-mortgage-insurance-support',
+    title: 'Mortgage and insurance broker support',
+    category: 'Lending & Risk',
+    icon: FileText,
+    subServices: [
+      'Coming on request. Get in touch to discuss your needs.',
     ],
   },
 ];
@@ -301,35 +294,6 @@ export default function Services() {
               </div>
             );
           })}
-
-          {/* Custom Workflow Card */}
-          <div className="rounded-[22px] sm:rounded-[26px] p-5 sm:p-7 bg-[#11151C] hover:bg-[#151A22] text-white flex flex-col justify-between border border-[#222A38] hover:border-teal/40 transition-all duration-300 shadow-xl">
-            <div>
-              <div className="w-11 h-11 rounded-2xl bg-[#0B0F14] border border-[#222A38] flex items-center justify-center text-teal-light mb-5">
-                <Globe className="w-5 h-5 text-teal-light" />
-              </div>
-              <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight mb-2">
-                Need a Custom Task or SOP?
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-200 leading-relaxed mb-4">
-                Have specific aggregator guidelines or specialized platforms? We build custom pilots calibrated directly around your firm&apos;s internal processes.
-              </p>
-              <div className="p-3 rounded-xl bg-[#0B0F14] border border-[#222A38] text-xs text-slate-200 space-y-1">
-                <p className="font-semibold text-white">Coverage:</p>
-                <p>Australia &amp; USA Active · UK Pilot Available</p>
-              </div>
-            </div>
-
-            <div className="pt-5 mt-6 border-t border-[#222A38]">
-              <a
-                href="/contact"
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-teal/20 hover:bg-teal/30 text-teal-light hover:text-white border border-teal/40 hover:border-teal/60 font-semibold text-xs transition-colors shadow-sm"
-              >
-                <span>Request Custom Pilot</span>
-                <ArrowRight className="w-3.5 h-3.5 text-teal-light" />
-              </a>
-            </div>
-          </div>
         </div>
 
         {/* Seamless Integration & Software Reassurance Section */}
@@ -347,7 +311,7 @@ export default function Services() {
               </p>
             </div>
 
-            {/* In-House / Proprietary Software Callout Card */}
+            {/* In-House / Proprietary Software & Custom SOP Callout Card */}
             <div className="p-4 sm:p-6 rounded-2xl bg-[#151A22] border border-[#222A38] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div className="flex items-start sm:items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-[#0B0F14] flex items-center justify-center text-teal shrink-0 border border-[#222A38]">
@@ -355,10 +319,10 @@ export default function Services() {
                 </div>
                 <div>
                   <h4 className="text-xs sm:text-sm font-bold text-white">
-                    Using proprietary or customized software?
+                    Need a custom task or bespoke SOP?
                   </h4>
                   <p className="text-xs text-slate-300 mt-0.5">
-                    We adapt directly to your bespoke internal tools and screen recordings during onboarding.
+                    Have specific aggregator guidelines, unique checklists, or proprietary platforms? We adapt directly to your internal processes and screen recordings during onboarding.
                   </p>
                 </div>
               </div>

@@ -62,22 +62,25 @@ export default function Navbar() {
         }`}
       >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="relative flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 focus:outline-none group shrink-0">
+          <Link href="/" className="flex items-center gap-2 focus:outline-none group shrink-0 z-10">
             <Image
-              src="/meridex-logo-light.png"
+              src="/meridex-logo-solutions.png"
               alt="Meridex Solutions"
-              width={204}
-              height={34}
-              className="h-8 sm:h-9 w-auto object-contain"
+              width={220}
+              height={47}
+              className="h-9 sm:h-10 md:h-[42px] w-auto object-contain transition-transform group-hover:opacity-95"
               priority
               unoptimized
             />
           </Link>
 
-          {/* Desktop Navigation - Clean, minimalist aesthetic */}
-          <nav className="hidden lg:flex items-center space-x-7" aria-label="Main navigation">
+          {/* Desktop Navigation - Centered, balanced aesthetic */}
+          <nav
+            className="hidden lg:flex items-center space-x-7 xl:space-x-8 absolute left-1/2 -translate-x-1/2"
+            aria-label="Main navigation"
+          >
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -90,7 +93,7 @@ export default function Navbar() {
           </nav>
 
           {/* Right Action: Pill Button */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4 shrink-0 z-10">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-teal-light hover:text-white bg-teal/20 hover:bg-teal/30 border border-teal/40 hover:border-teal/60 rounded-full transition-all duration-200 shadow-sm hover:shadow"
@@ -100,7 +103,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Hamburger Button */}
-          <div className="flex lg:hidden">
+          <div className="flex lg:hidden z-10">
             <button
               type="button"
               onClick={() => setMobileMenuOpen((prev) => !prev)}

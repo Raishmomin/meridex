@@ -12,48 +12,35 @@ import {
   CheckCircle2,
 } from 'lucide-react';
 
-interface PrincipleItem {
-  number: string;
-  title: string;
-  shortDesc: string;
-  detail: string;
-  icon: React.ComponentType<{ className?: string }>;
-}
-
-const principles: PrincipleItem[] = [
+const howWeWorkItems = [
   {
-    number: '01',
+    step: '01',
     title: 'Start small.',
-    shortDesc: 'A defined pilot, with no lock-in.',
-    detail: 'Test our precision on a single loan file, batch of reconciliations, or discrete workflow before committing to ongoing support.',
+    desc: 'A defined pilot, with no lock-in.',
     icon: Rocket,
   },
   {
-    number: '02',
+    step: '02',
     title: 'Checked work.',
-    shortDesc: 'Each file goes through a second-level review before delivery.',
-    detail: 'Every document pack, BAS workpaper, and lodgement is audited by a senior reviewer before it reaches your desk.',
+    desc: 'Each file goes through a second-level review before delivery.',
     icon: ShieldCheck,
   },
   {
-    number: '03',
+    step: '03',
     title: 'Clear communication.',
-    shortDesc: 'A named point of contact and regular updates.',
-    detail: 'Work directly with your designated specialist with clear communication channels, agreed turnaround times, and proactive status updates.',
+    desc: 'A named point of contact and regular updates.',
     icon: MessageSquare,
   },
   {
-    number: '04',
+    step: '04',
     title: 'Confidential handling.',
-    shortDesc: 'Client data is treated with strict care and access controls.',
-    detail: 'Role-based access, strict confidentiality agreements, and data handling protocols built around international data protection standards.',
+    desc: 'Client data is treated with strict care and access controls.',
     icon: Lock,
   },
   {
-    number: '05',
+    step: '05',
     title: 'Flexible scope.',
-    shortDesc: 'You choose which tasks to hand over, and we scale up as trust grows.',
-    detail: 'Delegate the administrative bottlenecks slowing your firm down, and expand your support pod as your business scales.',
+    desc: 'You choose which tasks to hand over, and we scale up as trust grows.',
     icon: SlidersHorizontal,
   },
 ];
@@ -76,41 +63,32 @@ export default function HowItWorks() {
           </p>
         </div>
 
-        {/* 5 Consistent Principle Cards (Uniform Sizing for Steps 1 through 5) */}
-        <div className="flex flex-wrap justify-center gap-5 sm:gap-6 max-w-6xl mx-auto">
-          {principles.map((item) => {
+        {/* 5 Process Cards matching image exactly */}
+        <div className="grid grid-cols-1 gap-3.5 max-w-4xl mx-auto">
+          {howWeWorkItems.map((item) => {
             const Icon = item.icon;
             return (
               <div
-                key={item.number}
-                className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-[#151A22] border border-[#222A38] rounded-[24px] sm:rounded-[28px] p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:border-teal/40 group"
+                key={item.step}
+                className="p-5 sm:p-6 rounded-2xl bg-[#151A22] border border-[#222A38] hover:border-teal/40 transition-all flex items-center gap-4 shadow-sm group"
               >
-                <div>
-                  <div className="flex items-center justify-between mb-5">
-                    <span className="text-xs font-black tracking-wider text-teal">
-                      STEP {item.number}
+                <div className="w-10 h-10 rounded-xl bg-[#0B0F14] border border-[#222A38] text-teal flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                  <Icon className="w-5 h-5 text-teal" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-[11px] font-black tracking-wider text-teal">
+                      STEP {item.step}
                     </span>
-                    <div className="w-10 h-10 rounded-2xl bg-[#0B0F14] border border-[#222A38] flex items-center justify-center text-teal shadow-xs group-hover:scale-105 transition-transform">
-                      <Icon className="w-5 h-5 text-teal" />
-                    </div>
                   </div>
-
-                  <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight mb-1.5">
-                    {item.title}{' '}
-                    <span className="text-slate-300 font-medium block text-base mt-0.5">
-                      {item.shortDesc}
+                  <h3 className="text-base sm:text-lg text-white tracking-tight">
+                    <span className="font-bold">{item.title}</span>{' '}
+                    <span className="text-slate-300 font-normal">
+                      {item.desc}
                     </span>
                   </h3>
-
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mt-3">
-                    {item.detail}
-                  </p>
                 </div>
-
-                <div className="mt-6 pt-4 border-t border-[#222A38] flex items-center gap-2 text-xs font-semibold text-slate-300">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-teal shrink-0" />
-                  <span>Guaranteed on every file</span>
-                </div>
+                <CheckCircle2 className="w-5 h-5 text-teal/40 group-hover:text-teal shrink-0 transition-colors" />
               </div>
             );
           })}
