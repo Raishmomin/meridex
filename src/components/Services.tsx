@@ -282,14 +282,22 @@ export default function Services() {
                 </div>
 
                 <div className="pt-5 mt-6 border-t border-[#222A38] flex items-center justify-between">
-                  <span className="text-[11px] font-medium text-slate-300">Pilot ready</span>
-                  <a
-                    href={`/contact?service=${encodeURIComponent(service.title)}`}
-                    className="inline-flex items-center gap-1 text-xs font-bold text-teal hover:text-teal-light transition-colors"
-                  >
-                    <span>Pilot this task</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
+                  <span className="text-[11px] font-medium text-slate-300">
+                    {activeTab === 'uk' ? 'Launching 2027' : 'Pilot ready'}
+                  </span>
+                  {activeTab === 'uk' ? (
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-medium bg-[#151A22] text-slate-400 border border-[#222A38] select-none">
+                      Coming soon
+                    </span>
+                  ) : (
+                    <a
+                      href={`/contact?service=${encodeURIComponent(service.title)}`}
+                      className="inline-flex items-center gap-1 text-xs font-bold text-teal hover:text-teal-light transition-colors"
+                    >
+                      <span>Pilot this task</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </a>
+                  )}
                 </div>
               </div>
             );
@@ -304,7 +312,7 @@ export default function Services() {
                 Seamless Platform Integration
               </span>
               <h3 className="text-xl sm:text-2xl font-bold text-white mt-1">
-                No forced platform migrations.
+                No fixed platform migrations
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
                 Our specialists integrate seamlessly into the accounting software, broker CRMs, and document tools your team already relies on.
@@ -322,7 +330,7 @@ export default function Services() {
                     Need a custom task or bespoke SOP?
                   </h4>
                   <p className="text-xs text-slate-300 mt-0.5">
-                    Have specific aggregator guidelines, unique checklists, or proprietary platforms? We adapt directly to your internal processes and screen recordings during onboarding.
+                    Have specific aggregator guidelines, unique checklists, or proprietary platforms?
                   </p>
                 </div>
               </div>

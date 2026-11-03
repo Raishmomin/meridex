@@ -113,7 +113,7 @@ export default function ToolsShowcase() {
             We work inside your existing software stack
           </h2>
           <p className="mt-3 text-slate-300 text-base sm:text-lg">
-            No forced platform migrations. Our specialists integrate seamlessly into the accounting software, broker CRMs, and document tools your team already relies on.
+            No fixed platform migrations. Our specialists integrate seamlessly into the accounting software, broker CRMs, and document tools your team already relies on.
           </p>
 
           {/* Category Tabs */}
@@ -185,7 +185,7 @@ export default function ToolsShowcase() {
             <div>
               <h4 className="text-sm font-bold text-white">Using proprietary or customized firm software?</h4>
               <p className="text-xs text-slate-300">
-                During onboarding, we review your screen recordings and custom SOPs to train our dedicated pod.
+                During onboarding, we review your custom SOPs and workflows to train our dedicated pod.
               </p>
             </div>
           </div>

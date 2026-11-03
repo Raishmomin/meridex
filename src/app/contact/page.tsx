@@ -294,7 +294,6 @@ function ContactFormContent() {
                       >
                         <option value="Australia" className="bg-[#151A22] text-white">🇦🇺 Australia</option>
                         <option value="United States" className="bg-[#151A22] text-white">🇺🇸 United States</option>
-                        <option value="United Kingdom" className="bg-[#151A22] text-white">🇬🇧 United Kingdom (Waitlist)</option>
                       </select>
                     </div>
                     <div>

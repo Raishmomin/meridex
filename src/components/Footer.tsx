@@ -39,23 +39,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-8 sm:pb-10 border-b border-[#222A38]">
           
           {/* Brand & Contact Info */}
-          <div className="lg:col-span-6 space-y-3">
-            <div className="space-y-1.5">
-              <Link href="/" className="inline-block">
+          <div className="lg:col-span-6 space-y-4">
+            <div>
+              <Link href="/" className="inline-block focus:outline-none">
                 <Image
                   src="/meridex-logo-footer.png"
                   alt="Meridex Solutions - Where merit meets dexterity"
-                  width={320}
-                  height={88}
-                  className="h-14 sm:h-16 md:h-20 w-auto object-contain"
+                  width={440}
+                  height={177}
+                  className="h-24 sm:h-28 md:h-32 lg:h-36 w-auto object-contain"
                   unoptimized
                 />
               </Link>
             </div>
-            
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-md">
-              Supporting mortgage brokers, insurance brokers, accountants and finance firms across Australia and the USA with precision outsourcing.
-            </p>
 
             <div className="pt-1 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-semibold text-white">
               <a
