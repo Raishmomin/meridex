@@ -100,7 +100,7 @@ function ContactFormContent() {
               START A PILOT · 24-HOUR RESPONSE
             </div>
             <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-bold text-white tracking-tight leading-tight">
-              Let&apos;s talk about the tasks slowing you down.
+              Let&apos;s talk about the tasks slowing you down
             </h1>
             <p className="mt-3 sm:mt-4 text-sm sm:text-lg text-slate-300 leading-relaxed">
               Tell us your volume, tools, and backlog. We will propose a tailored, zero-lock-in pilot so you can judge us purely on results.
@@ -294,6 +294,7 @@ function ContactFormContent() {
                       >
                         <option value="Australia" className="bg-[#151A22] text-white">🇦🇺 Australia</option>
                         <option value="United States" className="bg-[#151A22] text-white">🇺🇸 United States</option>
+                        <option value="United Kingdom" disabled className="bg-[#151A22] text-slate-500">🇬🇧 United Kingdom (Coming Soon - 2027)</option>
                       </select>
                     </div>
                     <div>
